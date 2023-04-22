@@ -24,10 +24,16 @@ My interests broadly include phonology, phonetics, and speech perception. More s
 ### Under Review
 
 * Taherkhani, N. & **Nelson, S.** 2022 "Southern Tati: Takestani Dialect"
+* **Nelson, S.** & Heinz, J. 2023 "The blueprint model of production"
+
+### Manuscripts
 
 * **Nelson, S**. 2020 "The logic and typology of derived environment effects".
 
 ## Presentations and Posters
+
+* Taherkhani, N., **Nelson, S.**, & Heinz, J. [A Contrastive Hierarchy for Vowels in
+Southern Tati: Takestani Dialect](Presentations/nacil2023-TaherkhaniNelsonHeinz). North American Conference in Iranian Linguistics 3 (NACIL). University of California Los Angeles, Los Angeles, CA, USA.
 
 * **Nelson,S.** (2022). [Are Representations in Articulatory and Generative Phonology so different?](Presentations/amp2022-Nelson.pdf). Annual Meeting on Phonology 2022 (AMP). University of California Los Angeles, Los Angeles, CA, USA.
 

@@ -11,7 +11,7 @@ title: "Scott Nelson"
 
 <img src="pics/me.jpg"  alt="abstract" style="float: right; margin: 4px 10px 0px 4px; border: 1px solid #000000; height:auto; width:50%">
 
-Hello. I am a PhD student at Stony Brook University (SBU). I am largely interested in Phonology, Phonetics, Speech Perception, and Computational Linguistics. I am advised by [Jeffrey Heinz](http://jeffreyheinz.net). Before attending SBU, I received my MA and BA in Linguistics from Michigan State University where I was advised by [Karthik Durvasula](https://karthikdurvasula.gitlab.io). 
+Hello. I am a PhD student at Stony Brook University. I am largely interested in Phonology, Phonetics, Speech Perception, and Computational Linguistics. I am advised by [Jeffrey Heinz](http://jeffreyheinz.net). Before attending Stony Brook, I received my MA and BA in Linguistics from Michigan State University where I was advised by [Karthik Durvasula](https://karthikdurvasula.gitlab.io). 
 
 You can find a current copy of my CV [here](pics/cv.pdf). If you would like to find out more information about me, please look around this website or send me an e-mail (which can be found at the top of this page). 
 
