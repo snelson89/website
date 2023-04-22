@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>LIN 405 Summer 2021</title>
+
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">My Website</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="research.html">Research</a>
+</li>
+<li>
+  <a href="teaching.html">Teaching</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">LIN 405 Summer 2021</h1>
+
+</div>
+
+
+<hr />
+<p><strong>Instructor</strong>: Scott Nelson</p>
+<p><strong>Course Meeting Time</strong>: T/Th 1:30–3:45pm</p>
+<p><strong>Course Zoom link</strong>: <a href="https://stonybrook.zoom.us/j/4091340647">https://stonybrook.zoom.us/j/4091340647</a></p>
+<p><strong>Office Hours</strong>: By appointment (send me an <a href="(mailto:scott.nelson@stonybrook.edu)">e-mail</a>)</p>
+<hr />
+<div id="important-links" class="section level1">
+<h1>Important Links</h1>
+<ul>
+<li><a href="LIN405/405SyllabusSummer2021.pdf">Syllabus</a></li>
+<li><a href="https://join.slack.com/t/lin405-summer2021/shared_invite/zt-qqd78udv-Fc8y8Th1MOU3OqyJ6d19YA">Slack</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/1GefHWT8B8B4UsRAo15WnXeYfpHK9VyYKm7ZJ0uc3y9E/edit?usp=sharing">Workshop Schedule</a>.</li>
+<li><a href="https://forms.gle/E96cropAgUGcRWuc8">Workshop Google Form</a></li>
+</ul>
+<hr />
+</div>
+<div id="class-log" class="section level1">
+<h1>Class Log</h1>
+<p><strong>07/01/2021</strong></p>
+<ul>
+<li>Each student gave a 5 minute presentation on their paper.</li>
+<li>Homework:
+<ul>
+<li>Finish the final draft of your paper due tomorrow by 5pm.</li>
+<li>Finish the reflection essay due tomorrow by 5pm.</li>
+</ul></li>
+</ul>
+<p><strong>06/29/2021</strong></p>
+<ul>
+<li>We went over <a href="405/IntroToBeamer.pdf">how to make slides using Beamer</a></li>
+<li>We workshopped a paper from Amanda</li>
+<li>Homework:
+<ul>
+<li>Fill out <a href="https://forms.gle/iji1og2XHhwHHpWh6">this Google Form</a> about the class.</li>
+<li>Work on slides for your 5 minute presentation this Thursday.</li>
+<li>Work on the final draft of your paper due this Friday by 5pm.</li>
+<li>Work on the reflection essay due this Friday by 5pm.</li>
+</ul></li>
+</ul>
+<p><strong>06/24/2021</strong></p>
+<ul>
+<li><a href="https://stonybrook.zoom.us/rec/share/ffMlo0y2NHJ2ipWUIjLOq6TQZmKQK20RMC4l2JZLJ2d1GoNvvurAWc5IJeBrRX4A.Y6kj5j62EMHBAVHO">Zoom Recording</a> with Passcode: <a href="mailto:9@GG1TwL" class="email">9@GG1TwL</a></li>
+<li>We talked about <a href="405/Lecture10.pdf">academic presentations</a></li>
+<li>We workshopped papers from Gabriella and Anna</li>
+<li>Homework:
+<ul>
+<li>Work on slides for your 5 minute presentation next Thursday.</li>
+<li>Work on the final draft of your paper due next Friday by 5pm.</li>
+<li>Work on the reflection essay due next Friday by 5pm.</li>
+</ul></li>
+</ul>
+<p><strong>06/22/2021</strong></p>
+<ul>
+<li><a href="https://stonybrook.zoom.us/rec/share/NlZ6_h0RAYSwtM58-41mdVfWFgya1LgN6asEgc5Z3Gj_m4sz1k31YzQBp4xQT2Sj.l5RwpLg-wAr7IOEd">Zoom Recording</a> with Passcode: 5M%sCEzw</li>
+<li>We talked about <a href="405/Lecture9.pdf">peer review</a></li>
+<li>We workshopped papers from Cathryn and Raquel</li>
+<li>Homework:
+<ul>
+<li>Read the Linguistic Society of America’s <a href="https://www.linguisticsociety.org/resource/lsa-paper-guidelines-0">paper presentation guidelines</a></li>
+<li>Read <a href="https://people.ucsc.edu/~pullum/goldenrules.html">Geoff Pullum’s Five Golden Rules</a></li>
+<li>Read <a href="readings/howtotalk.pdf">How to Give an Academic Talk</a></li>
+<li>Submit 3 questions/topics for discussion <a href="https://forms.gle/UXSm5qKcbqsLMPPRA">here</a></li>
+</ul></li>
+</ul>
+<p><strong>06/17/2021</strong></p>
+<ul>
+<li><a href="https://stonybrook.zoom.us/rec/share/2082TVoIZJ4n8fpXj4SZIuYrax-YzGh2cX5yBxDgr00_csoT_ZEZKK_8QpUIrOFH.INVH8Z2y9UEV1FB1">Zoom Recording</a> with Passcode: Bsspj+9v</li>
+<li>We talked about <a href="405/Lecture8.pdf">linguistics style guides</a>.</li>
+<li>We workshopped papers from Joshua and Kelsia</li>
+<li>Homework:
+<ul>
+<li>Read <a href="https://undergraduatesciencelibrarian.org/a-very-brief-introduction-to-the-scientific-literature/">A Very Brief Introduction to Scientific Literature</a> and <a href="https://boingboing.net/2011/04/22/meet-science-what-is.html">Meet Science: What is Peer Review?</a> and submit 3 questions/topics for discussion <a href="https://forms.gle/vRX1UC7tNtFPBtWo6">here</a>.</li>
+<li>On the last day of class you will give a short 5 minute talk on your paper to the class. Sign up for a time <a href="https://docs.google.com/spreadsheets/d/1yzztMsKVO7RXbankZxPlq_1NoukBj5Ouyfajy_SLCr0/edit?usp=sharing">here</a>.
+<ul>
+<li>We will discuss the process of presenting papers next week.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>06/15/2021</strong></p>
+<ul>
+<li><a href="https://stonybrook.zoom.us/rec/share/kFrBI1eLBxQXEu6fn2RGgyblYV-czfq02hIom0DMiU0sMOKzp5YMPv2rbG9g66eH.-ltzK8Y3fLBTajFL">Zoom Recording</a> with Passcode: <a href="mailto:u*34@!Nt" class="email">u*34@!Nt</a></li>
+<li>We talked about <a href="405/Lecture7.pdf">open-source research and its implication for linguistics</a>.</li>
+<li>We workshopped papers from Jonathon and Thanaree.</li>
+<li>Homework:
+<ul>
+<li>Read this <a href="readings/GenericStyleRules.pdf">general linguistics style guide</a>, the <a href="readings/LanguageStyleGuide.pdf">Language style guide</a>, and the <a href="readings/LinguisticInquiryStyleGuide.pdf">Linguistic Inquiry style guide</a>.</li>
+<li>Fill out this <a href="https://forms.gle/41r851wgXWFQFBpw6">Google Form</a></li>
+<li>Find the style guide for one of the three journals you found for today’s homework and be ready to briefly talk about it.</li>
+</ul></li>
+</ul>
+<p><strong>06/10/2021</strong></p>
+<ul>
+<li><a href="https://stonybrook.zoom.us/rec/share/QwFmuydCty_ykx18dL3r_-H7rNb99nuFAP1UW5EID8T3rIZetLRBwDPu3PAzI5Kq.mPd6LRuVO305S9gp">Zoom Recording</a> with Passcode: ekbT^RV8</li>
+<li>Scott talked about <a href="405/Lecture6.pdf">linguistic resources</a>.
+<ul>
+<li><a href="https://scholar.google.com">Google Scholar</a></li>
+<li><a href="https://search.proquest.com/llba">Linguistics and Language Behavior Abstracts</a></li>
+<li><a href="https://www.oxfordbibliographies.com/obo/page/linguistics">Oxford Bibliographies in Linguistics</a></li>
+<li><a href="https://guides.library.stonybrook.edu/c.php?g=35582&amp;p=225909">Interlibrary Loan</a></li>
+<li><a href="https://lingbuzz.net">LingBuzz</a></li>
+<li><a href="https://linguistlist.org">LINGUIST List</a></li>
+</ul></li>
+<li>We workshopped papers from Liam and Loizos</li>
+<li>Homework:
+<ul>
+<li>Submit your mid-session draft by 5pm tomorrow (06/11/2021).</li>
+<li>Read this blog post on <a href="readings/PseudoLing.pdf">how to recognize pseudo-linguistic writing</a>, this article on <a href="readings/ElsevierPetition.pdf">open access in linguistics</a>, and this article on <a href="readings/SciHub.pdf">SciHub</a>.
+<ul>
+<li>Submit three questions/topics for discussion <a href="https://forms.gle/KA1x9kLRTvU5SfZc6">here</a></li>
+</ul></li>
+<li>Find 3 new potential sources for your paper
+<ul>
+<li>For each source figure out how much it would cost you to read if you had to pay full price for it</li>
+</ul></li>
+<li>Find 3 linguistics journals that you could skim through for ideas for your current paper or even a future paper</li>
+</ul></li>
+</ul>
+<p><strong>06/08/2021</strong></p>
+<ul>
+<li><del>Zoom recording with Passcode:</del></li>
+<li>We discussed the first nine sections of <a href="405/Lecture5.pdf">Halmos (1973)</a>.</li>
+<li>Scott talked about citations and how to do citations in LaTeX.</li>
+<li>We workshopped papers from Arwen and Ryan.</li>
+<li>Homework:
+<ul>
+<li>Work on your mid-session draft due this Friday by 5pm.</li>
+</ul></li>
+</ul>
+<p><strong>06/03/2021</strong></p>
+<ul>
+<li><a href="https://stonybrook.zoom.us/rec/share/S-dpQkXEl6hUHrYYqaFUd1o0PDHVVX3UWkBVEHmZz6CJTtCUCC8ghapwMfNfdnjM.PIfd5Cc4IFTmMFXX">Zoom recording</a> with Passcode: <a href="mailto:G8xT@7i" class="email">G8xT@7i</a>+</li>
+<li>We discussed <a href="405/Lecture4.pdf">abstract writing</a>.</li>
+<li>We continued going over Scott’s <a href="https://www.overleaf.com/read/mwskrrgxdprp">Intro to LaTeX</a> handout.
+<ul>
+<li>If you want to learn more about LaTeX, <a href="https://upload.wikimedia.org/wikipedia/commons/2/2d/LaTeX.pdf">here</a> is a very thorough wikibook.</li>
+</ul></li>
+<li>We workshopped a paper from Marc.</li>
+<li>Homework for next class:
+<ul>
+<li>Read Halmos (1973) <a href="readings/Halmos1973.pdf">pp. 19–33</a>) and submit 3 questions/topics for discussion <a href="https://forms.gle/8tdFFfGKhH3i2saM6">here</a>.
+<ul>
+<li>Ignore the fact that it’s about mathematics and focus on what it says about writing.</li>
+<li>You can skip section 5 “Think About the Alphabet”.</li>
+</ul></li>
+<li>Read about the <a href="readings/onehourworkday.pdf">one hour workday</a>.</li>
+<li>Start working on transferring your paper to Overleaf.</li>
+</ul></li>
+</ul>
+<p><strong>06/01/2021</strong></p>
+<ul>
+<li><a href="https://stonybrook.zoom.us/rec/share/SxlwzkhP_xj3G3vdNU9Mn7WDkFIFmKZ1f6_lEOoxlghmRwYbPEIRCwniKbpoPfM.3b-g4G1pQZ9iIpwj">Zoom recording</a> with Passcode: ?17CQzw3</li>
+<li>We started going over Scott’s <a href="https://www.overleaf.com/read/mwskrrgxdprp">Intro to LaTeX</a> handout.</li>
+<li>We discussed <a href="405/Lecture3.pdf">how to write like a linguist</a>.</li>
+<li>We workshopped papers from Zhihao and Chong.</li>
+<li>Homework for next class:
+<ul>
+<li>Go through Kalil Iskarous’s <a href="https://www.linguisticsociety.org/sites/default/files/AbstractWriting.pdf">slides</a> from a Linguistic Society of America webinar on abstract writing.</li>
+<li>Read the Linguistic Society of America’s <a href="https://www.linguisticsociety.org/resource/model-abstracts">model abstracts</a> web page.</li>
+<li>Write two versions of an abstract for your paper. The first should be 50 words, the second should be 150 words.</li>
+</ul></li>
+</ul>
+<p><strong>05/27/2021</strong></p>
+<ul>
+<li><a href="https://stonybrook.zoom.us/rec/share/WN4-J_Z3hk8Zkl9-WrqTtb-4mLGolSl4xtDg-ukfDC7w2KPaqi3qIZp471__4ceg.9zihhfnbHXiUGODg">Zoom recording</a> with Passcode: 9t0h=Z6^</li>
+<li>Scott presented on <a href="405/Lecture2.pdf">different types of writing in linguistics and writing basics</a>.
+<ul>
+<li>This <a href="https://drive.google.com/drive/folders/1Jgk33fLPTeMcgER6EfOJAISvkx7RzDrz?usp=sharing">Google Drive folder</a> contains examples of different types of linguistic writing.</li>
+</ul></li>
+<li>We discussed Macaulay chapters 2-3.</li>
+<li>We workshopped two example papers.
+<ul>
+<li>Workshop papers will be posted on <a href="https://join.slack.com/t/lin405-summer2021/shared_invite/zt-qqd78udv-Fc8y8Th1MOU3OqyJ6d19YA">Slack</a>.</li>
+<li><a href="https://forms.gle/E96cropAgUGcRWuc8">Workshop Google Form</a>.</li>
+</ul></li>
+<li>Homework for next class:
+<ul>
+<li>Sign up for a workshop date <a href="https://docs.google.com/spreadsheets/d/1GefHWT8B8B4UsRAo15WnXeYfpHK9VyYKm7ZJ0uc3y9E/edit?usp=sharing">here</a>.</li>
+<li>E-mail me your paper/paper idea for approval by Monday, May 31 at 5pm.</li>
+<li>Read Macaulay chapters 4-5 and submit 3 questions/topics for class discussion <a href="https://forms.gle/PpFbhN2CYCDHBStQ7">here</a>.</li>
+<li>Read Karthik Durvasula’s <a href="https://karthikdurvasula.gitlab.io/documents/advice/NotesOnWritingPapers.pdf">notes on writing papers</a>.</li>
+<li>Register for an Overleaf account <a href="https://www.overleaf.com">here</a> before class next Tuesday.</li>
+</ul></li>
+</ul>
+<p><strong>05/25/2021</strong></p>
+<ul>
+<li><a href="https://stonybrook.zoom.us/rec/share/fBUQAss-ggqWO0_ROJvmmeL-EOVyWtlDYO1NJ81z8_p4SSsUJQMyOs1hbOxXYYPg.zb9k34GkxeudXAQE">Zoom recording</a> with Passcode: ekju^Em7</li>
+<li>We went over the <a href="405/LIN405SyllabusSummer2021.pdf">syllabus</a>.</li>
+<li>Scott introduced <a href="405/Lecture1.pdf">the class, Slack, and Overleaf</a>.</li>
+<li>Homework for next class:
+<ul>
+<li>Sign up for a workshop date <a href="https://docs.google.com/spreadsheets/d/1GefHWT8B8B4UsRAo15WnXeYfpHK9VyYKm7ZJ0uc3y9E/edit?usp=sharing">here</a>.</li>
+<li>E-mail me your paper/paper idea for approval by Monday, May 31 at 5pm.</li>
+<li>Read Macaulay chapters <a href="readings/Macaulay2011_Ch2.pdf">2</a>-<a href="readings/Macaulay2011_Ch3.pdf">3</a> and submit 3 questions/topics for class discussion <a href="https://forms.gle/FSB8pJhRjf4CfS9g9">here</a>.</li>
+<li>Join the course Slack channel <a href="https://join.slack.com/t/lin405-summer2021/shared_invite/zt-qqd78udv-Fc8y8Th1MOU3OqyJ6d19YA">here</a>.</li>
+<li>Register for an Overleaf account <a href="https://www.overleaf.com">here</a>.</li>
+</ul></li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

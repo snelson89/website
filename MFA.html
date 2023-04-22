@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Introduction to Montreal Forced Aligner</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">My Website</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="research.html">Research</a>
+</li>
+<li>
+  <a href="teaching.html">Teaching</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Introduction to Montreal Forced Aligner</h1>
+
+</div>
+
+
+<hr />
+<div id="overview" class="section level1">
+<h1>1. Overview</h1>
+<p>A forced aligner is a tool used to provide automatic segmentation of spoken audio files. Typically, you start with an audio file and some type of transcribed text file and the forced aligner <strong>forces</strong> the audio to be <strong>aligned</strong> with the text.</p>
+<p>The <a href="https://montreal-forced-aligner.readthedocs.io/en/latest/">Montreal Forced Aligner (MFA)</a> is a forced alignment tool created by researchers at McGill University in Montreal.</p>
+<blockquote>
+<p>McAuliffe, Michael, Michaela Socolof, Sarah Mihuc, Michael Wagner, and Morgan Sonderegger (2017). <a href="https://www.researchgate.net/profile/Morgan-Sonderegger/publication/319185277_Montreal_Forced_Aligner_Trainable_Text-Speech_Alignment_Using_Kaldi/links/59b84d450f7e9bc4ca393755/Montreal-Forced-Aligner-Trainable-Text-Speech-Alignment-Using-Kaldi.pdf">Montreal Forced Aligner: trainable text-speech alignment using Kaldi</a>. In <em>Proceedings of the 18th Conference of the International Speech Communication Association</em>.</p>
+</blockquote>
+<p>Forced alignment requires both an <strong>acoustic model</strong> which contains information about how the phones of a language are pronounced (both in isolation and when surrounded by other phones), as well as a <strong>pronouncing dictionary</strong> which gives a phone{m/t/?}ic transcription of words in the language. The MFA is nice because it comes with many pre-trained acoustic models for a wide variety of languages as well as corresponding pronouncing dictionaries. Additionally, it has pre-trained grapheme-to-phoneme models that convert orthographic to phonetic transcription. Finally, it also allows user to train their own acoustic models and grapheme-to-phoneme models for a) potentially better alignment performance and b) the ability to do forced alignment on languages for which they do not have models.</p>
+<p>This workshop assumes that you have Praat downloaded on your computer. If you do not, you can install it by going to <a href="https://www.fon.hum.uva.nl/praat/">praat.org</a> and clicking on the link in the top left corner corresponding to your operating system. This will bring you to a page that will guide you through the installation process.</p>
+</div>
+<div id="installation" class="section level1">
+<h1>2. Installation</h1>
+<p>Instructions for installation can be found <a href="https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html">here</a>. There are two general steps that need to be taken.</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://conda.io/projects/conda/en/latest/user-guide/install/download.html">Download and install Anaconda or Miniconda</a></li>
+<li>Create a conda environment and install MFA by running this from the command line: <code>conda create -n aligner -c conda-forge montreal-forced-aligner</code></li>
+</ol>
+<p>To activate the MFA environment, you can run the command: <code>conda activate aligner</code>. To deactivate it you can run <code>conda deactivate</code>.</p>
+</div>
+<div id="preparing-your-files" class="section level1">
+<h1>3. Preparing your files</h1>
+<p>There are two ways in which we can organize our files for alignment. Each one requires a different directory structure, so we’ll look at them both individually.</p>
+<div id="method-1" class="section level3">
+<h3>3.1 Method 1</h3>
+<p>The first method uses <code>.lab</code> or <code>.txt</code> files containing tab-delimited orthographic transcription for each word. I have always just used <code>.txt</code> files. If you’d like to learn more about <code>.lab</code> files you can do so <a href="https://montreal-forced-aligner.readthedocs.io/en/latest/user_guide/corpus_structure.html#corpus-structure">here</a>. This method assumes that you may have multiple files for multiple speakers. You should therefore make a new directory <code>&lt;corpus-name&gt;</code> with sub-folders <code>speaker1</code>, <code>speaker2</code>, …, <code>speakern</code>.</p>
+<p><strong>Activity 1:</strong> During this workshop, we will align data from 4 speakers. So let’s create our corpus directory and 4 speaker sub-directories now. Once you’ve done this, download <a href="MFA/Allignment1.zip">these files</a>, unzip them, and move them into the correct folders on your machine.</p>
+<p>MFA only runs on audio files in a specific format. Fortunately, as long as you are using <code>.wav</code> files, it takes care of things automatically. That being said, it’s recommended to not use files with a sampling rate lower than 16kHz. If you have recordings that are in another format (e.g. <code>.mp3</code>), you should have <code>sox</code> or <code>ffmpeg</code> which provide ways to convert files into the <code>wav</code> format. We won’t go over that here, but I wanted to make sure people were made aware of this fact.</p>
+</div>
+<div id="method-2" class="section level3">
+<h3>3.2 Method 2</h3>
+<p>The second method uses Praat TextGrid files and generally can handle longer audio and multiple speakers within a single file. For this reason, you only need to make a corpus directory with no further sub-folders. The TextGrid file should have a unique tier for each speaker. On each tier, you can then make boundaries for chunks around 5-6 seconds. You can then label each interval with the orthographic transcription of what is being said.</p>
+<p><strong>Activity 2:</strong> Create a second corpus directory (with a different name from the one above). Once you’ve done this, download <a href="MFA/Allignment2.zip">these files</a>, unzip them, and move them into the correct folders on your machine.</p>
+</div>
+</div>
+<div id="downloading-pre-trained-acoustic-models-and-pronouncing-dictionaries" class="section level1">
+<h1>4. Downloading pre-trained acoustic models and pronouncing dictionaries</h1>
+<p>MFA has the Acoustic Models and/or Pronouncing dictionaries for the following languages (as of 11/5/2022). Note, some languages have multiple dictionaries/acoustic models to account for different dialects. Furthermore, some are more expansive than others. So it’s important to read about each model/dictionary before using it. It’s fine to use general models for more specific data sets, but it’s crucial to be aware of the limitations and the social/ethical concerns that may arise from doing so.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Language</th>
+<th align="center">Acoustic Model</th>
+<th align="center">Pronouncing Dictionary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Abkhaz</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Armenian</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Bashkir</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Basque</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Belarusian</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Bulgarian</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Chuvash</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Croatian</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Czech</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Dutch</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">English</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">French</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Georgian</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">German</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Greek</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Guarani</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Hausa</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Hungarian</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Italian</td>
+<td align="center">TRUE</td>
+<td align="center">FALSE</td>
+</tr>
+<tr class="even">
+<td align="center">Japanese</td>
+<td align="center">FALSE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Kazakh</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Korean</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Kurmanji</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Kyrgyz</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Maltese</td>
+<td align="center">FALSE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Mandarin</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Polish</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Portuguese</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Punjabi</td>
+<td align="center">FALSE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Romanian</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Russian</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Sorbian</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Spanish</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Swahili</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Swedish</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Tamil</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Tatar</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Thai</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Turkish</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Ukranian</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Urdu</td>
+<td align="center">FALSE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Uyghur</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="odd">
+<td align="center">Uzbek</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">Vietnamese</td>
+<td align="center">TRUE</td>
+<td align="center">TRUE</td>
+</tr>
+</tbody>
+</table>
+<p>To download an acoustic model to your local computer, first make sure that you have activated the <code>aligner</code> environment. Then run the command <code>mfa model download acoustic &lt;name of acoustic model&gt;</code>. Likewise, to download a pronouncing dictionary, run the command <code>mfa model download dictinoary &lt;name of pronouncing dictionary&gt;</code>.</p>
+<p><strong>Activity 3:</strong> Since our audio files are for American English, we will need to download one of the American English acoustic models and one of the American English pronouncing dictionaries. The name of both of these are <code>english_us_arpa</code>. Use the commands described above to download both of them to your local machine. They should end up in <code>Documents/MFA/pretrained_models</code>. In the <code>dictionary/</code> sub-folder you should see the file <code>english_us_arpa.dict</code>. Open this file in a text editor because we will edit it later and it’s good to have an idea of what it looks like. If you are unfamiliar with ARPABET transcription, you can read more about it <a href="https://en.wikipedia.org/wiki/ARPABET">here</a>. These transcriptions use the 2-letter version.</p>
+</div>
+<div id="running-the-aligner" class="section level1">
+<h1>5. Running the Aligner</h1>
+<p>Now that we have our files in the correct format, and our acoustic model and pronouncing dictionary, we can now actually get to the main event: doing the forced alignment! Before we actually do that, though, we can run a verification command that checks to make sure that everything is correctly set up. The command for this is: <code>mfa validate &lt;path to corpus&gt; &lt;name of acoustic model&gt; &lt;name of pronouncing dictionary&gt;</code>.</p>
+<p><strong>Activity 4:</strong> Run the <code>validate</code> command on our first corpus. It takes ~40 seconds to run on my computer. It will give you some information in the console. One thing it will tell you is that there are some OOV words. OOV stands for <strong>o</strong>ut <strong>o</strong>f <strong>v</strong>ocabulary. This means that the word it is trying to align does not have a pronunciation in the dictionary. We will ignore this for now, but later I will show you how to add new words to the pronouncing dictionaries.</p>
+<p>The command to run the aligner is quite similar. The only thing we need to do is add an output directory where the output files (Praat TextGrids) will do. The command to do alignment is `mfa align <path to corpus> <name of acoustic model> <name of pronouncing dictionary> <path to output folder>. In the past I have had to create an output directory before running this command, but while preparing for this workshop I noticed it seemed to automatically create one if I just gave a path in the command. So it may be a new feature, I don’t know for sure YMMV.</p>
+<p><strong>Activity 5:</strong> Run the <code>align</code> command on our first corpus. It should once again take ~40 seconds. Once you are finished. Navigate to your corpus and output directories, and open the corresponding <code>.wav</code> and <code>.TextGrid</code> files in Praat. In one of the files for each speaker, you should notice that the word was not transcribed. This is unsurprising since we already knew we had an OOV item. Navigate to the <code>english_us_arpa.dict</code> file and open it in a text editor. We can add words by providing the orthographic form, a tab, then an ARPABET transcription with spaces in between each segment. In this file, you will also see 4 numbers. We can ignore these. They refer to various probabilities and will be given default values if we don’t provide anything. Add the line <code>skornash   S K OW1 R N AA0 SH</code> to the dictionary file and then save it. Run the <code>align</code> command again, but this time add the <code>--clean</code> tag to the end. This will ensure that the previous alignment files are deleted. If they don’t get deleted it will not run properly. If you re-open the <code>.wav</code> and <code>.TextGrid</code> files you should see that there is now a transcription and alignment for the problematic word.</p>
+<p><strong>Activity 6:</strong> run the <code>align</code> command on the second corpus. Note, here you provide a <code>.TextGrid</code> file in the input and get a <code>.TextGrid</code> file in your output. So make sure you open the correct file when looking to see the finished product.</p>
+</div>
+<div id="a-general-note-about-forced-alignment" class="section level1">
+<h1>6. A general note about forced alignment</h1>
+<p>It is important to remember that using forced aligners is not a replacement for segmenting by hand. It’s best used as a first pass that you should then look over to make sure everything is in the right place. That being said, it is much easier to <em>move</em> Praat TextGrid boundaries around than it is to <em>create</em> them. So using a forced aligner still saves <strong>a lot</strong> of time. But remember…never assume that you don’t have to check the output. You can, and certainly will, get burned.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

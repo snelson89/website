@@ -1,0 +1,164 @@
+---
+title: "LIN 405 Summer 2021"
+---
+***
+
+**Instructor**: Scott Nelson
+
+**Course Meeting Time**: T/Th 1:30--3:45pm
+
+**Course Zoom link**: [https://stonybrook.zoom.us/j/4091340647](https://stonybrook.zoom.us/j/4091340647)
+
+**Office Hours**: By appointment (send me an [e-mail]((mailto:scott.nelson@stonybrook.edu)))
+
+***
+
+# Important Links
+
+- [Syllabus](LIN405/405SyllabusSummer2021.pdf)
+- [Slack](https://join.slack.com/t/lin405-summer2021/shared_invite/zt-qqd78udv-Fc8y8Th1MOU3OqyJ6d19YA)
+- [Workshop Schedule](https://docs.google.com/spreadsheets/d/1GefHWT8B8B4UsRAo15WnXeYfpHK9VyYKm7ZJ0uc3y9E/edit?usp=sharing).
+- [Workshop Google Form](https://forms.gle/E96cropAgUGcRWuc8)
+
+***
+
+# Class Log
+
+**07/01/2021**
+
+* Each student gave a 5 minute presentation on their paper.
+* Homework: 
+  + Finish the final draft of your paper due tomorrow by 5pm.
+  + Finish the reflection essay due tomorrow by 5pm.
+
+**06/29/2021**
+
+* We went over [how to make slides using Beamer](405/IntroToBeamer.pdf)
+* We workshopped a paper from Amanda
+* Homework:
+  + Fill out [this Google Form](https://forms.gle/iji1og2XHhwHHpWh6) about the class.
+  + Work on slides for your 5 minute presentation this Thursday.
+  + Work on the final draft of your paper due this Friday by 5pm.
+  + Work on the reflection essay due this Friday by 5pm.
+
+**06/24/2021**
+
+* [Zoom Recording](https://stonybrook.zoom.us/rec/share/ffMlo0y2NHJ2ipWUIjLOq6TQZmKQK20RMC4l2JZLJ2d1GoNvvurAWc5IJeBrRX4A.Y6kj5j62EMHBAVHO) with Passcode: 9@GG1TwL
+* We talked about [academic presentations](405/Lecture10.pdf)
+* We workshopped papers from Gabriella and Anna
+* Homework:
+  + Work on slides for your 5 minute presentation next Thursday.
+  + Work on the final draft of your paper due next Friday by 5pm.
+  + Work on the reflection essay due next Friday by 5pm.
+
+**06/22/2021**
+
+* [Zoom Recording](https://stonybrook.zoom.us/rec/share/NlZ6_h0RAYSwtM58-41mdVfWFgya1LgN6asEgc5Z3Gj_m4sz1k31YzQBp4xQT2Sj.l5RwpLg-wAr7IOEd) with Passcode: 5M%sCEzw
+* We talked about [peer review](405/Lecture9.pdf)
+* We workshopped papers from Cathryn and Raquel
+* Homework:
+  + Read the Linguistic Society of America's [paper presentation guidelines](https://www.linguisticsociety.org/resource/lsa-paper-guidelines-0)
+  + Read [Geoff Pullum's Five Golden Rules](https://people.ucsc.edu/~pullum/goldenrules.html)
+  + Read [How to Give an Academic Talk](readings/howtotalk.pdf)
+  + Submit 3 questions/topics for discussion [here](https://forms.gle/UXSm5qKcbqsLMPPRA)
+
+**06/17/2021**
+
+* [Zoom Recording](https://stonybrook.zoom.us/rec/share/2082TVoIZJ4n8fpXj4SZIuYrax-YzGh2cX5yBxDgr00_csoT_ZEZKK_8QpUIrOFH.INVH8Z2y9UEV1FB1) with Passcode: Bsspj+9v
+* We talked about [linguistics style guides](405/Lecture8.pdf).
+* We workshopped papers from Joshua and Kelsia
+* Homework:
+  + Read [A Very Brief Introduction to Scientific Literature](https://undergraduatesciencelibrarian.org/a-very-brief-introduction-to-the-scientific-literature/) and [Meet Science: What is Peer Review?](https://boingboing.net/2011/04/22/meet-science-what-is.html) and submit 3 questions/topics for discussion [here](https://forms.gle/vRX1UC7tNtFPBtWo6).
+  + On the last day of class you will give a short 5 minute talk on your paper to the class. Sign up for a time [here](https://docs.google.com/spreadsheets/d/1yzztMsKVO7RXbankZxPlq_1NoukBj5Ouyfajy_SLCr0/edit?usp=sharing).
+    - We will discuss the process of presenting papers next week.
+
+**06/15/2021**
+
+* [Zoom Recording](https://stonybrook.zoom.us/rec/share/kFrBI1eLBxQXEu6fn2RGgyblYV-czfq02hIom0DMiU0sMOKzp5YMPv2rbG9g66eH.-ltzK8Y3fLBTajFL) with Passcode: u*34@!Nt
+* We talked about [open-source research and its implication for linguistics](405/Lecture7.pdf).
+* We workshopped papers from Jonathon and Thanaree.
+* Homework:
+  + Read this [general linguistics style guide](readings/GenericStyleRules.pdf), the [Language style guide](readings/LanguageStyleGuide.pdf), and the [Linguistic Inquiry style guide](readings/LinguisticInquiryStyleGuide.pdf).
+  + Fill out this [Google Form](https://forms.gle/41r851wgXWFQFBpw6)
+  + Find the style guide for one of the three journals you found for today's homework and be ready to briefly talk about it.
+
+**06/10/2021**
+
+* [Zoom Recording](https://stonybrook.zoom.us/rec/share/QwFmuydCty_ykx18dL3r_-H7rNb99nuFAP1UW5EID8T3rIZetLRBwDPu3PAzI5Kq.mPd6LRuVO305S9gp) with Passcode: ekbT^RV8
+* Scott talked about [linguistic resources](405/Lecture6.pdf).
+  + [Google Scholar](https://scholar.google.com)
+  + [Linguistics and Language Behavior Abstracts](https://search.proquest.com/llba)
+  + [Oxford Bibliographies in Linguistics](https://www.oxfordbibliographies.com/obo/page/linguistics)
+  + [Interlibrary Loan](https://guides.library.stonybrook.edu/c.php?g=35582&p=225909)
+  + [LingBuzz](https://lingbuzz.net)
+  + [LINGUIST List](https://linguistlist.org)
+* We workshopped papers from Liam and Loizos
+* Homework:
+  + Submit your mid-session draft by 5pm tomorrow (06/11/2021).
+  + Read this blog post on [how to recognize pseudo-linguistic writing](readings/PseudoLing.pdf), this article on [open access in linguistics](readings/ElsevierPetition.pdf), and this article on [SciHub](readings/SciHub.pdf).
+    - Submit three questions/topics for discussion [here](https://forms.gle/KA1x9kLRTvU5SfZc6)
+  + Find 3 new potential sources for your paper
+    - For each source figure out how much it would cost you to read if you had to pay full price for it
+  + Find 3 linguistics journals that you could skim through for ideas for your current paper or even a future paper
+
+**06/08/2021**
+
+* ~~Zoom recording with Passcode:~~ 
+* We discussed the first nine sections of [Halmos (1973)](405/Lecture5.pdf).
+* Scott talked about citations and how to do citations in LaTeX.
+* We workshopped papers from Arwen and Ryan.
+* Homework:
+  + Work on your mid-session draft due this Friday by 5pm.
+
+**06/03/2021**
+
+* [Zoom recording](https://stonybrook.zoom.us/rec/share/S-dpQkXEl6hUHrYYqaFUd1o0PDHVVX3UWkBVEHmZz6CJTtCUCC8ghapwMfNfdnjM.PIfd5Cc4IFTmMFXX) with Passcode: G8xT@7i+
+* We discussed [abstract writing](405/Lecture4.pdf).
+* We continued going over Scott's [Intro to LaTeX](https://www.overleaf.com/read/mwskrrgxdprp) handout.
+  + If you want to learn more about LaTeX, [here](https://upload.wikimedia.org/wikipedia/commons/2/2d/LaTeX.pdf) is a very thorough wikibook.
+* We workshopped a paper from Marc.
+* Homework for next class:
+  + Read Halmos (1973) [pp. 19--33](readings/Halmos1973.pdf)) and submit 3 questions/topics for discussion [here](https://forms.gle/8tdFFfGKhH3i2saM6).
+    * Ignore the fact that it's about mathematics and focus on what it says about writing.
+    * You can skip section 5 "Think About the Alphabet".
+  + Read about the [one hour workday](readings/onehourworkday.pdf).
+  + Start working on transferring your paper to Overleaf.
+
+**06/01/2021**
+
+* [Zoom recording](https://stonybrook.zoom.us/rec/share/SxlwzkhP_xj3G3vdNU9Mn7WDkFIFmKZ1f6_lEOoxlghmRwYbPEIRCwniKbpoPfM.3b-g4G1pQZ9iIpwj) with Passcode: ?17CQzw3
+* We started going over Scott's [Intro to LaTeX](https://www.overleaf.com/read/mwskrrgxdprp) handout.
+* We discussed [how to write like a linguist](405/Lecture3.pdf). 
+* We workshopped papers from Zhihao and Chong.
+* Homework for next class:
+  + Go through Kalil Iskarous's [slides](https://www.linguisticsociety.org/sites/default/files/AbstractWriting.pdf) from a Linguistic Society of America webinar on abstract writing.
+  + Read the Linguistic Society of America's [model abstracts](https://www.linguisticsociety.org/resource/model-abstracts) web page.
+  + Write two versions of an abstract for your paper. The first should be 50 words, the second should be 150 words.
+
+**05/27/2021**
+
+* [Zoom recording](https://stonybrook.zoom.us/rec/share/WN4-J_Z3hk8Zkl9-WrqTtb-4mLGolSl4xtDg-ukfDC7w2KPaqi3qIZp471__4ceg.9zihhfnbHXiUGODg) with Passcode: 9t0h=Z6^
+* Scott presented on [different types of writing in linguistics and writing basics](405/Lecture2.pdf).
+  + This [Google Drive folder](https://drive.google.com/drive/folders/1Jgk33fLPTeMcgER6EfOJAISvkx7RzDrz?usp=sharing) contains examples of different types of linguistic writing.
+* We discussed Macaulay chapters 2-3.
+* We workshopped two example papers.
+  + Workshop papers will be posted on [Slack](https://join.slack.com/t/lin405-summer2021/shared_invite/zt-qqd78udv-Fc8y8Th1MOU3OqyJ6d19YA).
+  + [Workshop Google Form](https://forms.gle/E96cropAgUGcRWuc8).
+* Homework for next class:
+  + Sign up for a workshop date [here](https://docs.google.com/spreadsheets/d/1GefHWT8B8B4UsRAo15WnXeYfpHK9VyYKm7ZJ0uc3y9E/edit?usp=sharing).
+  + E-mail me your paper/paper idea for approval by Monday, May 31 at 5pm.
+  + Read Macaulay chapters 4-5 and submit 3 questions/topics for class discussion [here](https://forms.gle/PpFbhN2CYCDHBStQ7).
+  + Read Karthik Durvasula's [notes on writing papers](https://karthikdurvasula.gitlab.io/documents/advice/NotesOnWritingPapers.pdf).
+  + Register for an Overleaf account [here](https://www.overleaf.com) before class next Tuesday.
+
+**05/25/2021**
+
+* [Zoom recording](https://stonybrook.zoom.us/rec/share/fBUQAss-ggqWO0_ROJvmmeL-EOVyWtlDYO1NJ81z8_p4SSsUJQMyOs1hbOxXYYPg.zb9k34GkxeudXAQE) with Passcode: ekju^Em7
+* We went over the [syllabus](405/LIN405SyllabusSummer2021.pdf).
+* Scott introduced [the class, Slack, and Overleaf](405/Lecture1.pdf).
+* Homework for next class:
+  + Sign up for a workshop date [here](https://docs.google.com/spreadsheets/d/1GefHWT8B8B4UsRAo15WnXeYfpHK9VyYKm7ZJ0uc3y9E/edit?usp=sharing).
+  + E-mail me your paper/paper idea for approval by Monday, May 31 at 5pm.
+  + Read Macaulay chapters [2](readings/Macaulay2011_Ch2.pdf)-[3](readings/Macaulay2011_Ch3.pdf) and submit 3 questions/topics for class discussion [here](https://forms.gle/FSB8pJhRjf4CfS9g9).
+  + Join the course Slack channel [here](https://join.slack.com/t/lin405-summer2021/shared_invite/zt-qqd78udv-Fc8y8Th1MOU3OqyJ6d19YA).
+  + Register for an Overleaf account [here](https://www.overleaf.com).

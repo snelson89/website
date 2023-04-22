@@ -1,0 +1,38 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 34.53387755102041 
+tiers? <exists> 
+size = 1 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Scott" 
+        xmin = 0 
+        xmax = 34.53387755102041 
+        intervals: size = 6 
+        intervals [1]:
+            xmin = 0 
+            xmax = 6.389438349314665 
+            text = "AT LUNCHTIME I BOUGHT A HUGE ORANGE THE SIZE OF IT MADE US ALL LAUGH" 
+        intervals [2]:
+            xmin = 6.389438349314665 
+            xmax = 12.141530612244898 
+            text = "I PEELED IT AND SHARED IT WITH ROBERT AND DAVE THEY GOT QUARTERS AND I HAD A HALF" 
+        intervals [3]:
+            xmin = 12.141530612244898 
+            xmax = 18.0686637504121 
+            text = "AND THAT ORANGE IT MADE ME SO HAPPY AS ORDINARY THINGS OFTEN DO" 
+        intervals [4]:
+            xmin = 18.0686637504121 
+            xmax = 24.237273757221985 
+            text = "JUST LATELY THE SHOPPING A WALK IN THE PARK THIS IS PEACE AND CONTENTMENT IT'S NEW" 
+        intervals [5]:
+            xmin = 24.237273757221985 
+            xmax = 28.9587709172592 
+            text = "THE REST OF THE DAY WAS QUITE EASY I DID ALL THE JOBS ON MY LIST" 
+        intervals [6]:
+            xmin = 28.9587709172592 
+            xmax = 34.53387755102041 
+            text = "AND ENJOYED THEM AND HAD SOME TIME OVER I LOVE YOU I'M GLAD I EXIST" 

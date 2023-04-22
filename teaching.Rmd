@@ -1,0 +1,56 @@
+---
+title: "Teaching"
+---
+I currently work as a teaching assistant in the Department of Linguistics at Stony Brook University. My office is located in SBS N235. My fall 2022 weekly office hours are Mondays from 4-5pm and Fridays from 10:30-11:30am. Please send me an e-mail if you would like to meet with me at a different time. Below is a list of classes I have served as either a teaching assistant or main instructor for.
+
+## Stony Brook Univeristy
+
+### Teaching Assistant
+* **LIN 101**: *Introduction to Linguistics*
+    + Spring 2020
+* **LIN 120**: *Language and Technology*
+    + Fall 2020
+* **LIN 201**: *Phonetics*
+    + Fall 2019; Fall 2021; Spring 2022
+* **LIN 301**: *Phonology*
+    + Spring 2021; Fall 2022
+    
+### Main Instructor
+* **LIN 200**: *Language in the United States*
+  + Winter 2022 (Co-taught with [Andrija Petrovic](https://andrija-petrovic.github.io))
+* **LIN 405**: *Writing in Linguistics*
+  + Summer [2021](405SU21.html)
+* **LIN 522**: *Phonetics*
+  + Summer 2020; Summer 2022 (Co-taught with [Felix Fonseca Quesada](https://sites.google.com/view/felixfonsecaquesada/página-principal))
+
+
+## Michigan State University
+
+### Teaching Assistant
+* **IAH 204**: *Asia and The World*
+    + Fall 2017/2018; Spring 2018/019
+
+### Main Instructor
+* **LIN 291**: *Language and Animals*
+    + Summer 2018
+    
+## Additional Instruction
+
+### Head Instructor
+* Michigan State University Python Linguistics Group
+  + Fall 2018; Spring 2019
+* Stony Brook University Youth Camp in Computational Linguistics
+  + Summer 2021; Summer 2022
+  
+### Volunteer
+* Stony Brook University Youth Camp in Computational Linguistics
+  + Summer 2020
+* Stony Brook School Linguistics Minicourse
+  + Winter 2022
+  
+## Workshops, etc...
+
+* [Introduction to Praat](Praat.html)
+* [Introdcution to Montreal Forced Aligner](MFA.html)
+
+        

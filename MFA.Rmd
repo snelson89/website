@@ -1,0 +1,119 @@
+---
+title: "Introduction to Montreal Forced Aligner"
+---
+
+***
+
+# 1. Overview 
+
+A forced aligner is a tool used to provide automatic segmentation of spoken audio files. Typically, you start with an audio file and some type of transcribed text file and the forced aligner **forces** the audio to be **aligned** with the text. 
+
+The [Montreal Forced Aligner (MFA)](https://montreal-forced-aligner.readthedocs.io/en/latest/) is a forced alignment tool created by researchers at McGill University in Montreal.
+
+> McAuliffe, Michael, Michaela Socolof, Sarah Mihuc, Michael Wagner, and Morgan Sonderegger (2017). [Montreal Forced Aligner: trainable text-speech alignment using Kaldi](https://www.researchgate.net/profile/Morgan-Sonderegger/publication/319185277_Montreal_Forced_Aligner_Trainable_Text-Speech_Alignment_Using_Kaldi/links/59b84d450f7e9bc4ca393755/Montreal-Forced-Aligner-Trainable-Text-Speech-Alignment-Using-Kaldi.pdf). In *Proceedings of the 18th Conference of the International Speech Communication Association*.
+
+Forced alignment requires both an **acoustic model** which contains information about how the phones of a language are pronounced (both in isolation and when surrounded by other phones), as well as a **pronouncing dictionary** which gives a phone{m/t/?}ic transcription of words in the language. The MFA is nice because it comes with many pre-trained acoustic models for a wide variety of languages as well as corresponding pronouncing dictionaries. Additionally, it has pre-trained grapheme-to-phoneme models that convert orthographic to phonetic transcription. Finally, it also allows user to train their own acoustic models and grapheme-to-phoneme models for a) potentially better alignment performance and b) the ability to do forced alignment on languages for which they do not have models. 
+
+This workshop assumes that you have Praat downloaded on your computer. If you do not, you can install it by going to [praat.org](https://www.fon.hum.uva.nl/praat/) and clicking on the link in the top left corner corresponding to your operating system. This will bring you to a page that will guide you through the installation process.
+
+# 2. Installation
+
+Instructions for installation can be found [here](https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html). There are two general steps that need to be taken.
+
+1. [Download and install Anaconda or Miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/download.html)
+2. Create a conda environment and install MFA by running this from the command line: `conda create -n aligner -c conda-forge montreal-forced-aligner`
+
+To activate the MFA environment, you can run the command: `conda activate aligner`. To deactivate it you can run `conda deactivate`.
+
+# 3. Preparing your files
+
+There are two ways in which we can organize our files for alignment. Each one requires a different directory structure, so we'll look at them both individually. 
+
+
+### 3.1 Method 1
+
+The first method uses `.lab` or `.txt` files containing tab-delimited orthographic transcription for each word. I have always just used `.txt` files. If you'd like to learn more about `.lab` files you can do so [here](https://montreal-forced-aligner.readthedocs.io/en/latest/user_guide/corpus_structure.html#corpus-structure). This method assumes that you may have multiple files for multiple speakers. You should therefore make a new directory `<corpus-name>` with sub-folders `speaker1`, `speaker2`, ..., `speakern`.
+
+**Activity 1:** During this workshop, we will align data from 4 speakers. So let's create our corpus directory and 4 speaker sub-directories now. Once you've done this, download [these files](MFA/Allignment1.zip), unzip them, and move them into the correct folders on your machine. 
+
+MFA only runs on audio files in a specific format. Fortunately, as long as you are using `.wav` files, it takes care of things automatically. That being said, it's recommended to not use files with a sampling rate lower than 16kHz. If you have recordings that are in another format (e.g. `.mp3`), you should have `sox` or `ffmpeg` which provide ways to convert files into the `wav` format. We won't go over that here, but I wanted to make sure people were made aware of this fact. 
+
+### 3.2 Method 2
+
+The second method uses Praat TextGrid files and generally can handle longer audio and multiple speakers within a single file. For this reason, you only need to make a corpus directory with no further sub-folders. The TextGrid file should have a unique tier for each speaker. On each tier, you can then make boundaries for chunks around 5-6 seconds. You can then label each interval with the orthographic transcription of what is being said. 
+
+**Activity 2:** Create a second corpus directory (with a different name from the one above). Once you've done this, download [these files](MFA/Allignment2.zip), unzip them, and move them into the correct folders on your machine. 
+
+# 4. Downloading pre-trained acoustic models and pronouncing dictionaries
+
+MFA has the Acoustic Models and/or Pronouncing dictionaries for the following languages (as of 11/5/2022). Note, some languages have multiple dictionaries/acoustic models to account for different dialects. Furthermore, some are more expansive than others. So it's important to read about each model/dictionary before using it. It's fine to use general models for more specific data sets, but it's crucial to be aware of the limitations and the social/ethical concerns that may arise from doing so. 
+
+| Language | Acoustic Model | Pronouncing Dictionary |
+| :-: | :-: | :-: |
+| Abkhaz | TRUE | TRUE |
+| Armenian | TRUE | TRUE |
+| Bashkir | TRUE | TRUE |
+| Basque | TRUE | TRUE |
+| Belarusian | TRUE | TRUE |
+| Bulgarian | TRUE | TRUE |
+| Chuvash | TRUE | TRUE |
+| Croatian | TRUE | TRUE |
+| Czech | TRUE | TRUE |
+| Dutch | TRUE | TRUE |
+| English | TRUE | TRUE |
+| French | TRUE | TRUE |
+| Georgian | TRUE | TRUE |
+| German | TRUE | TRUE |
+| Greek | TRUE | TRUE |
+| Guarani | TRUE | TRUE |
+| Hausa | TRUE | TRUE |
+| Hungarian | TRUE | TRUE |
+| Italian | TRUE | FALSE |
+| Japanese | FALSE | TRUE |
+| Kazakh | TRUE | TRUE |
+| Korean | TRUE | TRUE |
+| Kurmanji | TRUE | TRUE |
+| Kyrgyz | TRUE | TRUE |
+| Maltese | FALSE | TRUE |
+| Mandarin | TRUE | TRUE |
+| Polish | TRUE | TRUE |
+| Portuguese | TRUE | TRUE |
+| Punjabi | FALSE | TRUE |
+| Romanian | TRUE | TRUE |
+| Russian | TRUE | TRUE |
+| Sorbian | TRUE | TRUE |
+| Spanish | TRUE | TRUE |
+| Swahili | TRUE | TRUE |
+| Swedish | TRUE | TRUE |
+| Tamil | TRUE | TRUE |
+| Tatar | TRUE | TRUE |
+| Thai | TRUE | TRUE |
+| Turkish | TRUE | TRUE |
+| Ukranian | TRUE | TRUE |
+| Urdu | FALSE | TRUE |
+| Uyghur | TRUE | TRUE |
+| Uzbek | TRUE | TRUE |
+| Vietnamese | TRUE | TRUE |
+
+To download an acoustic model to your local computer, first make sure that you have activated the `aligner` environment. Then run the command `mfa model download acoustic <name of acoustic model>`. Likewise, to download a pronouncing dictionary, run the command `mfa model download dictinoary <name of pronouncing dictionary>`.
+
+**Activity 3:** Since our audio files are for American English, we will need to download one of the American English acoustic models and one of the American English pronouncing dictionaries. The name of both of these are `english_us_arpa`. Use the commands described above to download both of them to your local machine. They should end up in `Documents/MFA/pretrained_models`. In the `dictionary/` sub-folder you should see the file `english_us_arpa.dict`. Open this file in a text editor because we will edit it later and it's good to have an idea of what it looks like. If you are unfamiliar with ARPABET transcription, you can read more about it [here](https://en.wikipedia.org/wiki/ARPABET). These transcriptions use the 2-letter version. 
+
+# 5. Running the Aligner
+
+Now that we have our files in the correct format, and our acoustic model and pronouncing dictionary, we can now actually get to the main event: doing the forced alignment! Before we actually do that, though, we can run a verification command that checks to make sure that everything is correctly set up. The command for this is: `mfa validate <path to corpus> <name of acoustic model> <name of pronouncing dictionary>`.
+
+**Activity 4:** Run the `validate` command on our first corpus. It takes ~40 seconds to run on my computer. It will give you some information in the console. One thing it will tell you is that there are some OOV words. OOV stands for **o**ut **o**f **v**ocabulary. This means that the word it is trying to align does not have a pronunciation in the dictionary. We will ignore this for now, but later I will show you how to add new words to the pronouncing dictionaries. 
+
+The command to run the aligner is quite similar. The only thing we need to do is add an output directory where the output files (Praat TextGrids) will do. The command to do alignment is `mfa align <path to corpus> <name of acoustic model> <name of pronouncing dictionary> <path to output folder>. In the past I have had to create an output directory before running this command, but while preparing for this workshop I noticed it seemed to automatically create one if I just gave a path in the command. So it may be a new feature, I don't know for sure YMMV. 
+
+**Activity 5:** Run the `align` command on our first corpus. It should once again take ~40 seconds. Once you are finished. Navigate to your corpus and output directories, and open the corresponding `.wav` and `.TextGrid` files in Praat. In one of the files for each speaker, you should notice that the word was not transcribed. This is unsurprising since we already knew we had an OOV item. Navigate to the `english_us_arpa.dict` file and open it in a text editor. We can add words by providing the orthographic form, a tab, then an ARPABET transcription with spaces in between each segment. In this file, you will also see 4 numbers. We can ignore these. They refer to various probabilities and will be given default values if we don't provide anything. Add the line `skornash   S K OW1 R N AA0 SH` to the dictionary file and then save it. Run the `align` command again, but this time add the `--clean` tag to the end. This will ensure that the previous alignment files are deleted. If they don't get deleted it will not run properly. If you re-open the `.wav` and `.TextGrid` files you should see that there is now a transcription and alignment for the problematic word.
+
+**Activity 6:** run the `align` command on the second corpus. Note, here you provide a `.TextGrid` file in the input and get a `.TextGrid` file in your output. So make sure you open the correct file when looking to see the finished product.
+
+# 6. A general note about forced alignment
+
+It is important to remember that using forced aligners is not a replacement for segmenting by hand. It's best used as a first pass that you should then look over to make sure everything is in the right place. That being said, it is much easier to *move* Praat TextGrid boundaries around than it is to *create* them. So using a forced aligner still saves **a lot** of time. But remember...never assume that you don't have to check the output. You can, and certainly will, get burned. 
+
+
+
