@@ -13,10 +13,10 @@
 
 <title>Introduction to Praat</title>
 
-<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -141,11 +141,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -174,8 +178,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -183,16 +187,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -241,19 +238,11 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">My Website</a>
+      <a class="navbar-brand" href="index.html">Scott Nelson</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">Home</a>
-</li>
-<li>
-  <a href="research.html">Research</a>
-</li>
-<li>
-  <a href="teaching.html">Teaching</a>
-</li>
+        
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -274,48 +263,156 @@ $(document).ready(function () {
 <hr />
 <div id="overview" class="section level1">
 <h1>1. Overview</h1>
-<p>Praat (pronounced /pɹɑt/) is a free, open-source program created by Paul Boersma and David Weenink at the University of Amsterdam. It has many functions, but is primarily used to analyze speech. This site provides basic information on how to get started using Praat for linguistic research. Along the way we will do three basic acoustic analyses: measuring vowel formants, voice onset time (VOT), and pitch values. I will assume a basic understanding of these concepts. If you are interested in learning more about acoustic (linguistic) phonetics I recommend reading <a href="https://www.wiley.com/en-us/Acoustic+and+Auditory+Phonetics%2C+3rd+Edition-p-9781444343083">this book</a> by Keith Johnson, <a href="https://press.uchicago.edu/ucp/books/book/chicago/E/bo3683670.html">this book</a> by Peter Ladefoged, or, if you are really ambitious, <a href="https://mitpress.mit.edu/books/acoustic-phonetics">this book</a> by Ken Stevens.</p>
+<p>Praat (pronounced /pɹɑt/) is a free, open-source program created by
+Paul Boersma and David Weenink at the University of Amsterdam. It has
+many functions, but is primarily used to analyze speech. This site
+provides basic information on how to get started using Praat for
+linguistic research. Along the way we will do three basic acoustic
+analyses: measuring vowel formants, voice onset time (VOT), and pitch
+values. I will assume a basic understanding of these concepts. If you
+are interested in learning more about acoustic (linguistic) phonetics I
+recommend reading <a
+href="https://www.wiley.com/en-us/Acoustic+and+Auditory+Phonetics%2C+3rd+Edition-p-9781444343083">this
+book</a> by Keith Johnson, <a
+href="https://press.uchicago.edu/ucp/books/book/chicago/E/bo3683670.html">this
+book</a> by Peter Ladefoged, or, if you are really ambitious, <a
+href="https://mitpress.mit.edu/books/acoustic-phonetics">this book</a>
+by Ken Stevens.</p>
 <hr />
 </div>
 <div id="installation" class="section level1">
 <h1>2. Installation</h1>
-<p>To install Praat, go to <a href="https://www.fon.hum.uva.nl/praat/">praat.org</a> and click on the link in the top left corner corresponding to your operating system. This will bring you to a page that will guide you through the installation process.</p>
+<p>To install Praat, go to <a
+href="https://www.fon.hum.uva.nl/praat/">praat.org</a> and click on the
+link in the top left corner corresponding to your operating system. This
+will bring you to a page that will guide you through the installation
+process.</p>
 <hr />
 </div>
-<div id="recording-sounds-and-working-with-sound-files" class="section level1">
+<div id="recording-sounds-and-working-with-sound-files"
+class="section level1">
 <h1>3. Recording sounds and working with sound files</h1>
-<p>When you first open Praat you will see two windows. One will be called <code>Praat Objects</code> and the other will be called <code>Praat Pictures</code>. We will ignore the <code>Praat Pictures</code> window for now. In the <code>Praat Objects</code> window you should see a big white box that says “Objects:”. There should be nothing in there as of right now. The most important type of object is a <code>Sound</code> object. Let’s start by learning how to record sounds directly into Praat.</p>
+<p>When you first open Praat you will see two windows. One will be
+called <code>Praat Objects</code> and the other will be called
+<code>Praat Pictures</code>. We will ignore the
+<code>Praat Pictures</code> window for now. In the
+<code>Praat Objects</code> window you should see a big white box that
+says “Objects:”. There should be nothing in there as of right now. The
+most important type of object is a <code>Sound</code> object. Let’s
+start by learning how to record sounds directly into Praat.</p>
 <ol style="list-style-type: decimal">
-<li>At the top of the <code>Praat Objects</code> window click <code>New &gt; Record mono Sound...</code>.</li>
+<li>At the top of the <code>Praat Objects</code> window click
+<code>New &gt; Record mono Sound...</code>.</li>
 <li>A new window called <code>SoundRecorder</code> should now pop up.
 <ul>
-<li>If you have a microphone of some type plugged in, you can make sure it is being used as the audio capture device by making sure it is selected under “Input source:”.</li>
-<li>You can also change the sampling frequency if necessary. It defaults to 44.1 KHz.</li>
+<li>If you have a microphone of some type plugged in, you can make sure
+it is being used as the audio capture device by making sure it is
+selected under “Input source:”.</li>
+<li>You can also change the sampling frequency if necessary. It defaults
+to 44.1 KHz.</li>
 </ul></li>
-<li>To actually record a sound you can click the <code>Record</code> button. When finished, click <code>Stop</code>.</li>
-<li>You can listen back to what you just recorded by clicking <code>Play</code>.</li>
-<li>If you are satisfied with the recording, you can label the recording by typing in the box to the right of “Name:”. After doing so, you can click <code>Save to list</code> which will save your current recording to the <code>Praat Objects</code> window and allow you to make another recording or click <code>Save to list &amp; Close</code> which will save your current recording to the <code>Praat Objects</code> window and exit out of the <code>SoundRecorder</code> window.</li>
+<li>To actually record a sound you can click the <code>Record</code>
+button. When finished, click <code>Stop</code>.</li>
+<li>You can listen back to what you just recorded by clicking
+<code>Play</code>.</li>
+<li>If you are satisfied with the recording, you can label the recording
+by typing in the box to the right of “Name:”. After doing so, you can
+click <code>Save to list</code> which will save your current recording
+to the <code>Praat Objects</code> window and allow you to make another
+recording or click <code>Save to list &amp; Close</code> which will save
+your current recording to the <code>Praat Objects</code> window and exit
+out of the <code>SoundRecorder</code> window.</li>
 </ol>
-<p>In the <code>Praat Objects</code> window you should now see <code>1. Sound &lt;name of sound object&gt;</code>. You can ignore the numbering. Every time a new object is added to the list during a single Praat session that number increases by 1. This means that the same file can technically show up with different numbers at different times. We can see how that is the case by saving our sound file, removing it from the <code>Praat Objects</code> window and then loading the file back into our workspace. To save a <code>Sound</code> object you can click <code>Save &gt; Save as WAV file...</code>. There are other file formats available for saving audio, but WAV is pretty much the universal standard for our purposes. Save the recording you made somewhere on your computer where it will be easy to find.</p>
-<p>Once you are back at the <code>Praat Objects</code> window click on the <code>Sound</code> object. In the bottom left corner there is a button that says <code>Remove</code>. Click this to remove the recording. The “Objects:” box should now be empty like it was when you first opened Praat. Let’s now add our recording back into the <code>Praat Objects</code> window. At the top, click <code>Open &gt; Read from file...</code>. Open the sound we previously recorded by navigating to where you saved it on your computer. The <code>Praat Objects</code> window should now show <code>2. Sound &lt;name of sound object&gt;</code> (notice the incremented number).</p>
-<p>You can also work with sound files that were not recorded using Praat. For these types of files, you can open them directly from wherever they are saved on your computer.</p>
+<p>In the <code>Praat Objects</code> window you should now see
+<code>1. Sound &lt;name of sound object&gt;</code>. You can ignore the
+numbering. Every time a new object is added to the list during a single
+Praat session that number increases by 1. This means that the same file
+can technically show up with different numbers at different times. We
+can see how that is the case by saving our sound file, removing it from
+the <code>Praat Objects</code> window and then loading the file back
+into our workspace. To save a <code>Sound</code> object you can click
+<code>Save &gt; Save as WAV file...</code>. There are other file formats
+available for saving audio, but WAV is pretty much the universal
+standard for our purposes. Save the recording you made somewhere on your
+computer where it will be easy to find.</p>
+<p>Once you are back at the <code>Praat Objects</code> window click on
+the <code>Sound</code> object. In the bottom left corner there is a
+button that says <code>Remove</code>. Click this to remove the
+recording. The “Objects:” box should now be empty like it was when you
+first opened Praat. Let’s now add our recording back into the
+<code>Praat Objects</code> window. At the top, click
+<code>Open &gt; Read from file...</code>. Open the sound we previously
+recorded by navigating to where you saved it on your computer. The
+<code>Praat Objects</code> window should now show
+<code>2. Sound &lt;name of sound object&gt;</code> (notice the
+incremented number).</p>
+<p>You can also work with sound files that were not recorded using
+Praat. For these types of files, you can open them directly from
+wherever they are saved on your computer.</p>
 <hr />
 </div>
 <div id="viewing-spectrograms" class="section level1">
 <h1>4. Viewing Spectrograms</h1>
-<p>One way to do acoustic analysis of speech is by visual interpreting a spectrogram. A spectrogram is a visual picture of the speech signal. The x-axis corresponds to time, the y-axis corresponds to frequency (Hz), and the z-axis (represented as darkness level) corresponds to amplitude.</p>
-<p>To view a spectrogram of a <code>Sound</code> object, first select the object you want to view in the <code>Praat Objects</code> window. Once it is selected, a number of buttons should appear on the right side of the window. Select <code>View &amp; Edit</code>. After doing so, a window called <code>&lt;object number&gt; Sound &lt;name of sound object&gt;</code> will appear. The top half of this window contains the waveform. A waveform is the overall amplitude change over time. The bottom half of the window contains the actual spectrogram. It should look something like the image below. <br></br></p>
+<p>One way to do acoustic analysis of speech is by visual interpreting a
+spectrogram. A spectrogram is a visual picture of the speech signal. The
+x-axis corresponds to time, the y-axis corresponds to frequency (Hz),
+and the z-axis (represented as darkness level) corresponds to
+amplitude.</p>
+<p>To view a spectrogram of a <code>Sound</code> object, first select
+the object you want to view in the <code>Praat Objects</code> window.
+Once it is selected, a number of buttons should appear on the right side
+of the window. Select <code>View &amp; Edit</code>. After doing so, a
+window called
+<code>&lt;object number&gt; Sound &lt;name of sound object&gt;</code>
+will appear. The top half of this window contains the waveform. A
+waveform is the overall amplitude change over time. The bottom half of
+the window contains the actual spectrogram. It should look something
+like the image below. <br></br></p>
 <center>
 <img src="Praat/NameSpectrogram.png" />
 </center>
-<br></br> The default spectrogram settings <a href="https://twitter.com/lisa_b_davidson/status/698249575317032960">are not always ideal</a>. You can change the settings by clicking <code>Spectrum &gt; Spectrogram settings...</code>. This will cause a window called <code>Spectrogram settings</code> to pop up. I usually change the view range by adjusting the right box next to “View range (Hz):” from 5000 to 7500. I also change the dynamic range by adjusting the box to the right of “Dynamic range (dB):” from 70 to 50. If you mess around with the settings and suddenly things start looking strange, you can always click the <code>Standards</code> button on the bottom of the window to reset all the parameters to their default settings. If you would like to see what the settings would look like before leaving the <code>Spectrogram settings</code> window you can click <code>Apply</code>. As long as the <code>&lt;object number&gt; Sound &lt;name of sound object&gt;</code> window is still visible you can see the changes in real time. Once you change the settings you can click <code>OK</code> to get rid of the <code>Spectrogram settings</code> window. The updated version of the spectrogram is shown below. <br></br>
+<br></br> The default spectrogram settings <a
+href="https://twitter.com/lisa_b_davidson/status/698249575317032960">are
+not always ideal</a>. You can change the settings by clicking
+<code>Spectrum &gt; Spectrogram settings...</code>. This will cause a
+window called <code>Spectrogram settings</code> to pop up. I usually
+change the view range by adjusting the right box next to “View range
+(Hz):” from 5000 to 7500. I also change the dynamic range by adjusting
+the box to the right of “Dynamic range (dB):” from 70 to 50. If you mess
+around with the settings and suddenly things start looking strange, you
+can always click the <code>Standards</code> button on the bottom of the
+window to reset all the parameters to their default settings. If you
+would like to see what the settings would look like before leaving the
+<code>Spectrogram settings</code> window you can click
+<code>Apply</code>. As long as the
+<code>&lt;object number&gt; Sound &lt;name of sound object&gt;</code>
+window is still visible you can see the changes in real time. Once you
+change the settings you can click <code>OK</code> to get rid of the
+<code>Spectrogram settings</code> window. The updated version of the
+spectrogram is shown below. <br></br>
 <center>
 <img src="Praat/NameSpectrogram2.png" />
 </center>
-<p><br></br> There are a few other things we can do that may help with our interpretation of the spectrogram. These are listed below.</p>
+<p><br></br> There are a few other things we can do that may help with
+our interpretation of the spectrogram. These are listed below.</p>
 <div id="formants" class="section level2">
 <h2>Formants</h2>
-Formants are the de facto method for measuring basic vowel quality. Specifically, the first two formants (F1 and F2). Trained phoneticians can often eyeball the location of the formants, but Praat has an algorithm for determining a formant value at any location and will show this if prompted. At the top of the <code>&lt;object number&gt; Sound &lt;name of sound object&gt;</code> window click <code>Formant &gt; Show formants</code>. You should see a bunch of red dots appear, forming lines throughout the spectrogram. Determining which line corresponds with F1 and F2 is done by counting up from the bottom. F1 is the first line starting from 0 Hz, F2 is the second line,, and so on. You can determine the F1 and F2 values at a given time by clicking on the red dot/line for the formant. A red number on the left hand side will show you the value. The image below shows an example of what your window should look like. To get rid of the formant tracking, click <code>Formant &gt; Show formants</code> again and they should disappear. <br></br>
+Formants are the de facto method for measuring basic vowel quality.
+Specifically, the first two formants (F1 and F2). Trained phoneticians
+can often eyeball the location of the formants, but Praat has an
+algorithm for determining a formant value at any location and will show
+this if prompted. At the top of the
+<code>&lt;object number&gt; Sound &lt;name of sound object&gt;</code>
+window click <code>Formant &gt; Show formants</code>. You should see a
+bunch of red dots appear, forming lines throughout the spectrogram.
+Determining which line corresponds with F1 and F2 is done by counting up
+from the bottom. F1 is the first line starting from 0 Hz, F2 is the
+second line,, and so on. You can determine the F1 and F2 values at a
+given time by clicking on the red dot/line for the formant. A red number
+on the left hand side will show you the value. The image below shows an
+example of what your window should look like. To get rid of the formant
+tracking, click <code>Formant &gt; Show formants</code> again and they
+should disappear. <br></br>
 <center>
 <img src="Praat/NameSpectrogramFormants.png" />
 </center>
@@ -323,7 +420,20 @@ Formants are the de facto method for measuring basic vowel quality. Specifically
 </div>
 <div id="pitch" class="section level2">
 <h2>Pitch</h2>
-<p>Pitch can be used for different types of acoustic analysis. For example, you may want to look at the pitch pattern over an entire phrase if you are studying the prosody of a language. Or, if you are interested in the tonal properties of a language, you can look at the pitch location and shape over a single tone bearing unit. To visualize the pitch, click <code>Pitch &gt; Show pitch</code>. This time, a blue line should appear on the spectrogram. You can see what the exact pitch value is at any given time by clicking at a specific time on the spectrogram. If pitch can be calculated at that moment, you will see a blue number appear on the right side of the spectrogram. If pitch can’t be calculated, you will only see the 75 Hz and 500 Hz limits. The image below shows an example of what your window should look like. To get rid of the pitch tracking, click <code>Pitch &gt; Show pitch</code> again and it should disappear.</p>
+<p>Pitch can be used for different types of acoustic analysis. For
+example, you may want to look at the pitch pattern over an entire phrase
+if you are studying the prosody of a language. Or, if you are interested
+in the tonal properties of a language, you can look at the pitch
+location and shape over a single tone bearing unit. To visualize the
+pitch, click <code>Pitch &gt; Show pitch</code>. This time, a blue line
+should appear on the spectrogram. You can see what the exact pitch value
+is at any given time by clicking at a specific time on the spectrogram.
+If pitch can be calculated at that moment, you will see a blue number
+appear on the right side of the spectrogram. If pitch can’t be
+calculated, you will only see the 75 Hz and 500 Hz limits. The image
+below shows an example of what your window should look like. To get rid
+of the pitch tracking, click <code>Pitch &gt; Show pitch</code> again
+and it should disappear.</p>
 <br></br>
 <center>
 <img src="Praat/NameSpectrogramPitch.png" />
@@ -332,7 +442,16 @@ Formants are the de facto method for measuring basic vowel quality. Specifically
 </div>
 <div id="intensity" class="section level2">
 <h2>Intensity</h2>
-The final thing you may want to visualize is the intensity. This is sometimes useful for determining where one segment may start or end. It also corresponds with the wave form in the top of the window, but is still helpful in my opinion. To visualize the intensity click <code>Intensity &gt; Show intensity</code>. If you click anywhere on the spectrogram, if the intensity value is greater than 50 dB you will see a green number appear on the right hand side. Otherwise, you will see the 50 dB and 100 dB limits. To get rid of the intensity tracking, click <code>Intensity &gt; Show intensity</code> again and it should disappear. <br></br>
+The final thing you may want to visualize is the intensity. This is
+sometimes useful for determining where one segment may start or end. It
+also corresponds with the wave form in the top of the window, but is
+still helpful in my opinion. To visualize the intensity click
+<code>Intensity &gt; Show intensity</code>. If you click anywhere on the
+spectrogram, if the intensity value is greater than 50 dB you will see a
+green number appear on the right hand side. Otherwise, you will see the
+50 dB and 100 dB limits. To get rid of the intensity tracking, click
+<code>Intensity &gt; Show intensity</code> again and it should
+disappear. <br></br>
 <center>
 <img src="Praat/NameSpectrogramIntensity.png" />
 </center>
@@ -342,29 +461,108 @@ The final thing you may want to visualize is the intensity. This is sometimes us
 </div>
 <div id="textgrids" class="section level1">
 <h1>5. TextGrids</h1>
-<p>TextGrids in Praat are another type of object in Praat. These are used to annotate the spectrogram. To create a TextGrid, first select the <code>Sound</code> object you want to annotate, then click <code>Annotate - &gt; To TextGrid...</code> on the right hand side of the <code>Praat Objects</code> window. This will cause a new window to pop up named <code>Sound: To TextGrid</code>. In the top box next to “All tier names:” you can type in the name of the tiers you want to add. You can separate each tier with a space. For our purposes I will create two tiers: “Word” and “Segment”. The bottom box next to “Which of these are point tiers?” can be left blank for now. The default type of tier is an <code>Interval tier</code> which has a starting and ending point. A <code>Point tier</code> is instead a single point. We will see how these work later.</p>
-After hitting <code>OK</code>, you should notice that there is a new object in the <code>Praat Objects</code> window called <code>&lt;object number&gt; TextGrid &lt;name of TextGrid object&gt;</code>. You can view a TextGrid on its own, but this is ultimately not helpful. To view it with the spectrogram, make sure that both the <code>Sound</code> object and the <code>TextGrid</code> object are selected. Once they are both selected, click <code>View &amp; Edit</code> on the right hand side of the <code>Praat Objects</code> window. The spectrogram window will pop up again but this time it will look a little different. Below the spectrogram there are two rows that correspond to the tiers of the TextGrid and on the right hand side you should see a bunch of IPA symbols. These are for entering IPA symbols while labeling your tiers. Praat does kind of weird stuff with IPA symbols so I recommend not using these and instead entering them with your IPA keyboard. You can also get rid of the IPA symbols completely by clicking <code>File &gt; Preferences...</code> and then un check the box next to “Show IPA chart”. Click <code>OK</code> and the IPA symbols should go away. It should now look like the picture below. <br></br>
+<p>TextGrids in Praat are another type of object in Praat. These are
+used to annotate the spectrogram. To create a TextGrid, first select the
+<code>Sound</code> object you want to annotate, then click
+<code>Annotate - &gt; To TextGrid...</code> on the right hand side of
+the <code>Praat Objects</code> window. This will cause a new window to
+pop up named <code>Sound: To TextGrid</code>. In the top box next to
+“All tier names:” you can type in the name of the tiers you want to add.
+You can separate each tier with a space. For our purposes I will create
+two tiers: “Word” and “Segment”. The bottom box next to “Which of these
+are point tiers?” can be left blank for now. The default type of tier is
+an <code>Interval tier</code> which has a starting and ending point. A
+<code>Point tier</code> is instead a single point. We will see how these
+work later.</p>
+After hitting <code>OK</code>, you should notice that there is a new
+object in the <code>Praat Objects</code> window called
+<code>&lt;object number&gt; TextGrid &lt;name of TextGrid object&gt;</code>.
+You can view a TextGrid on its own, but this is ultimately not helpful.
+To view it with the spectrogram, make sure that both the
+<code>Sound</code> object and the <code>TextGrid</code> object are
+selected. Once they are both selected, click
+<code>View &amp; Edit</code> on the right hand side of the
+<code>Praat Objects</code> window. The spectrogram window will pop up
+again but this time it will look a little different. Below the
+spectrogram there are two rows that correspond to the tiers of the
+TextGrid and on the right hand side you should see a bunch of IPA
+symbols. These are for entering IPA symbols while labeling your tiers.
+Praat does kind of weird stuff with IPA symbols so I recommend not using
+these and instead entering them with your IPA keyboard. You can also get
+rid of the IPA symbols completely by clicking
+<code>File &gt; Preferences...</code> and then un check the box next to
+“Show IPA chart”. Click <code>OK</code> and the IPA symbols should go
+away. It should now look like the picture below. <br></br>
 <center>
 <img src="Praat/NameTextGrid.png" />
 </center>
 <p><br></br></p>
-Let’s populate our tiers now. First we can start with the “Word” tier. Here, we want to create intervals at the word level. For my recording, there will be two words: <strong>Scott</strong> and <strong>Nelson</strong>. There are a few different ways you can mark an interval on a tier. You can select a tier by clicking anywhere on it. The active tier should be yellow. Make sure that tier 1 (“Words”) is highlighted. Then click on the spectrogram a little bit before the beginning of the word. You should see a dashed red line marking where you’d like to place a boundary. Before marking it on the tier, it’s good practice to make sure that you are selecting a point at a zero-crossing. To do this, click <code>Select &gt; Move cursor to nearest zero crossing</code>. One way to create a boundary marker is by clicking the open circle on the desired tier. A second (and faster) way is to click <code>Enter</code> on your keyboard. This will create the boundary marker on the selected tier. Finally, you can click <code>Boundary &gt; Add on selected tier</code> or <code>Boundary &gt; Add on tier 1</code>. We can do the same thing for the end of the word. We now have an interval. You can do the same thing for other words on your recording. The same process can be used for the “Segment” tier, but now you just mark the start/stop points of the segments rather than the words. After completion you should get something that looks like the image below. <br></br>
+Let’s populate our tiers now. First we can start with the “Word” tier.
+Here, we want to create intervals at the word level. For my recording,
+there will be two words: <strong>Scott</strong> and
+<strong>Nelson</strong>. There are a few different ways you can mark an
+interval on a tier. You can select a tier by clicking anywhere on it.
+The active tier should be yellow. Make sure that tier 1 (“Words”) is
+highlighted. Then click on the spectrogram a little bit before the
+beginning of the word. You should see a dashed red line marking where
+you’d like to place a boundary. Before marking it on the tier, it’s good
+practice to make sure that you are selecting a point at a zero-crossing.
+To do this, click
+<code>Select &gt; Move cursor to nearest zero crossing</code>. One way
+to create a boundary marker is by clicking the open circle on the
+desired tier. A second (and faster) way is to click <code>Enter</code>
+on your keyboard. This will create the boundary marker on the selected
+tier. Finally, you can click
+<code>Boundary &gt; Add on selected tier</code> or
+<code>Boundary &gt; Add on tier 1</code>. We can do the same thing for
+the end of the word. We now have an interval. You can do the same thing
+for other words on your recording. The same process can be used for the
+“Segment” tier, but now you just mark the start/stop points of the
+segments rather than the words. After completion you should get
+something that looks like the image below. <br></br>
 <center>
 <img src="Praat/NameTextGridFilled.png" />
 </center>
 <p><br></br></p>
-<p>TextGrids can be saved from the <code>Praat Objects</code> window as well. Make sure that the TextGrid you want to save is highlighted and then click <code>Save &gt; Save as text file...</code>.</p>
+<p>TextGrids can be saved from the <code>Praat Objects</code> window as
+well. Make sure that the TextGrid you want to save is highlighted and
+then click <code>Save &gt; Save as text file...</code>.</p>
 </div>
 <div id="doing-a-basic-analysis" class="section level1">
 <h1>6. Doing a basic analysis</h1>
-<p>Now that you have a marked up recording, it is time to do an analysis. For a simple recording (like my name) it is possible to perform all the measurements by hand. With the recording of my name you could find the F1 and F2 values of all the vowels, measure the duration of stressed vs. unstressed vowels, find the peak intensity of a stressed /s/ vs. unstressed /s/ in onset, etc… Of course, on this small of a sample size, doing so would be little more than a fun exercise.</p>
-<p>It is much quicker, accurate (to the extent that Praat is accurate), and scalable if you automate your analysis. Praat has a built in scripting system that allows you to write custom scripts. We don’t have time and not everyone enjoys coding so I will not go through how to <em>write</em> a Praat script here, but you should know how to <em>run</em> a Praat script as it will save you lots of time!</p>
-<p>If you are interested in learning how to write your own scripts in Praat I would suggest <a href="https://praatscripting.lingphon.net">this tutorial</a> or <a href="http://praatscriptingtutorial.com/default">this tutorial</a>. There is also a built in tutorial in the Praat help menu, but I have always found it to be lacking.</p>
-<p>There are many places to find custom scripts online. Some people who I have borrowed from include <a href="https://github.com/stylerw/styler_praat_scripts">Will Style</a>, <a href="http://www.mattwinn.com/praat.html">Matt Winn</a>, and <a href="https://www.acsu.buffalo.edu/~cdicanio/scripts.html">Christian DiCanio</a>. There are plenty more out there.</p>
-<p>For this tutorial we will use two scripts that I wrote. We will use them to analyze vowel and VOT data from the Takestani dialect of Southern Tati. This is data that was gathered as part of a Field Methods course at Stony Brook University during the Spring 2022 semester.</p>
+<p>Now that you have a marked up recording, it is time to do an
+analysis. For a simple recording (like my name) it is possible to
+perform all the measurements by hand. With the recording of my name you
+could find the F1 and F2 values of all the vowels, measure the duration
+of stressed vs. unstressed vowels, find the peak intensity of a stressed
+/s/ vs. unstressed /s/ in onset, etc… Of course, on this small of a
+sample size, doing so would be little more than a fun exercise.</p>
+<p>It is much quicker, accurate (to the extent that Praat is accurate),
+and scalable if you automate your analysis. Praat has a built in
+scripting system that allows you to write custom scripts. We don’t have
+time and not everyone enjoys coding so I will not go through how to
+<em>write</em> a Praat script here, but you should know how to
+<em>run</em> a Praat script as it will save you lots of time!</p>
+<p>If you are interested in learning how to write your own scripts in
+Praat I would suggest <a href="https://praatscripting.lingphon.net">this
+tutorial</a> or <a href="http://praatscriptingtutorial.com/default">this
+tutorial</a>. There is also a built in tutorial in the Praat help menu,
+but I have always found it to be lacking.</p>
+<p>There are many places to find custom scripts online. Some people who
+I have borrowed from include <a
+href="https://github.com/stylerw/styler_praat_scripts">Will Style</a>,
+<a href="http://www.mattwinn.com/praat.html">Matt Winn</a>, and <a
+href="https://www.acsu.buffalo.edu/~cdicanio/scripts.html">Christian
+DiCanio</a>. There are plenty more out there.</p>
+<p>For this tutorial we will use two scripts that I wrote. We will use
+them to analyze vowel and VOT data from the Takestani dialect of
+Southern Tati. This is data that was gathered as part of a Field Methods
+course at Stony Brook University during the Spring 2022 semester.</p>
 <div id="part-1-vowel-analysis" class="section level2">
 <h2>Part 1: Vowel Analysis</h2>
-<p>To begin, download the <a href="Praat/Vowels.zip">data</a> and the <a href="Praat/vowelData.praat">script</a>. Unzip the folder to find individual WAV and TextGrid files for ~ 25 words.</p>
+<p>To begin, download the <a href="Praat/Vowels.zip">data</a> and the <a
+href="Praat/vowelData.praat">script</a>. Unzip the folder to find
+individual WAV and TextGrid files for ~ 25 words.</p>
 </div>
 </div>
 

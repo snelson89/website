@@ -1,11 +1,4 @@
-name: "my-website"
+name: "Scott Nelson"
 navbar:
-  title: "My Website"
-  left:
-    - text: "Home"
-      href: index.html
-    - text: "Research"
-      href: research.html
-    - text: "Teaching"
-      href: teaching.html
+  title: "Scott Nelson"
 output_dir: "."

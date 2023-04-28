@@ -1,5 +1,8 @@
 ---
 title: "Introduction to Praat"
+output: 
+  html_document: 
+    theme: cosmo
 ---
 
 *** 

@@ -1,5 +1,8 @@
 ---
 title: "Introduction to Montreal Forced Aligner"
+output: 
+  html_document: 
+    theme: cosmo
 ---
 
 ***
