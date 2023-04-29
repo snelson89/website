@@ -1,0 +1,17 @@
+---
+title: "Statistics Workshop Summer 2023"
+output: 
+  html_document: 
+    theme: cosmo
+---
+***
+
+**Instructor**: Scott Nelson
+
+**Course Meeting Time**: T/Th 1:30--3:45pm
+
+**Course Zoom link**: [https://stonybrook.zoom.us/j/4091340647](https://stonybrook.zoom.us/j/4091340647)
+
+**Office Hours**: By appointment (send me an [e-mail]((mailto:scott.nelson@stonybrook.edu)))
+
+***
