@@ -18,6 +18,7 @@ output:
 
 # Important Links
 
+- [Datacamp](https://www.datacamp.com)
 - [The R-Project](https://www.r-project.org)
 - [RStudio Desktop](https://posit.co/download/rstudio-desktop/)
 - [RStudio Cloud](https://login.rstudio.cloud)
