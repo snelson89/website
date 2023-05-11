@@ -1,5 +1,5 @@
 ---
-title: "Statistics Workshop Summer 2023"
+title: "Statistics Mini-Course Summer 2023"
 output: 
   html_document: 
     theme: cosmo
@@ -8,10 +8,46 @@ output:
 
 **Instructor**: Scott Nelson
 
-**Course Meeting Time**: T/Th 1:30--3:45pm
+**Course Meeting Time**: tbd
 
 **Course Zoom link**: [https://stonybrook.zoom.us/j/4091340647](https://stonybrook.zoom.us/j/4091340647)
 
 **Office Hours**: By appointment (send me an [e-mail]((mailto:scott.nelson@stonybrook.edu)))
 
 ***
+
+# Important Links
+
+- [The R-Project](https://www.r-project.org)
+- [RStudio Desktop](https://posit.co/download/rstudio-desktop/)
+- [RStudio Cloud](https://login.rstudio.cloud)
+
+***
+
+# Participants
+
+1. Sarah
+2. Steven
+3. Han
+4. Chia-Chi
+5. Michelle
+6. Grace
+7. Pardis
+8. Elizabeth
+9. Allison
+10. Felix
+11. Dwyer
+12. Logan
+13. Alexa?
+
+***
+
+# Schedule
+|Week|Day|Lessons|
+|:--:|:-:|:-----:|
+|1|tbd|Introduction to R, Introduction to the Tidyverse|
+|1|tbd|Introduction to Statistics in R, Foundations of Probability in R|
+|2|tbd|Introduction to Regresssion in R, Intermediate Regression in R|
+|2|tbd|Sampling in R, Hypothesis Testing in R|
+|3|tbd|Experimental Design in R, Hierarchical and Mixed Effect Models in R|
+|3|tbd|Fundamentals of Bayesian Data Analysis in R, Foundations of Inference in R|
