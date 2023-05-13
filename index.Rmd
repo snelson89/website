@@ -18,7 +18,13 @@ When I'm not doing linguistics, I like to {write,record,perform,listen to} music
 
 ## Specific Interests
 
-My interests broadly include phonology, phonetics, and speech perception. More specifically, I am interested in how the formal phonological system interacts with the sensory-motor system, the role of top-down knowledge in speech perception, and the computations and representations required to transform continuous speech data from/to discrete symbolic units. Because of the nature of the data, my research has involved both experimental and formal methods.
+Language production and perception involve many factors. My research seeks to explain how these different factors interact. Primarily, I am interested in how the formal phonological system interacts with the sensory-motor system. I take the perspective that this is best answered by looking into the computational and representational properties of the transformations between continuous speech data and discrete symbolic mental units. In general, there are three questions to be considered:
+
+1. How do we best characterize the output function? (production)
+2. How do we best characterize the input function? (perception)
+3. How do we best characterize the mental representations that mediate between the two?
+
+Because of the nature of the data, my research has involved both experimental and formal methods. I also work on model-theoretic phonology. In that domain I find myself consistently thinking about process interactions. Most of my abstracts contain some combination of the keywords: ``phonetics-phonology interface``, ``computation``, and ``model-theoretic phonology``.
 
 ## Publications
 
@@ -40,8 +46,9 @@ My interests broadly include phonology, phonetics, and speech perception. More s
 
 ### Under Review
 
--   Taherkhani, N. & **Nelson, S.** 2022 "Southern Tati: Takestani Dialect"
 -   **Nelson, S.** & Heinz, J. 2023 "The blueprint model of production"
+-   Taherkhani, N. & **Nelson, S.** 2022 "Southern Tati: Takestani Dialect"
+
 
 ### Other
 
@@ -135,7 +142,7 @@ I currently work as a teaching assistant in the Department of Linguistics at Sto
 ### Volunteer
 
 -   Stony Brook University Youth Camp in Computational Linguistics
-    -   Summer 2020
+    -   Summer 2020; Summer 2023
 -   Stony Brook School Linguistics Minicourse
     -   Winter 2022
 
