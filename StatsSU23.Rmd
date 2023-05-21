@@ -8,7 +8,7 @@ output:
 
 **Instructor**: Scott Nelson
 
-**Course Meeting Time**: tbd
+**Course Meeting Time**: 12:00--1:00pm T/F
 
 **Course Zoom link**: [https://stonybrook.zoom.us/j/4091340647](https://stonybrook.zoom.us/j/4091340647)
 
@@ -23,32 +23,44 @@ output:
 - [RStudio Desktop](https://posit.co/download/rstudio-desktop/)
 - [RStudio Cloud](https://login.rstudio.cloud)
 
+
 ***
 
-# Participants
+# Overview
 
-1. Sarah
-2. Steven
-3. Han
-4. Chia-Chi
-5. Michelle
-6. Grace
-7. Pardis
-8. Elizabeth
-9. Allison
-10. Felix
-11. Dwyer
-12. Logan
-13. Alexa?
+This minicourse will run for three weeks from May 21 to June 9. Individual lessons will be assigned using the website Datacamp which is an online learning platform. Each week we will on Monday and Friday from 12:00-1:00pm via Zoom to discuss and review the material. Completion of lessons is self-paced, but it is expected that the assigned lessons will be completed before the Zoom meetings. A list of topics and schedule is given below.
+
 
 ***
 
 # Schedule
 |Week|Day|Lessons|
 |:--:|:-:|:-----:|
-|1|tbd|Introduction to R, Introduction to the Tidyverse|
-|1|tbd|Introduction to Statistics in R, Foundations of Probability in R|
-|2|tbd|Introduction to Regresssion in R, Intermediate Regression in R|
-|2|tbd|Sampling in R, Hypothesis Testing in R|
-|3|tbd|Experimental Design in R, Hierarchical and Mixed Effect Models in R|
-|3|tbd|Fundamentals of Bayesian Data Analysis in R, Foundations of Inference in R|
+|1|5/23|Introduction to R, Introduction to the Tidyverse|
+|1|5/26|Introduction to Statistics in R, Foundations of Probability in R|
+|2|5/30|Introduction to Regresssion in R, Intermediate Regression in R|
+|2|6/2|Sampling in R, Hypothesis Testing in R|
+|3|6/6|Experimental Design in R, Hierarchical and Mixed Effect Models in R|
+|3|6/9|Fundamentals of Bayesian Data Analysis in R, Foundations of Inference in R|
+
+***
+
+# Further Reading
+
+### Linguistics Related Statistics Textbooks
+
+- [Statistics for Linguists: An Introduction Using R](https://www.routledge.com/Statistics-for-Linguists-An-Introduction-Using-R/Winter/p/book/9781138056091)
+- [Regression Modeling for Linguistic Data](https://mitpress.mit.edu/9780262045483/regression-modeling-for-linguistic-data/)
+  - [Free pdf](https://osf.io/3827m)
+  - [Older free online course notes](http://people.linguistics.mcgill.ca/~morgan/qmld-book/)
+  
+### General Statistics Textbooks
+
+- [All of Statistics](https://link.springer.com/book/10.1007/978-0-387-21736-9)
+- [Statistical Inference](https://www.cengage.com/c/statistical-inference-2e-casella/9780534243128/)
+- [Regression and Other Stories](https://www.cambridge.org/highereducation/books/regression-and-other-stories/DD20DD6C9057118581076E54E40C372C#overview)
+
+### Bayesian Statistics Textbooks
+
+- [Statistical Rethinking](https://www.routledge.com/Statistical-Rethinking-A-Bayesian-Course-with-Examples-in-R-and-STAN/McElreath/p/book/9780367139919)
+- [Doing Bayesian Data Analysis](https://www.elsevier.com/books/doing-bayesian-data-analysis/kruschke/978-0-12-405888-0)
