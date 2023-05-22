@@ -36,7 +36,7 @@ This minicourse will run for three weeks from May 21 to June 9. Individual lesso
 # Schedule
 |Week|Day|Lessons|
 |:--:|:-:|:-----:|
-|1|5/23|Introduction to R, Introduction to the Tidyverse|
+|1|[5/23](files/StatsSU23/Session1.R)|Introduction to R, Introduction to the Tidyverse|
 |1|5/26|Introduction to Statistics in R, Foundations of Probability in R|
 |2|5/30|Introduction to Regresssion in R, Intermediate Regression in R|
 |2|6/2|Sampling in R, Hypothesis Testing in R|
