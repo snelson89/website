@@ -37,7 +37,7 @@ This minicourse will run for three weeks from May 21 to June 9. Individual lesso
 |Week|Day|Lessons|R File|Zoom
 |:--:|:-:|:-----:|:----:|:--:
 |1|5/23|Introduction to R, Introduction to the Tidyverse|[Session1.R](files/StatsSU23/Session1.R)|[Session 1 Recording](https://stonybrook.zoom.us/rec/share/tBEX4MqYbH5V5AOCUzRzxRUQH4zJIyIiR187NpxXevcYEOdnAXyIJL1HcHTZ0COm.qOf-I0cJziGViGoS?startTime=1684857888000)
-|1|5/26|Introduction to Statistics in R, Foundations of Probability in R|
+|1|5/26|Introduction to Statistics in R, Foundations of Probability in R| [Session2.R](files/StatsSU23/Session2.R)
 |2|5/30|Introduction to Regresssion in R, Intermediate Regression in R|
 |2|6/2|Sampling in R, Hypothesis Testing in R|
 |3|6/6|Experimental Design in R, Hierarchical and Mixed Effect Models in R|
