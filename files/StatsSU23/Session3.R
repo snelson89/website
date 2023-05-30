@@ -213,13 +213,13 @@ col2 <- "#F8766D"
 
 # 24 #
 # plot the original data with geom_jitter and height=0.05#
-# sex can be plotted with as.numeric(sex) - 1 #
+# sex can be plotted with as.numeric(as.factor(sex)) - 1 #
 # use geom_line to plot the predicted data and make it red #
 
 
 
 # 25 #
-# add another column to the predictions that predicts the sex based on probability #
+# add another column to the original data frame that predicts the sex based on probability #
 
 
 
