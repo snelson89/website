@@ -1,0 +1,28 @@
+---
+title: "LIN 350 Summer 2023"
+output: 
+  html_document: 
+    theme: cosmo
+---
+
+**Instructor**: Scott Nelson
+
+**Course Meeting Time**: T/Th 9:30am--12:55pm
+
+**Course Zoom link**: [https://stonybrook.zoom.us/j/4091340647](https://stonybrook.zoom.us/j/4091340647)
+
+**Office Hours**: By appointment (send me an [e-mail]((mailto:scott.nelson@stonybrook.edu)))
+
+***
+
+# Important Links
+
+- [Brightspace](https://it.stonybrook.edu/services/brightspace)
+- [Syllabus](LIN405/405SyllabusSummer2021.pdf)
+- [Slack](https://join.slack.com/t/lin350summer2023/shared_invite/zt-1wlogdm2b-JtDb~jPe89ky1jLfmbZeUg)
+- [Presentation Sign-up]()
+
+***
+
+# Class Log
+
