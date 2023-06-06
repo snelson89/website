@@ -40,7 +40,7 @@ This minicourse will run for three weeks from May 21 to June 9. Individual lesso
 |1|5/26|Introduction to Statistics in R, Foundations of Probability in R| [Session2.R](files/StatsSU23/Session2.R)|[Session 2 Recording](https://stonybrook.zoom.us/rec/share/g0GKboAFb7nJL8TQ42yLA13rPrU_GdvyYGfPzAXUBZ9nvlx3U4pPAyH1Xd-_UhWt.GOPOoQV6mxcX8yYl?startTime=1685117093000)
 |2|5/30|Introduction to Regresssion in R, Intermediate Regression in R|[Session3.R](files/StatsSU23/Session3.R)|[Session 3 Recording](https://stonybrook.zoom.us/rec/share/q0vf_4gGgdQ9CtP1uwm8WINEvqIbrQcramp0e39Ui9iFSfN3yIVQZUdHu-cGfttk.8P_Wsk3fHgV0H-yX)
 |2|6/2|Sampling in R, Hypothesis Testing in R|[Session4.R](files/StatsSU23/Session4.R)|[Session 4 Recording](https://stonybrook.zoom.us/rec/share/hPU5BWDnanx-wZg2jHuyU_Wy9oyZY0TdTQu90BZsFydDFnrbcXpg7IXAdNAYwKtq.kppTqOISmSs-_v1d)
-|3|6/6|Experimental Design in R, Hierarchical and Mixed Effect Models in R|[Session5.R](files/StatsSU23/Session5.R)
+|3|6/6|Experimental Design in R, Hierarchical and Mixed Effect Models in R|[Session5.R](files/StatsSU23/Session5.R)|[Session 5 Recording](https://stonybrook.zoom.us/rec/share/U95gi4bwGa6bSTzl4KZYpwMFzIdfQ7yS16Lo8nxCIrehige6EwEBqeV5bL2YwLpf.MqiKxEOMWuwWI49J)
 |3|6/9|Fundamentals of Bayesian Data Analysis in R, Foundations of Inference in R|
 
 ***
