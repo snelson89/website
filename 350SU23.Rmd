@@ -19,7 +19,7 @@ output:
 
 - [Brightspace](https://it.stonybrook.edu/services/brightspace)
 - [Syllabus](LIN405/405SyllabusSummer2021.pdf)
-- [Slack](https://join.slack.com/t/lin350summer2023/shared_invite/zt-1wlogdm2b-JtDb~jPe89ky1jLfmbZeUg)
+- [Slack](https://lin350summer2023.slack.com)
 - [Presentation Sign-up]()
 
 ***
