@@ -41,7 +41,26 @@ This minicourse will run for three weeks from May 21 to June 9. Individual lesso
 |2|5/30|Introduction to Regresssion in R, Intermediate Regression in R|[Session3.R](files/StatsSU23/Session3.R)|[Session 3 Recording](https://stonybrook.zoom.us/rec/share/q0vf_4gGgdQ9CtP1uwm8WINEvqIbrQcramp0e39Ui9iFSfN3yIVQZUdHu-cGfttk.8P_Wsk3fHgV0H-yX)
 |2|6/2|Sampling in R, Hypothesis Testing in R|[Session4.R](files/StatsSU23/Session4.R)|[Session 4 Recording](https://stonybrook.zoom.us/rec/share/hPU5BWDnanx-wZg2jHuyU_Wy9oyZY0TdTQu90BZsFydDFnrbcXpg7IXAdNAYwKtq.kppTqOISmSs-_v1d)
 |3|6/6|Experimental Design in R, Hierarchical and Mixed Effect Models in R|[Session5.R](files/StatsSU23/Session5.R)|[Session 5 Recording](https://stonybrook.zoom.us/rec/share/U95gi4bwGa6bSTzl4KZYpwMFzIdfQ7yS16Lo8nxCIrehige6EwEBqeV5bL2YwLpf.MqiKxEOMWuwWI49J)
-|3|6/9|Fundamentals of Bayesian Data Analysis in R, Foundations of Inference in R|
+|3|6/9|Fundamentals of Bayesian Data Analysis in R, Foundations of Inference in R|[Session6.R](files/StatsSU23/Session6.R)
+
+***
+
+# Further Datacamp Suggestions
+
+You will have free access to all Datacamp courses until **Tuesday, November 21**. The following are some suggestions for what to do after completing the courses above.
+
+### Finish the 'Statistician with R' track 
+
+Almost all of the courses used for this minicourse were part of the 'Statistician with R' career track on Datacamp. Only three additional courses need to be taken to finish this track: Analyzing Survey Data in R, Survival Analysis in R, and Factor Analysis in R.
+
+### Start a new track 
+
+- The "Data Scientist with R" track consists of 22 courses. 8/22 overlap with the courses above. So you're already a third of a way towards completion. 
+- If you already know how to code in Python, there is a "Statistics Fundamentals with Python" track that consists of only 5 courses. 
+
+### Find a course that looks interesting
+
+If you search "statistics" on DataCamp, there are 16155 results. 96 of these are full courses. Look through the results and find a topic that looks interesting to you.
 
 ***
 
