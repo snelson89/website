@@ -7,7 +7,7 @@
 
 
 
-
+# P(A|B) = P(B|A) * P(A) / Sum(P(B|a in A)|P(a))
 
 
 
@@ -97,7 +97,7 @@ h95 <- read_csv("https://www.scott-nelson.net/data/StatsSU23/h95-ipa.csv") %>%
 # bayesian inference requires 3 things #
 # data, generative model, and priors #
 # our generative model is the one from above, with the prior probs2 #
-# grammatical = yes ~ binom(100,probs2) #
+# grammatical = yes ~ binom(n=100,p=probs2) #
 # probs2 ~ uniform(0.33,0.67) #
 # use rbinom and runif to simulate 100000 versions of running this grammaticality experiment #
 # save it as results1 #
@@ -188,11 +188,31 @@ h95 <- read_csv("https://www.scott-nelson.net/data/StatsSU23/h95-ipa.csv") %>%
 # use geom_point where x and y are mu and sigma, color by probability #
 # what can we take away from this?
 
+# dur ~ normal(mu,sigma) #
+# mu ~ normal(271,100) #
+# sigma ~ uniform(50,100) #
+
+summary(h95$dur)
+
+possible.mean <- seq(min(h95$dur),max(h95$dur),by=1)
+possible.sd <- seq(50,100,by=1)
+
+pars <- expand.grid(mean=possible.mean,sd=possible.sd)
+pars$mu_prior <- dnorm(pars$mean,mean=271,sd=100)
+pars$sd_prior <- dunif(pars$sd,min=50,100)
+pars$prior <- pars$mu_prior * pars$sd_prior
+
+dur <- round(h95$dur,0)
+
 for(i in 1:nrow(pars)){    
-  likelihoods <- dnorm(dur, pars$mu[i], pars$sigma[i])    
-  pars$likelihood[i]<- prod(likelihoods)
+  likelihoods <- dnorm(dur, pars$mean[i], pars$sd[i])    
+  pars$likelihood[i]<- sum(log(likelihoods))
 }
 
 pars$probability <- pars$likelihood * pars$prior
 pars$probability <- pars$probability /sum(pars$probability)
+
+ggplot(pars,aes(x=pars$mean,y=pars$sd,color=pars$probability)) +
+  geom_point() + scale_color_viridis_c()
+
 
