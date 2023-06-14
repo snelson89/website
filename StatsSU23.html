@@ -13,7 +13,7 @@
 
 <title>Statistics Mini-Course Summer 2023</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -60,7 +60,6 @@ if (window.hljs) {
 
 
 
-
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -81,9 +80,6 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
 }
 pre code {
   padding: 0;
@@ -141,15 +137,11 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -178,8 +170,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -187,9 +179,16 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
+  content: "&#xe258;";
   border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -233,7 +232,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -263,31 +262,22 @@ $(document).ready(function () {
 <hr />
 <p><strong>Instructor</strong>: Scott Nelson</p>
 <p><strong>Course Meeting Time</strong>: 12:00–1:00pm T/F</p>
-<p><strong>Course Zoom link</strong>: <a
-href="https://stonybrook.zoom.us/j/4091340647">https://stonybrook.zoom.us/j/4091340647</a></p>
-<p><strong>Office Hours</strong>: By appointment (send me an <a
-href="(mailto:scott.nelson@stonybrook.edu)">e-mail</a>)</p>
+<p><strong>Course Zoom link</strong>: <a href="https://stonybrook.zoom.us/j/4091340647">https://stonybrook.zoom.us/j/4091340647</a></p>
+<p><strong>Office Hours</strong>: By appointment (send me an <a href="(mailto:scott.nelson@stonybrook.edu)">e-mail</a>)</p>
 <hr />
 <div id="important-links" class="section level1">
 <h1>Important Links</h1>
 <ul>
 <li><a href="https://www.datacamp.com">Datacamp</a></li>
 <li><a href="https://www.r-project.org">The R-Project</a></li>
-<li><a href="https://posit.co/download/rstudio-desktop/">RStudio
-Desktop</a></li>
+<li><a href="https://posit.co/download/rstudio-desktop/">RStudio Desktop</a></li>
 <li><a href="https://login.rstudio.cloud">RStudio Cloud</a></li>
 </ul>
 <hr />
 </div>
 <div id="overview" class="section level1">
 <h1>Overview</h1>
-<p>This minicourse will run for three weeks from May 21 to June 9.
-Individual lessons will be assigned using the website Datacamp which is
-an online learning platform. Each week we will on Monday and Friday from
-12:00-1:00pm via Zoom to discuss and review the material. Completion of
-lessons is self-paced, but it is expected that the assigned lessons will
-be completed before the Zoom meetings. A list of topics and schedule is
-given below.</p>
+<p>This minicourse will run for three weeks from May 21 to June 9. Individual lessons will be assigned using the website Datacamp which is an online learning platform. Each week we will on Monday and Friday from 12:00-1:00pm via Zoom to discuss and review the material. Completion of lessons is self-paced, but it is expected that the assigned lessons will be completed before the Zoom meetings. A list of topics and schedule is given below.</p>
 <hr />
 </div>
 <div id="schedule" class="section level1">
@@ -314,65 +304,43 @@ given below.</p>
 <td align="center">1</td>
 <td align="center">5/23</td>
 <td align="center">Introduction to R, Introduction to the Tidyverse</td>
-<td align="center"><a
-href="files/StatsSU23/Session1.R">Session1.R</a></td>
-<td align="center"><a
-href="https://stonybrook.zoom.us/rec/share/tBEX4MqYbH5V5AOCUzRzxRUQH4zJIyIiR187NpxXevcYEOdnAXyIJL1HcHTZ0COm.qOf-I0cJziGViGoS?startTime=1684857888000">Session
-1 Recording</a></td>
+<td align="center"><a href="files/StatsSU23/Session1.R">Session1.R</a></td>
+<td align="center"><a href="https://stonybrook.zoom.us/rec/share/tBEX4MqYbH5V5AOCUzRzxRUQH4zJIyIiR187NpxXevcYEOdnAXyIJL1HcHTZ0COm.qOf-I0cJziGViGoS?startTime=1684857888000">Session 1 Recording</a></td>
 </tr>
 <tr class="even">
 <td align="center">1</td>
 <td align="center">5/26</td>
-<td align="center">Introduction to Statistics in R, Foundations of
-Probability in R</td>
-<td align="center"><a
-href="files/StatsSU23/Session2.R">Session2.R</a></td>
-<td align="center"><a
-href="https://stonybrook.zoom.us/rec/share/g0GKboAFb7nJL8TQ42yLA13rPrU_GdvyYGfPzAXUBZ9nvlx3U4pPAyH1Xd-_UhWt.GOPOoQV6mxcX8yYl?startTime=1685117093000">Session
-2 Recording</a></td>
+<td align="center">Introduction to Statistics in R, Foundations of Probability in R</td>
+<td align="center"><a href="files/StatsSU23/Session2.R">Session2.R</a></td>
+<td align="center"><a href="https://stonybrook.zoom.us/rec/share/g0GKboAFb7nJL8TQ42yLA13rPrU_GdvyYGfPzAXUBZ9nvlx3U4pPAyH1Xd-_UhWt.GOPOoQV6mxcX8yYl?startTime=1685117093000">Session 2 Recording</a></td>
 </tr>
 <tr class="odd">
 <td align="center">2</td>
 <td align="center">5/30</td>
-<td align="center">Introduction to Regresssion in R, Intermediate
-Regression in R</td>
-<td align="center"><a
-href="files/StatsSU23/Session3.R">Session3.R</a></td>
-<td align="center"><a
-href="https://stonybrook.zoom.us/rec/share/q0vf_4gGgdQ9CtP1uwm8WINEvqIbrQcramp0e39Ui9iFSfN3yIVQZUdHu-cGfttk.8P_Wsk3fHgV0H-yX">Session
-3 Recording</a></td>
+<td align="center">Introduction to Regresssion in R, Intermediate Regression in R</td>
+<td align="center"><a href="files/StatsSU23/Session3.R">Session3.R</a></td>
+<td align="center"><a href="https://stonybrook.zoom.us/rec/share/q0vf_4gGgdQ9CtP1uwm8WINEvqIbrQcramp0e39Ui9iFSfN3yIVQZUdHu-cGfttk.8P_Wsk3fHgV0H-yX">Session 3 Recording</a></td>
 </tr>
 <tr class="even">
 <td align="center">2</td>
 <td align="center">6/2</td>
 <td align="center">Sampling in R, Hypothesis Testing in R</td>
-<td align="center"><a
-href="files/StatsSU23/Session4.R">Session4.R</a></td>
-<td align="center"><a
-href="https://stonybrook.zoom.us/rec/share/hPU5BWDnanx-wZg2jHuyU_Wy9oyZY0TdTQu90BZsFydDFnrbcXpg7IXAdNAYwKtq.kppTqOISmSs-_v1d">Session
-4 Recording</a></td>
+<td align="center"><a href="files/StatsSU23/Session4.R">Session4.R</a></td>
+<td align="center"><a href="https://stonybrook.zoom.us/rec/share/hPU5BWDnanx-wZg2jHuyU_Wy9oyZY0TdTQu90BZsFydDFnrbcXpg7IXAdNAYwKtq.kppTqOISmSs-_v1d">Session 4 Recording</a></td>
 </tr>
 <tr class="odd">
 <td align="center">3</td>
 <td align="center">6/6</td>
-<td align="center">Experimental Design in R, Hierarchical and Mixed
-Effect Models in R</td>
-<td align="center"><a
-href="files/StatsSU23/Session5.R">Session5.R</a></td>
-<td align="center"><a
-href="https://stonybrook.zoom.us/rec/share/U95gi4bwGa6bSTzl4KZYpwMFzIdfQ7yS16Lo8nxCIrehige6EwEBqeV5bL2YwLpf.MqiKxEOMWuwWI49J">Session
-5 Recording</a></td>
+<td align="center">Experimental Design in R, Hierarchical and Mixed Effect Models in R</td>
+<td align="center"><a href="files/StatsSU23/Session5.R">Session5.R</a></td>
+<td align="center"><a href="https://stonybrook.zoom.us/rec/share/U95gi4bwGa6bSTzl4KZYpwMFzIdfQ7yS16Lo8nxCIrehige6EwEBqeV5bL2YwLpf.MqiKxEOMWuwWI49J">Session 5 Recording</a></td>
 </tr>
 <tr class="even">
 <td align="center">3</td>
 <td align="center">6/9</td>
-<td align="center">Fundamentals of Bayesian Data Analysis in R,
-Foundations of Inference in R</td>
-<td align="center"><a
-href="files/StatsSU23/Session6.R">Session6.R</a></td>
-<td align="center"><a
-href="https://stonybrook.zoom.us/rec/share/qlaMXDLRSoezfuEcwAZW8L5RHlec1DVuSuY21sCFnOgs4CakhdU2h6oLM_3DDFKA.hCDmNuBbWPX5h-i0">Session
-6 Recording</a></td>
+<td align="center">Fundamentals of Bayesian Data Analysis in R, Foundations of Inference in R</td>
+<td align="center"><a href="files/StatsSU23/Session6.R">Session6.R</a></td>
+<td align="center"><a href="https://stonybrook.zoom.us/rec/share/qlaMXDLRSoezfuEcwAZW8L5RHlec1DVuSuY21sCFnOgs4CakhdU2h6oLM_3DDFKA.hCDmNuBbWPX5h-i0">Session 6 Recording</a></td>
 </tr>
 </tbody>
 </table>
@@ -380,98 +348,65 @@ href="https://stonybrook.zoom.us/rec/share/qlaMXDLRSoezfuEcwAZW8L5RHlec1DVuSuY21
 </div>
 <div id="further-datacamp-suggestions" class="section level1">
 <h1>Further Datacamp Suggestions</h1>
-<p>You will have free access to all Datacamp courses until
-<strong>Tuesday, November 21</strong>. The following are some
-suggestions for what to do after completing the courses above.</p>
+<p>You will have free access to all Datacamp courses until <strong>Tuesday, November 21</strong>. The following are some suggestions for what to do after completing the courses above.</p>
 <div id="finish-the-statistician-with-r-track" class="section level3">
 <h3>Finish the ‘Statistician with R’ track</h3>
-<p>Almost all of the courses used for this minicourse were part of the
-‘Statistician with R’ career track on Datacamp. Only three additional
-courses need to be taken to finish this track: Analyzing Survey Data in
-R, Survival Analysis in R, and Factor Analysis in R.</p>
+<p>Almost all of the courses used for this minicourse were part of the ‘Statistician with R’ career track on Datacamp. Only three additional courses need to be taken to finish this track: Analyzing Survey Data in R, Survival Analysis in R, and Factor Analysis in R.</p>
 </div>
 <div id="start-a-new-track" class="section level3">
 <h3>Start a new track</h3>
 <ul>
-<li>The “Data Scientist with R” track consists of 22 courses. 8/22
-overlap with the courses above. So you’re already a third of a way
-towards completion.</li>
-<li>If you already know how to code in Python, there is a “Statistics
-Fundamentals with Python” track that consists of only 5 courses.</li>
+<li>The “Data Scientist with R” track consists of 22 courses. 8/22 overlap with the courses above. So you’re already a third of a way towards completion.</li>
+<li>If you already know how to code in Python, there is a “Statistics Fundamentals with Python” track that consists of only 5 courses.</li>
 </ul>
 </div>
 <div id="find-a-course-that-looks-interesting" class="section level3">
 <h3>Find a course that looks interesting</h3>
-<p>If you search “statistics” on DataCamp, there are 16155 results. 96
-of these are full courses. Look through the results and find a topic
-that looks interesting to you.</p>
+<p>If you search “statistics” on DataCamp, there are 16155 results. 96 of these are full courses. Look through the results and find a topic that looks interesting to you.</p>
 <hr />
 </div>
 </div>
 <div id="further-reading" class="section level1">
 <h1>Further Reading</h1>
-<div id="linguistics-related-statistics-textbooks"
-class="section level3">
+<div id="linguistics-related-statistics-textbooks" class="section level3">
 <h3>Linguistics Related Statistics Textbooks</h3>
 <ul>
-<li><a
-href="https://www.routledge.com/Statistics-for-Linguists-An-Introduction-Using-R/Winter/p/book/9781138056091">Statistics
-for Linguists: An Introduction Using R</a></li>
-<li><a
-href="https://mitpress.mit.edu/9780262045483/regression-modeling-for-linguistic-data/">Regression
-Modeling for Linguistic Data</a>
+<li><a href="https://www.routledge.com/Statistics-for-Linguists-An-Introduction-Using-R/Winter/p/book/9781138056091">Statistics for Linguists: An Introduction Using R</a></li>
+<li><a href="https://mitpress.mit.edu/9780262045483/regression-modeling-for-linguistic-data/">Regression Modeling for Linguistic Data</a>
 <ul>
 <li><a href="https://osf.io/3827m">Free pdf</a></li>
-<li><a
-href="http://people.linguistics.mcgill.ca/~morgan/qmld-book/">Older free
-online course notes</a></li>
+<li><a href="http://people.linguistics.mcgill.ca/~morgan/qmld-book/">Older free online course notes</a></li>
 </ul></li>
 </ul>
 </div>
 <div id="general-statistics-textbooks" class="section level3">
 <h3>General Statistics Textbooks</h3>
 <ul>
-<li><a
-href="https://link.springer.com/book/10.1007/978-0-387-21736-9">All of
-Statistics</a></li>
-<li><a
-href="https://www.cengage.com/c/statistical-inference-2e-casella/9780534243128/">Statistical
-Inference</a></li>
-<li><a
-href="https://www.cambridge.org/highereducation/books/regression-and-other-stories/DD20DD6C9057118581076E54E40C372C#overview">Regression
-and Other Stories</a></li>
+<li><a href="https://link.springer.com/book/10.1007/978-0-387-21736-9">All of Statistics</a></li>
+<li><a href="https://www.cengage.com/c/statistical-inference-2e-casella/9780534243128/">Statistical Inference</a></li>
+<li><a href="https://www.cambridge.org/highereducation/books/regression-and-other-stories/DD20DD6C9057118581076E54E40C372C#overview">Regression and Other Stories</a></li>
+<li><a href="https://www.pearson.com/en-us/subject-catalog/p/statistics-and-data-analysis-from-elementary-to-intermediate/P200000006374/9780137444267">Statistics and Data Analysis: From Elementary to Intermediate</a></li>
 </ul>
 </div>
 <div id="bayesian-statistics-textbooks" class="section level3">
 <h3>Bayesian Statistics Textbooks</h3>
 <ul>
-<li><a
-href="https://www.routledge.com/Statistical-Rethinking-A-Bayesian-Course-with-Examples-in-R-and-STAN/McElreath/p/book/9780367139919">Statistical
-Rethinking</a></li>
-<li><a
-href="https://www.elsevier.com/books/doing-bayesian-data-analysis/kruschke/978-0-12-405888-0">Doing
-Bayesian Data Analysis</a></li>
+<li><a href="https://www.routledge.com/Statistical-Rethinking-A-Bayesian-Course-with-Examples-in-R-and-STAN/McElreath/p/book/9780367139919">Statistical Rethinking</a></li>
+<li><a href="https://www.elsevier.com/books/doing-bayesian-data-analysis/kruschke/978-0-12-405888-0">Doing Bayesian Data Analysis</a></li>
 </ul>
 </div>
 <div id="journal-special-issues" class="section level3">
 <h3>Journal Special Issues</h3>
 <ul>
-<li><a
-href="https://www.sciencedirect.com/journal/journal-of-phonetics/special-issue/10357FT5MD0">Journal
-of Phonetics: Emerging Data Analysis in Phonetic Sciences</a></li>
-<li><a
-href="https://www.sciencedirect.com/journal/journal-of-memory-and-language/vol/59/issue/4">Journal
-of Memory and Language: Emerging Data Analysis</a></li>
+<li><a href="https://www.sciencedirect.com/journal/journal-of-phonetics/special-issue/10357FT5MD0">Journal of Phonetics: Emerging Data Analysis in Phonetic Sciences</a></li>
+<li><a href="https://www.sciencedirect.com/journal/journal-of-memory-and-language/vol/59/issue/4">Journal of Memory and Language: Emerging Data Analysis</a></li>
 </ul>
 </div>
 <div id="online-open-courses" class="section level3">
 <h3>Online Open Courses</h3>
 <ul>
-<li><a href="https://lakens.github.io/statistical_inferences/">Improving
-Your Statistical Inferences</a></li>
-<li><a
-href="https://michael-franke.github.io/intro-data-analysis/index.html">An
-Introduction to Data Analysis</a></li>
+<li><a href="https://lakens.github.io/statistical_inferences/">Improving Your Statistical Inferences</a></li>
+<li><a href="https://michael-franke.github.io/intro-data-analysis/index.html">An Introduction to Data Analysis</a></li>
 </ul>
 </div>
 </div>

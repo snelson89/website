@@ -78,6 +78,7 @@ If you search "statistics" on DataCamp, there are 16155 results. 96 of these are
 - [All of Statistics](https://link.springer.com/book/10.1007/978-0-387-21736-9)
 - [Statistical Inference](https://www.cengage.com/c/statistical-inference-2e-casella/9780534243128/)
 - [Regression and Other Stories](https://www.cambridge.org/highereducation/books/regression-and-other-stories/DD20DD6C9057118581076E54E40C372C#overview)
+- [Statistics and Data Analysis: From Elementary to Intermediate](https://www.pearson.com/en-us/subject-catalog/p/statistics-and-data-analysis-from-elementary-to-intermediate/P200000006374/9780137444267)
 
 ### Bayesian Statistics Textbooks
 
