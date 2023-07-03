@@ -41,5 +41,5 @@ output:
     + Watch the review of acoustic phonetics video
     + Watch the intro to Praat video
     + Review Chapters 1 & 2 and Appendix A of the course notes
-    + Complete and submit Lab 0; files [here](350/Labs/Lab0/)
+    + Complete and submit Lab 0; files [here](350/Labs/Lab0.zip)
 
