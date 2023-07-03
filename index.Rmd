@@ -6,7 +6,7 @@ output:
     theme: cosmo
 ---
 
-<img src="pics/me.jpg" alt="abstract" style="float: left; margin: 4px 10px 0px 4px; border: 1px solid #000000; height:auto; width:50%"/>
+<img src="pics/me.jpg" alt="abstract" style="float: left; margin: 4px 10px 0px 4px; border: 1px solid #000000; height:auto; width:48%"/>
 
 I am a PhD candidate in the [Department of Linguistics](https://www.linguistics.stonybrook.edu) at Stony Brook University. I am also affiliated with the [Institute for Advanced Computational Science](https://iacs.stonybrook.edu/index.php). My research interests include the phonetics-phonology interface, phonological representations, and computational/model-theoretic phonology. I am advised by [Jeffrey Heinz](http://jeffreyheinz.net). Before attending Stony Brook, I received my MA and BA in Linguistics from Michigan State University where I was advised by [Karthik Durvasula](https://karthikdurvasula.gitlab.io). You can find a current copy of my CV [here](pics/cv.pdf). If you would like to find out more information about me, please look around this website or **send me an e-mail:** scott[dot]nelson[at]stonybrook[dot]edu.
 

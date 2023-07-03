@@ -17,12 +17,29 @@ output:
 
 # Important Links
 
+- [Course Notes]()
 - [Brightspace](https://it.stonybrook.edu/services/brightspace)
-- [Syllabus](LIN405/405SyllabusSummer2021.pdf)
+- [Syllabus](350/LIN350SyllabusSummer2023.pdf)
 - [Slack](https://lin350summer2023.slack.com)
 - [Presentation Sign-up]()
 
 ***
 
 # Class Log
+
+**07/11/2023 & 07/13/2023**
+
+* Week 1 is online & asynchronous because I am out of town
+* I will be on Zoom from 12-1pm on 7/11 and 7/13 for anyone who would like to meet with me.
+* Your tasks for week 1:
+    + Come to one of the Zoom meetings to introduce yourself. If you are unable, please send me an email introducing yourself instead.
+    + Read the [syllabus](350/LIN350SyllabusSummer2023.pdf)
+    + Join the [course slack channel](https://lin350summer2023.slack.com)
+    + Sign up for a presentation slot
+    + Watch the intro to the course video
+    + Watch the review of articulatory phonetics video
+    + Watch the review of acoustic phonetics video
+    + Watch the intro to Praat video
+    + Review Chapters 1 & 2 and Appendix A of the course notes
+    + Complete and submit Lab 0; files [here](350/Labs/Lab0/)
 
