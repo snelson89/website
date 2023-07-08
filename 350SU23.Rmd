@@ -21,7 +21,7 @@ output:
 - [Brightspace](https://it.stonybrook.edu/services/brightspace)
 - [Syllabus](350/LIN350SyllabusSummer2023.pdf)
 - [Slack](https://lin350summer2023.slack.com)
-- [Presentation Sign-up]()
+- [Presentation Sign-up](https://docs.google.com/spreadsheets/d/1xXhAyL8QtRJlz38SCuRhMD7NcSI8bWonai9Bky0zohQ/edit?usp=sharing)
 
 ***
 
@@ -35,11 +35,11 @@ output:
     + Come to one of the Zoom meetings to introduce yourself. If you are unable, please send me an email introducing yourself instead.
     + Read the [syllabus](350/LIN350SyllabusSummer2023.pdf)
     + Join the [course slack channel](https://lin350summer2023.slack.com)
-    + Sign up for a presentation slot
+    + Sign up for a presentation slot [here](https://docs.google.com/spreadsheets/d/1xXhAyL8QtRJlz38SCuRhMD7NcSI8bWonai9Bky0zohQ/edit?usp=sharing)
     + Watch the intro to the course video
     + Watch the review of articulatory phonetics video
     + Watch the review of acoustic phonetics video
     + Watch the intro to Praat video
     + Review Chapters 1 & 2 and Appendix A of the course notes
-    + Complete and submit Lab 0; files [here](350/Labs/Lab0.zip)
+    + Complete and submit Lab 0; download files [here](350/Labs/Lab0.zip)
 
