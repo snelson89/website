@@ -17,7 +17,7 @@ output:
 
 # Important Links
 
-- [Course Notes]()
+- [Course Notes](350/CourseNotes.pdf)
 - [Brightspace](https://it.stonybrook.edu/services/brightspace)
 - [Syllabus](350/LIN350SyllabusSummer2023.pdf)
 - [Slack](https://lin350summer2023.slack.com)
