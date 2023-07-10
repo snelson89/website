@@ -36,7 +36,7 @@ output:
     + Read the [syllabus](350/LIN350SyllabusSummer2023.pdf)
     + Join the [course slack channel](https://lin350summer2023.slack.com)
     + Sign up for a presentation slot [here](https://docs.google.com/spreadsheets/d/1xXhAyL8QtRJlz38SCuRhMD7NcSI8bWonai9Bky0zohQ/edit?usp=sharing)
-    + Watch the intro to the course video
+    + Watch the intro to the course [video](intro.mp4)
     + Watch the review of articulatory phonetics video
     + Watch the review of acoustic phonetics video
     + Watch the intro to Praat video
