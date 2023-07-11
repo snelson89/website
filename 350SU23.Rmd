@@ -34,7 +34,7 @@ output:
 * Your tasks for week 1:
     + Come to one of the Zoom meetings to introduce yourself. If you are unable, please send me an email introducing yourself instead.
     + Read the [syllabus](350/LIN350SyllabusSummer2023.pdf)
-    + Join the [course slack channel](https://lin350summer2023.slack.com)
+    + Join the [course slack channel](https://join.slack.com/t/lin350summer2023/shared_invite/zt-1wlogdm2b-JtDb~jPe89ky1jLfmbZeUg)
     + Sign up for a presentation slot [here](https://docs.google.com/spreadsheets/d/1xXhAyL8QtRJlz38SCuRhMD7NcSI8bWonai9Bky0zohQ/edit?usp=sharing)
     + Watch the intro to the course [video](350/intro.mp4)
     + Watch the review of articulatory phonetics video
