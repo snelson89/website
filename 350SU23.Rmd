@@ -39,7 +39,7 @@ output:
     + Watch the intro to the course [video](350/intro.mp4)
     + Watch the review of articulatory phonetics [video](350/review-articulatory.mp4)
     + Watch the review of acoustic phonetics [video](350/review-acoustics.mp4)
-    + Watch the intro to Praat [video](intro-praat.mp4)
+    + Watch the intro to Praat [video](350/intro-praat.mp4)
     + Review Chapters 1 & 2 and Appendix A of the [course notes](350/CourseNotes.pdf)
     + Complete and submit Lab 0; download files [here](350/Labs/Lab0.zip)
 
