@@ -37,8 +37,8 @@ output:
     + Join the [course slack channel](https://join.slack.com/t/lin350summer2023/shared_invite/zt-1wlogdm2b-JtDb~jPe89ky1jLfmbZeUg)
     + Sign up for a presentation slot [here](https://docs.google.com/spreadsheets/d/1xXhAyL8QtRJlz38SCuRhMD7NcSI8bWonai9Bky0zohQ/edit?usp=sharing)
     + Watch the intro to the course [video](350/intro.mp4)
-    + Watch the review of articulatory phonetics video
-    + Watch the review of acoustic phonetics video
+    + Watch the review of articulatory phonetics [video](350/review-articulatory.mp4)
+    + Watch the review of acoustic phonetics [video](350/review-acoustics.mp4)
     + Watch the intro to Praat video
     + Review Chapters 1 & 2 and Appendix A of the [course notes](350/CourseNotes.pdf)
     + Complete and submit Lab 0; download files [here](350/Labs/Lab0.zip)
