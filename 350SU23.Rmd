@@ -27,6 +27,10 @@ output:
 
 # Class Log
 
+**07/18/2023 **
+
+* We went over Chapter 3 in the [Course Notes](350/CourseNotes.pdf)
+
 **07/11/2023 & 07/13/2023**
 
 * Week 1 is online & asynchronous because I am out of town
