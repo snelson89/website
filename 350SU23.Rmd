@@ -30,6 +30,7 @@ output:
 **07/18/2023 **
 
 * We went over Chapter 3 in the [Course Notes](350/CourseNotes.pdf)
+* We discussed how to measure f0 in Praat and analyzed [this](350/PraatPractice/potato.wav.zip) sound file
 
 **07/11/2023 & 07/13/2023**
 
