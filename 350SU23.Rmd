@@ -30,6 +30,8 @@ output:
 **07/20/2023 **
 
 * We went over Chapter 4 in the [Course Notes](350/CourseNotes.pdf)
+* We discussed automatic analysis and how to draw pictures in Praat and analyzed [this](350/PraatPractice/PUT.wav.zip) sound file
+* We worked on Labe 2 in the [Course Notes](350/CourseNotes.pdf). Download the sound files [here](350/Labs/Lab2.zip). It is due next Thursday (7/27) by the start of class
 
 **07/18/2023 **
 
