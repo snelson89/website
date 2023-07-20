@@ -31,7 +31,7 @@ output:
 
 * We went over Chapter 4 in the [Course Notes](350/CourseNotes.pdf)
 * We discussed automatic analysis and how to draw pictures in Praat and analyzed [this](350/PraatPractice/PUT.wav.zip) sound file. [Here](350/PraatPractice/VowelDuration.praat) is the script we wrote together that automatically measures vowel duration.
-* We worked on Labe 2 in the [Course Notes](350/CourseNotes.pdf). Download the sound files [here](350/Labs/Lab2.zip). It is due next Thursday (7/27) by the start of class
+* We worked on Lab 2 in the [Course Notes](350/CourseNotes.pdf). Download the sound files [here](350/Labs/Lab2.zip). It is due next Thursday (7/27) by the start of class
 
 **07/18/2023 **
 
