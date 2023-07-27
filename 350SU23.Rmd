@@ -27,6 +27,13 @@ output:
 
 # Class Log
 
+**07/27/2023 **
+
+* Today is the halfway mark of the course. We reviewed all of the new material up to this point and *very briefly* discussed the acoustic properties of stress in the [Course Notes](350/CourseNotes.pdf)
+* We discussed measuring duration and intensity in Praat and analyzed [this](350/PraatPractice/st.zip) sound file.
+* We worked on Lab 4 in the [Course Notes](350/CourseNotes.pdf). It is due next Thursday (8/3) by the start of class.
+* **Reminder:** you must submit a project proposal to me by next Friday, August 4.
+
 **07/25/2023 **
 
 * We went over Chapter 5 on the Acoustic Theory of Speech Production in the [Course Notes](350/CourseNotes.pdf)
