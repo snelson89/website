@@ -39,6 +39,8 @@ output:
 * We went over Chapter 5 on the Acoustic Theory of Speech Production in the [Course Notes](350/CourseNotes.pdf)
 * We discussed different ways of measuring formants in Praat and analyzed [this](350/PraatPractice/pbzj.zip) sound file.
 * We worked on Lab 3 in the [Course Notes](350/CourseNotes.pdf). It is due next Tuesday (8/1) by the start of class.
+* To make your vowel plot for part 1, use [this page](vowelplotting.html). It requires your data to be in csv format. An example is [here](350/vowels.csv). 
+  * In excel/numbers/google sheets you can make a spreadsheet with three columns labeles `VOWEL`, `F1`, and `F2`. The vowel column should contain the vowel label, the F1 column should contain the mean F1 for each vowel, and the F2 column should contain the mean F2 for each vowel. You can then either save or export that spreadsheet as a csv. Once you do that, you can upload it to the page above and it will create a vowel plot for you. Right click and save the figure and you're done. You can now add it to your lab report.
 
 **07/20/2023 **
 
