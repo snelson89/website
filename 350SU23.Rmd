@@ -27,6 +27,10 @@ output:
 
 # Class Log
 
+**08/01/2023 **
+
+* We went over Chapter 7 on acoustic cues for voicing in the [Course Notes](350/CourseNotes.pdf)
+
 **07/27/2023 **
 
 * Today is the halfway mark of the course. We reviewed all of the new material up to this point and *very briefly* discussed the acoustic properties of stress in the [Course Notes](350/CourseNotes.pdf)
