@@ -30,6 +30,7 @@ output:
 **08/01/2023 **
 
 * We went over Chapter 7 on acoustic cues for voicing in the [Course Notes](350/CourseNotes.pdf)
+* We discussed measuring VOT in Praat and analyzed [this](350/PraatPractice/sto.zip) sound file
 
 **07/27/2023 **
 
