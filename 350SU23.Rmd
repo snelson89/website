@@ -27,10 +27,19 @@ output:
 
 # Class Log
 
+**08/03/2023 **
+
+* We went over Chapter 8 on acoustic cues for place of articulation in the [Course Notes](350/CourseNotes.pdf)
+* We discussed spectral measurements in Praat and analyzed [this](350/PraatPractice/poa.zip) sound file
+* We worked on Lab 6 in the [Course Notes](350/CourseNotes.pdf). It is due next Thursday (8/10) by the start of class.
+* **Reminder:** you must submit a project proposal to me by tomorrow at 5pm.
+
 **08/01/2023 **
 
 * We went over Chapter 7 on acoustic cues for voicing in the [Course Notes](350/CourseNotes.pdf)
 * We discussed measuring VOT in Praat and analyzed [this](350/PraatPractice/sto.zip) sound file
+* We worked on Lab 5 in the [Course Notes](350/CourseNotes.pdf). It is due next Tuesday (8/8) by the start of class.
+* **Reminder:** you must submit a project proposal to me by this Friday, August 4.
 
 **07/27/2023 **
 
