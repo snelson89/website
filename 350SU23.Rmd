@@ -27,6 +27,13 @@ output:
 
 # Class Log
 
+**08/08/2023 **
+
+* We went over Chapter 9 on speech perception with a focus on categorical perception, auditory illusions, and vowel normalization in the [Course Notes](350/CourseNotes.pdf)
+* We discussed this [VOT manipulation script](https://github.com/listenlab/vot) and also went over how to make and run experiments in Praat.
+* We worked on Lab 7 in the [Course Notes](350/CourseNotes.pdf). [Here](350/Labs/Lab7.zip) are the experiment files. You must run the experiment on yourself and one other person so that you can send me the data by 9:30 am this Friday (8/11). I will send out the results and more info so you can write up the lab report which is due next Thursday (8/17) by the start of class.
+
+
 **08/03/2023 **
 
 * We went over Chapter 8 on acoustic cues for place of articulation in the [Course Notes](350/CourseNotes.pdf)
