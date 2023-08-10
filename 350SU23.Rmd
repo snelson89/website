@@ -27,6 +27,13 @@ output:
 
 # Class Log
 
+**08/10/2023 **
+
+* We talked more about vowel normalization from Chapter 9 in the [Course Notes](350/CourseNotes.pdf). We also discussed Chapter 10 which includes the difference between auditory/acoustic theories of speech perception and gestural theories of speech perception and how they might relate to perceptual confusion and the production of rhotics in English.
+* We did one final Spectrogram analysis on [this](350/PraatPractice/final.zip  ) sound file.
+* We worked on Lab 8 in the [Course Notes](350/CourseNotes.pdf).
+[Here](350/Labs/Lab8.zip) are the experiment files. You must run the experiment on yourself and one other person so that you can send me the data by 9:30 am this Sunday (8/13). I will send out the results and more info so you can write up the lab report which is due next Thursday (8/19) by the start of class.
+
 **08/08/2023 **
 
 * ~~We went over Chapter 9 on speech perception with a focus on categorical perception, auditory illusions, and vowel normalization in the [Course Notes](350/CourseNotes.pdf)~~ We talked about [these slides](350/PerceptionSlides.pdf) which will be converted to course notes shortly.
