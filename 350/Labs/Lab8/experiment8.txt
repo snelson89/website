@@ -1,0 +1,70 @@
+"ooTextFile"
+"ExperimentMFC 7"
+blankWhilePlaying? <no>
+stimuliAreSounds? <yes>
+stimulusFileNameHead = "sounds/"
+stimulusFileNameTail = ".wav"
+stimulusCarrierBefore = ""
+stimulusCarrierAfter = ""
+stimulusInitialSilenceDuration = 1.0 seconds
+stimulusMedialSilenceDuration = 0.25 seconds
+stimulusFinalSilenceDuration = 0.25 seconds
+numberOfDifferentStimuli = 18
+    "ba"    ""
+    "da"    ""
+    "dha"    ""
+    "fa"    ""
+    "ga"    ""
+    "ka"    ""
+    "la"    ""
+    "ma"    ""
+    "na"    ""
+    "pa"    ""
+    "ra"    ""
+    "sa"    ""
+    "sha"    ""
+    "ta"    ""
+    "tha"    ""
+    "va"    ""
+    "za"    ""
+    "zha"    ""
+numberOfReplicationsPerStimulus = 20
+breakAfterEvery = 60
+randomize = <PermuteBalancedNoDoublets>
+startText = "This is a listening experiment.
+After hearing a word, choose the initial sound that is most
+    similar to what you heard.
+
+Click to start"
+runText = "Identify the initial sound that most resembles what you heard.
+You may replay the sound 1 time if you want to hear it again.
+
+dh = first sound in though; sh = first sound in she
+th = first sound in think; zh = middle sound in measure"
+pauseText = "You can have a short break if you like. Click to proceed."
+endText = "This experiment has finished. Please exit the experiment and save your results."
+maximumNumberOfReplays = 1
+replayButton = 0.9 1 0.9 1 "Replay" " "
+okButton =  0 0 0 0 "" ""
+oopsButton =  0 0 0 0 "" ""
+responsesAreSounds <no>  "" "" "" "" 0 0 0
+numberOfDifferentResponses = 18
+0.1 0.2 0.5 0.6 "b" 60 "" "b"
+0.24 0.34 0.5 0.6 "d" 60 "" "d"
+0.38 0.48 0.5 0.6 "dh" 60 "" "dh"
+0.52 0.62 0.5 0.6 "f" 60 "" "f"
+0.66 0.76 0.5 0.6 "g" 60 "" "g"
+0.8 0.9 0.5 0.6 "k" 60 "" "k"
+0.1 0.2 0.3 0.4 "l" 60 "" "l"
+0.24 0.34 0.3 0.4 "m" 60 "" "m"
+0.38 0.48 0.3 0.4 "n" 60 "" "n"
+0.52 0.62 0.3 0.4 "p" 60 "" "p"
+0.66 0.76 0.3 0.4 "r" 60 "" "r"
+0.8 0.9 0.3 0.4 "s" 60 "" "s"
+0.1 0.2 0.1 0.2 "sh" 60 "" "sh"
+0.24 0.34 0.1 0.2 "t" 60 "" "t"
+0.38 0.48 0.1 0.2 "th" 60 "" "th"
+0.52 0.62 0.1 0.2 "v" 60 "" "v"
+0.66 0.76 0.1 0.2 "z" 60 "" "z"
+0.8 0.9 0.1 0.2 "zh" 60 "" "zh"
+numberOfGoodnessCategories = 0

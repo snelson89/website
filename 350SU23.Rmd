@@ -27,6 +27,11 @@ output:
 
 # Class Log
 
+**08/15/2023 **
+
+* We went over [these slides](350/350-ExperimentalMethods.pdf) which discuss various experimental methods for measuring articulatory data. 
+* We started project presentations
+
 **08/10/2023 **
 
 * We talked more about vowel normalization from Chapter 9 in the [Course Notes](350/CourseNotes.pdf). We also discussed Chapter 10 which includes the difference between auditory/acoustic theories of speech perception and gestural theories of speech perception and how they might relate to perceptual confusion and the production of rhotics in English.
