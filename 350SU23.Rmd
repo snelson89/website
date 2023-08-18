@@ -27,6 +27,12 @@ output:
 
 # Class Log
 
+**08/17/2023 **
+
+* We continued project presentations
+* We reviewed the material learned in the course
+* Final project reports are due Friday (8/18) by 5:00 pm
+
 **08/15/2023 **
 
 * We went over [these slides](350/350-ExperimentalMethods.pdf) which discuss various experimental methods for measuring articulatory data. 
