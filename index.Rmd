@@ -32,7 +32,9 @@ Because of the nature of the data, my research has involved both experimental an
 
 ### Journal Articles
 
--   **Nelson, Scott** & Durvasula, K. 2021. "[Lexically-Guided Perceptual Learning does Generalize to New Contexts](https://www.sciencedirect.com/science/article/abs/pii/S0095447020301108)". *Journal of Phonetics*.
+-   Taherkhani, N. & **Nelson, S.** Accepted. "Southern Tati: Takestani Dialect". *Journal of the International Phonetic Association*.
+
+-   **Nelson, S** & Durvasula, K. 2021. "[Lexically-Guided Perceptual Learning does Generalize to New Contexts](https://www.sciencedirect.com/science/article/abs/pii/S0095447020301108)". *Journal of Phonetics*.
 
 ### Proceedings
 
@@ -49,7 +51,6 @@ Because of the nature of the data, my research has involved both experimental an
 ### Under Review
 
 -   **Nelson, S.** & Heinz, J. 2023 "The blueprint model of production"
--   Taherkhani, N. & **Nelson, S.** 2022 "Southern Tati: Takestani Dialect"
 
 
 ### Other
@@ -58,7 +59,7 @@ Because of the nature of the data, my research has involved both experimental an
 
 ## Presentations and Posters
 
-- **Nelson, S.** (2023). Unordered rules that only apply to the input are not more complex than ordered rules. M100. Massachusetts Institute of Technology. Cambridge, MA, USA.
+- **Nelson, S.** (2023). [Unordered rules that only apply to the input are not more complex than ordered rules](Presentations/m1002023-Nelson.pdf). M100. Massachusetts Institute of Technology. Cambridge, MA, USA.
 
 - **Nelson, S.** (2023). [Model Theoretic Phonology and Theory Comparison: Segments, Gestures, and Coupling Graphs](Presentations/naphc2023-Nelson.pdf). North American Phonology Conference 12 (NAPhC). Concordia University, Montreal, Quebec, Canada.
 
@@ -107,7 +108,7 @@ I currently work as a teaching assistant in the Department of Linguistics at Sto
 -   **LIN 201**: *Phonetics*
     -   Fall 2019; Fall 2021; Spring 2022
 -   **LIN 301**: *Phonology*
-    -   Spring 2021; Fall 2022
+    -   Spring 2021; Fall 2022; Fall 2023
 -   **LIN 538**: *Statistics for Linguistics*
     -   Spring 2023
 
