@@ -59,6 +59,8 @@ Because of the nature of the data, my research has involved both experimental an
 
 ## Presentations and Posters
 
+- Chandlee, J., Jardine, A., & **Nelson, S.** (2024). Tutorial: Logic and Model Theory for Phonology. Annual Meeting of the Linguistic Society of America (LSA). New York, New York, USA.
+
 - **Nelson, S.** (2023). [Unordered rules that only apply to the input are not more complex than ordered rules](Presentations/m1002023-Nelson.pdf). M100. Massachusetts Institute of Technology. Cambridge, MA, USA.
 
 - **Nelson, S.** (2023). [Model Theoretic Phonology and Theory Comparison: Segments, Gestures, and Coupling Graphs](Presentations/naphc2023-Nelson.pdf). North American Phonology Conference 12 (NAPhC). Concordia University, Montreal, Quebec, Canada.
@@ -145,6 +147,8 @@ I currently work as a teaching assistant in the Department of Linguistics at Sto
     -   Summer 2021; Summer 2022
 -   Stony Brook Linguistics Department Statistics Minicourse
     -   Summer 2023
+-   New York Institute
+    -   Winter 2024 (Introduction to Mathematical Linguistics co-taught with [Vinny Czarneski](https://www.vinczarnecki.com))
 
 ### Volunteer
 
