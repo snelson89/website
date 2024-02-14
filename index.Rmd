@@ -59,6 +59,8 @@ Because of the nature of the data, my research has involved both experimental an
 
 ## Presentations and Posters
 
+- **Nelson, S.** (2024). Optionality and the Phonetics-Phonology Interface. 42nd West Coast Conference on Formal Linguistics (WCCFL). University of California Berkeley. Berkeley, CA, USA.
+
 - Chandlee, J., Jardine, A., & **Nelson, S.** (2024). [Tutorial: Logic and Model Theory for Phonology](Presentations/lsa2024-ChandleeJardineNelson.pdf). Annual Meeting of the Linguistic Society of America (LSA). New York, New York, USA.
 
 - **Nelson, S.** (2023). [Unordered rules that only apply to the input are not more complex than ordered rules](Presentations/m1002023-Nelson.pdf). M100. Massachusetts Institute of Technology. Cambridge, MA, USA.
