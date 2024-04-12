@@ -59,7 +59,9 @@ Because of the nature of the data, my research has involved both experimental an
 
 ## Presentations and Posters
 
-- **Nelson, S.** (2024). Optionality and the Phonetics-Phonology Interface. 42nd West Coast Conference on Formal Linguistics (WCCFL). University of California Berkeley. Berkeley, CA, USA.
+- **Nelson, S.** & Baković, E. (2024). Underspecification without Underspecified Representations. Society for Computation in Linguistics 2024 (SCiL). University of California Irvine. Irvine, CA, USA.
+
+- **Nelson, S.** (2024). [Optionality and the Phonetics-Phonology Interface](Presentations/wccfl2024-Nelson.pdf). 42nd West Coast Conference on Formal Linguistics (WCCFL). University of California Berkeley. Berkeley, CA, USA.
 
 - Chandlee, J., Jardine, A., & **Nelson, S.** (2024). [Tutorial: Logic and Model Theory for Phonology](Presentations/lsa2024-ChandleeJardineNelson.pdf). Annual Meeting of the Linguistic Society of America (LSA). New York, New York, USA.
 
