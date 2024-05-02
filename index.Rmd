@@ -32,7 +32,9 @@ Because of the nature of the data, my research has involved both experimental an
 
 ### Journal Articles
 
--   Taherkhani, N. & **Nelson, S.** Accepted. "Southern Tati: Takestani Dialect". *Journal of the International Phonetic Association*.
+-   **Nelson, S.** & Heinz, J. Accepted. "The Blueprint Model of Production". *Phonology*
+
+-   Taherkhani, N. & **Nelson, S.** 2024. "[Southern Tati: Takestani Dialect](https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/abs/southern-tati-takestani-dialect/9C2D1269604E1F8AAC18EAE6C7E92A5C)". *Journal of the International Phonetic Association*.
 
 -   **Nelson, S** & Durvasula, K. 2021. "[Lexically-Guided Perceptual Learning does Generalize to New Contexts](https://www.sciencedirect.com/science/article/abs/pii/S0095447020301108)". *Journal of Phonetics*.
 
@@ -49,8 +51,6 @@ Because of the nature of the data, my research has involved both experimental an
 ## Manuscripts
 
 ### Under Review
-
--   **Nelson, S.** & Heinz, J. 2023 "The blueprint model of production"
 
 
 ### Other
