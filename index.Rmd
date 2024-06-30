@@ -40,6 +40,8 @@ Because of the nature of the data, my research has involved both experimental an
 
 ### Proceedings
 
+-   **Nelson, S** & Baković, E. 2024. "[Underspecification without Underspecified Representations](https://openpublishing.library.umass.edu/scil/article/id/2227/)". *Proceedings of the Society for Computation in Linguistics*, 7(1), 352-356.
+
 -   **Nelson, S**. 2022. "[A Model Theoretic Perspective on Phonological Feature Systems](https://scholarworks.umass.edu/scil/vol5/iss1/2/)". *Proceedings of the Society for Computation in Linguistics*, 5(1), 1-10.
 
 -   **Nelson, S** & Heinz, J. 2022. "[Incomplete Neutralization and the Blueprint Model of Production](http://journals.linguisticsociety.org/proceedings/index.php/amphonology/article/view/5304)". In Peter Jurgec, Liisa Duncan, Emily Elfner, Yoonjung Kang, Alexei Kochetov, Brittney K. O'Neill, Avery Ozburn, Keren Rice, Nathan Sanders, Jessamyn Schertz, Nate Shaftoe, and Lisa Sullivan (eds.), *Proceedings of the 2021 Annual Meeting on Phonology*. Washington, DC: Linguistic Society of America.
@@ -59,7 +61,7 @@ Because of the nature of the data, my research has involved both experimental an
 
 ## Presentations and Posters
 
-- **Nelson, S.** & Baković, E. (2024). Underspecification without Underspecified Representations. Society for Computation in Linguistics 2024 (SCiL). University of California Irvine. Irvine, CA, USA.
+- **Nelson, S.** & Baković, E. (2024). [Underspecification without Underspecified Representations](Presentations/scil2024-NelsonBakovic.pdf). Society for Computation in Linguistics 2024 (SCiL). University of California Irvine. Irvine, CA, USA.
 
 - **Nelson, S.** (2024). [Optionality and the Phonetics-Phonology Interface](Presentations/wccfl2024-Nelson.pdf). 42nd West Coast Conference on Formal Linguistics (WCCFL). University of California Berkeley. Berkeley, CA, USA.
 
