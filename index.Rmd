@@ -55,13 +55,16 @@ Because of the nature of the data, my research has involved both experimental an
 
 -   **Nelson, S**. "The logic and typology of derived environment effects".
 -   Taherkhani, N., **Nelson, S.** & Heinz, J. "Vowel alternations as evidence for contrastive vowel features in Southern Tati: Takestani dialect"
--   **Nelson, S**. "The logic and typology of derived environment effects".
 -   **Nelson, S**. "On inferring linear order from non-linear gestural representations".
 -   Heinz, J. & **Nelson, S.** "The Past, Present, and Future of Model-Theoretic Phonology".
 
 ## Presentations and Posters
 
 - **Nelson, S.** & Baković, E. (2024). [Computation Clarifies Mixed Specification Behavior of Coronals in English](). Annual Meeting on Phonology 2024 (AMP). Rutgers University, New Brunswick, NJ, USA.
+
+- **Nelson, S.** (2024). [Coronal is Never Underspecified in English: a Computational View](Presentations/midphon2024-Nelson.pdf). University of Illinois Urbana-Champaign, Urbana, IL, USA. 
+
+- **Nelson, S.** (2024). [BMRS and Underspecification](Presentations/rspw2024-Nelson.pdf). Rutgers Subregular Phonology Workshop. Rutgers University. New Brunswick, NJ, USA.
 
 - **Nelson, S.** & Baković, E. (2024). [Underspecification without Underspecified Representations](Presentations/scil2024-NelsonBakovic.pdf). Society for Computation in Linguistics 2024 (SCiL). University of California Irvine. Irvine, CA, USA.
 
