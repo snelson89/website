@@ -60,7 +60,7 @@ Because of the nature of the data, my research has involved both experimental an
 
 ## Presentations and Posters
 
-- **Nelson, S.** & Baković, E. (2024). [Computation Clarifies Mixed Specification Behavior of Coronals in English](). Annual Meeting on Phonology 2024 (AMP). Rutgers University, New Brunswick, NJ, USA.
+- **Nelson, S.** & Baković, E. (2024). [Computation Clarifies Mixed Specification Behavior of Coronals in English](Presentations/amp2024-NelsonBakovic.pdf). Annual Meeting on Phonology 2024 (AMP). Rutgers University, New Brunswick, NJ, USA.
 
 - **Nelson, S.** (2024). [Coronal is Never Underspecified in English: a Computational View](Presentations/midphon2024-Nelson.pdf). University of Illinois Urbana-Champaign, Urbana, IL, USA. 
 
