@@ -6,7 +6,7 @@ output:
     theme: cosmo
 ---
 
-<img src="pics/also-me.jpg" alt="abstract" style="float: left; margin: 4px 10px 0px 4px; border: 1px solid #000000; height:auto; width:18%"/>
+<img src="pics/also-also-me.jpg" alt="abstract" style="float: left; margin: 4px 10px 0px 4px; border: 1px solid #000000; height:auto; width:18%"/>
 
 I am an Instructor in the [Department of Linguistics](https://linguistics.illinois.edu) at the University of Illinois Urbana-Champaign.
 My broad research interests include the phonetics-phonology interface, phonological representations, and computational/model-theoretic phonology.
