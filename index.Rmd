@@ -75,6 +75,8 @@ Lately, I have also been interested in how optionality and variability play a ro
 
 ## Presentations and Posters
 
+- **Nelson, S.** (2025). [Phonological Knowledge, Weighted Logic, and the Competence/Performance Distinction](Presentations/naphc2025-Nelson.pdf). North American Phonology Conference 13 (NAPHC). Concordia University, Montreal, Quebec, CA. 
+
 - **Nelson, S.** & Baković, E. (2024). [Computation Clarifies Mixed Specification Behavior of Coronals in English](Presentations/amp2024-NelsonBakovic.pdf). Annual Meeting on Phonology 2024 (AMP). Rutgers University, New Brunswick, NJ, USA.
 
 - **Nelson, S.** (2024). [Coronal is Never Underspecified in English: a Computational View](Presentations/midphon2024-Nelson.pdf). University of Illinois Urbana-Champaign, Urbana, IL, USA. 
