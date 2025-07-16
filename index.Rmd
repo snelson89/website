@@ -1,6 +1,6 @@
 ---
 title: "Scott Nelson"
-author: "Instructor - University of Illinois Urbana-Champaign"
+author: "Assistant Professor - University of Illinois Urbana-Champaign"
 output: 
   html_document: 
     theme: cosmo
@@ -8,7 +8,7 @@ output:
 
 <img src="pics/also-also-me.jpg" alt="abstract" style="float: left; margin: 4px 10px 0px 4px; border: 1px solid #000000; height:auto; width:18%"/>
 
-I am an Instructor in the [Department of Linguistics](https://linguistics.illinois.edu) at the University of Illinois Urbana-Champaign.
+I am an Assistant Professor in the [Department of Linguistics](https://linguistics.illinois.edu) at the University of Illinois Urbana-Champaign.
 My broad research interests include the phonetics-phonology interface, phonological representations, and computational/model-theoretic phonology.
 I received my PhD in Linguistics from [Stony Brook University](https://www.linguistics.stonybrook.edu) in 2024. While at Stony Brook I was also affiliated with the [Institute for Advanced Computational Science](https://iacs.stonybrook.edu/index.php).  I was advised by [Jeffrey Heinz](http://jeffreyheinz.net). Before attending Stony Brook, I received my MA and BA in Linguistics from Michigan State University where I was advised by [Karthik Durvasula](https://karthikdurvasula.gitlab.io). You can find a current copy of my CV [here](pics/cv.pdf). If you would like to find out more information about me, please look around this website or **send me an e-mail:** sjnelson[at]illinois[dot]edu.
 
@@ -75,6 +75,10 @@ Lately, I have also been interested in how optionality and variability play a ro
 
 ## Presentations and Posters
 
+- Stephanov, A. & **Nelson, S.** (2025). Formalizing the Venetian ‘Evanescent’ /l/: A Three-Perspective Analysis. Annual Meeting on Phonology 2025 (AMP). University of California Berkeley. Berkeley, CA, USA. 
+
+- **Nelson, S.** (2025). Using Model Theory and Function Types to Formally Relate Symbolic and Dynamic Theories of Speech. Dynamic Models of Speech (DYMOS). University of Oregon. Eugene, OR, USA.
+
 - **Nelson, S.** (2025). [Phonological Knowledge, Weighted Logic, and the Competence/Performance Distinction](Presentations/naphc2025-Nelson.pdf). North American Phonology Conference 13 (NAPHC). Concordia University, Montreal, Quebec, CA. 
 
 - **Nelson, S.** & Baković, E. (2024). [Computation Clarifies Mixed Specification Behavior of Coronals in English](Presentations/amp2024-NelsonBakovic.pdf). Annual Meeting on Phonology 2024 (AMP). Rutgers University, New Brunswick, NJ, USA.
@@ -119,7 +123,7 @@ Lately, I have also been interested in how optionality and variability play a ro
 
 -   Pue, A. Sean & **Nelson, S.** (2018). Marking Poetic Time: Building and Annotating a Hindi-Urdu Poetry Corpus for Computational Humanities Research. Corpus-based Research in the Humanities 2, Austrian Academy of Science. Vienna, Austria.
 
--   Durvasula, K. & **Nelson, S.**. (2017). [Perceptual retuning targets features](Presentations/amp2017-DurvasulaNelson.pdf). Annual Meeting on Phonology 2017 (AMP). New York University. New York, New York, USA.
+-   Durvasula, K. & **Nelson, S.** (2017). [Perceptual retuning targets features](Presentations/amp2017-DurvasulaNelson.pdf). Annual Meeting on Phonology 2017 (AMP). New York University. New York, New York, USA.
 
 ------------------------------------------------------------------------
 
@@ -141,7 +145,7 @@ In 2023 I was a recipient of the Stony Brook [President's Award for Excellence i
 -   **LING 490**: *Computation and Phonological Theory*
     -   Spring 2025
 -   **LING 502**: *Phonology I*
-    -   Spring 2025
+    -   Spring 2025; Fall 2025
 -   **LING 542**: *Phonology II*
     -   Fall 2024
 
