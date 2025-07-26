@@ -77,7 +77,7 @@ Lately, I have also been interested in how optionality and variability play a ro
 
 - Stephanov, A. & **Nelson, S.** (2025). Formalizing the Venetian ‘Evanescent’ /l/: A Three-Perspective Analysis. Annual Meeting on Phonology 2025 (AMP). University of California Berkeley. Berkeley, CA, USA. 
 
-- **Nelson, S.** (2025). Using Model Theory and Function Types to Formally Relate Symbolic and Dynamic Theories of Speech. Dynamic Models of Speech (DYMOS). University of Oregon. Eugene, OR, USA.
+- **Nelson, S.** (2025). [Using Model Theory and Function Types to Formally Relate Symbolic and Dynamic Theories of Speech](Presentations/dymos2025-Nelson.pdf). Dynamic Models of Speech (DYMOS). University of Oregon. Eugene, OR, USA.
 
 - **Nelson, S.** (2025). [Phonological Knowledge, Weighted Logic, and the Competence/Performance Distinction](Presentations/naphc2025-Nelson.pdf). North American Phonology Conference 13 (NAPHC). Concordia University, Montreal, Quebec, CA. 
 
