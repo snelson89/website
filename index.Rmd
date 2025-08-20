@@ -47,7 +47,7 @@ Lately, I have also been interested in how optionality and variability play a ro
 
 ### Journal Articles
 
--   **Nelson, S.** & Heinz, J. Accepted. "The Blueprint Model of Production". *Phonology*
+-   **Nelson, S.** & Heinz, J. 2025. "[The Blueprint Model of Production](https://www.cambridge.org/core/journals/phonology/article/blueprint-model-of-production/8F5DCE3962C064DA547FD44B5BD21218)". *Phonology*
 
 -   Taherkhani, N. & **Nelson, S.** 2024. "[Southern Tati: Takestani Dialect](https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/abs/southern-tati-takestani-dialect/9C2D1269604E1F8AAC18EAE6C7E92A5C)". *Journal of the International Phonetic Association*.
 
@@ -74,6 +74,12 @@ Lately, I have also been interested in how optionality and variability play a ro
 -   Heinz, J. & **Nelson, S.** "The Past, Present, and Future of Model-Theoretic Phonology".
 
 ## Presentations and Posters
+
+- **Nelson, S.** (2026). Phonological Knowledge, Weighted Logic, and the Competence/Performance Distinction. Old-World Conference in Phonology 23 (OCP2023). University of Cambridge. Cambridge, UK, England.
+
+- **Nelson, S.** & Baković, E. (2026). Feature spreading and redundancy with BMRS. Old-World Conference in Phonology 23 (OCP23). University of Cambridge. Cambridge, UK, England. 
+
+- Stephanov, A. & **Nelson, S.** (2025). Formalizing the Venetian ‘Evanescent’ /l/: A Three-Perspective Analysis. Going Romance 2025. Ca' Foscari University of Venice, Venice, Italy.
 
 - Stephanov, A. & **Nelson, S.** (2025). Formalizing the Venetian ‘Evanescent’ /l/: A Three-Perspective Analysis. Annual Meeting on Phonology 2025 (AMP). University of California Berkeley. Berkeley, CA, USA. 
 
@@ -187,7 +193,7 @@ In 2023 I was a recipient of the Stony Brook [President's Award for Excellence i
 -   Stony Brook Linguistics Department Statistics Minicourse
     -   Summer 2023
 -   New York Institute
-    -   Winter/[Summer 2024](files/mathling-summer2024.pdf) (Introduction to Mathematical Linguistics co-taught with [Vinny Czarneski](https://www.vinczarnecki.com))
+    -   Winter/[Summer 2024](files/mathling-summer2024.pdf) (Introduction to Mathematical Linguistics co-taught with [Vinny Czarnecki](https://www.vinczarnecki.com))
 
 ### Volunteer
 
