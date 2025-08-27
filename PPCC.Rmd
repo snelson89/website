@@ -19,7 +19,7 @@ The final chunk is for a group member to teach a skill (programming language, so
 
 |Date|Research Presentation| Paper Presentation| Skill Presentation|
 |:---:|:---:|:---:|:---:|
-|8/27|na.|na.|na.|
+|8/27|[Scott on PPCC](PPCC/Intro-2025.pdf) |na.|na.|
 |9/10|Anna AMP Practice Talk|||
 |9/24||||
 |10/8||||
