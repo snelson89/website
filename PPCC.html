@@ -13,7 +13,7 @@
 
 <title>PPCC Research Group</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -80,6 +81,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -137,11 +141,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -170,8 +178,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -179,16 +187,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -232,7 +233,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -259,11 +260,30 @@ $(document).ready(function () {
 </div>
 
 
-<p>The <strong>P</strong>(honology), <strong>P</strong>(honetics), <strong>C</strong>(omputation), and <strong>C</strong>(ognition) <strong>Research Group</strong> is led by Scott Nelson at the University of Illinois Urbana-Champaign. The research focus of this group is on the relationship between <em>phonological</em> and <em>phonetic knowledge</em>. We largely approach things <em>computationally</em> and are interested in the implications of what we find for general linguistic <em>cognition</em>.</p>
-<p>The group meets every other week for two hours. Meetings are broken down into three 40 minute chunks. One chunk is for a group member to share their ongoing work with the group. Another chunk is for a group member to lead a discussion on a recently published (or pre-print) paper relevant to the group’s interests. The final chunk is for a group member to teach a skill (programming language, software, mathematical approach, …).</p>
+<p>The <strong>P</strong>(honology), <strong>P</strong>(honetics),
+<strong>C</strong>(omputation), and <strong>C</strong>(ognition)
+<strong>Research Group</strong> is led by Scott Nelson at the University
+of Illinois Urbana-Champaign. The research focus of this group is on the
+relationship between <em>phonological</em> and <em>phonetic
+knowledge</em>. We largely approach things <em>computationally</em> and
+are interested in the implications of what we find for general
+linguistic <em>cognition</em>.</p>
+<p>The group meets every other week for two hours. Meetings are broken
+down into three 40 minute chunks. One chunk is for a group member to
+share their ongoing work with the group. Another chunk is for a group
+member to lead a discussion on a recently published (or pre-print) paper
+relevant to the group’s interests. The final chunk is for a group member
+to teach a skill (programming language, software, mathematical approach,
+…).</p>
 <div id="fall-2025-meetings" class="section level2">
 <h2>Fall 2025 Meetings</h2>
 <table>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="center">Date</th>
@@ -282,44 +302,56 @@ $(document).ready(function () {
 <tr class="even">
 <td align="center">9/10</td>
 <td align="center">Anna AMP Practice Talk</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Matthew on <a
+href="https://mol2025.molweb.xyz/docs/mol2025_yolyan.pdf">Yolyan
+(2025)</a></td>
+<td align="center">Yinglun on LaTeX</td>
 </tr>
 <tr class="odd">
 <td align="center">9/24</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Yinglun on Re-Analyzing the Expressivity of SK Korean
+Tone Plateuing</td>
+<td align="center">Angie on <a
+href="https://www.sciencedirect.com/science/article/pii/S0749596X25000427">Meyers
+et al. (2025)</a></td>
+<td align="center">Scott on Markdown</td>
 </tr>
 <tr class="even">
 <td align="center">10/8</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Matthew on Tier-Based Functions with BMRS</td>
+<td align="center">Yinglun on <a
+href="https://openpublishing.library.umass.edu/scil/article/id/3124/">Joo
+&amp; Jardine (2025)</a></td>
+<td align="center">Scott on Weighted Logic</td>
 </tr>
 <tr class="odd">
 <td align="center">10/22</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Mikhael on Computing Rhyme</td>
+<td align="center">na.</td>
+<td align="center">na.</td>
 </tr>
 <tr class="even">
 <td align="center">11/5</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Ryan on Real-Time Automaton for Phonetic
+Categorization</td>
+<td align="center">Anna on tbd</td>
+<td align="center">Scott on Bayesian Statistics</td>
 </tr>
 <tr class="odd">
 <td align="center">11/19</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Angie on Malay Morphophonology and BMRS</td>
+<td align="center">Ryan on <a
+href="https://www.sciencedirect.com/science/article/pii/S0010027725000873">Wetzel
+&amp; Kurz (2025)</a></td>
+<td align="center">Scott on Algorithmic Analysis</td>
 </tr>
 <tr class="even">
 <td align="center">12/3</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">tbd</td>
+<td align="center">Mikhael on <a
+href="https://openpublishing.library.umass.edu/amphonology/article/id/3022/">Danis
+(2025)</a></td>
+<td align="center">Scott on Computational Learning Theory</td>
 </tr>
 </tbody>
 </table>

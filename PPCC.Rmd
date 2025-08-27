@@ -20,10 +20,10 @@ The final chunk is for a group member to teach a skill (programming language, so
 |Date|Research Presentation| Paper Presentation| Skill Presentation|
 |:---:|:---:|:---:|:---:|
 |8/27|[Scott on PPCC](PPCC/Intro-2025.pdf) |na.|na.|
-|9/10|Anna AMP Practice Talk|||
-|9/24||||
-|10/8||||
-|10/22||||
-|11/5||||
-|11/19||||
-|12/3||||
+|9/10|Anna AMP Practice Talk|Matthew on [Yolyan (2025)](https://mol2025.molweb.xyz/docs/mol2025_yolyan.pdf)|Yinglun on LaTeX|
+|9/24|Yinglun on Re-Analyzing the Expressivity of SK Korean Tone Plateuing|Angie on [Meyers et al. (2025)](https://www.sciencedirect.com/science/article/pii/S0749596X25000427)|Scott on Markdown|
+|10/8|Matthew on Tier-Based Functions with BMRS|Yinglun on [Joo & Jardine (2025)](https://openpublishing.library.umass.edu/scil/article/id/3124/)|Scott on Weighted Logic|
+|10/22|Mikhael on Computing Rhyme|na.|na.|
+|11/5|Ryan on Real-Time Automaton for Phonetic Categorization|Anna on tbd|Scott on Bayesian Statistics|
+|11/19|Angie on Malay Morphophonology and BMRS|Ryan on [Wetzel & Kurz (2025)](https://www.sciencedirect.com/science/article/pii/S0010027725000873)|Scott on Algorithmic Analysis|
+|12/3|tbd|Mikhael on [Danis (2025)](https://openpublishing.library.umass.edu/amphonology/article/id/3022/)|Scott on Computational Learning Theory|
