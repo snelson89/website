@@ -1,0 +1,29 @@
+---
+title: "PPCC Research Group"
+output: 
+  html_document: 
+    theme: cosmo
+---
+
+The **P**(honology), **P**(honetics), **C**(omputation), and **C**(ognition) **Research Group** is led 
+by Scott Nelson at the University of Illinois Urbana-Champaign.  The research focus of this group is on the relationship between *phonological* and *phonetic knowledge*. We largely approach things *computationally* and are interested in the implications of what we find for general linguistic *cognition*. 
+
+The group meets every other week for two hours. 
+Meetings are broken down into three 40 minute chunks.
+One chunk is for a group member to share their ongoing work with the group.
+Another chunk is for a group member to lead a discussion on a recently published (or pre-print) paper
+relevant to the group's interests.
+The final chunk is for a group member to teach a skill (programming language, software, mathematical approach, ...).
+
+## Fall 2025 Meetings
+
+|Date|Research Presentation| Paper Presentation| Skill Presentation|
+|:---:|:---:|:---:|:---:|
+|8/27|na.|na.|na.|
+|9/10|Anna AMP Practice Talk|||
+|9/24||||
+|10/8||||
+|10/22||||
+|11/5||||
+|11/19||||
+|12/3||||
