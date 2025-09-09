@@ -14,7 +14,7 @@
 
 <title>Scott Nelson</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -61,7 +61,6 @@ if (window.hljs) {
 
 
 
-
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -82,9 +81,6 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
 }
 pre code {
   padding: 0;
@@ -142,15 +138,11 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -179,8 +171,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -188,9 +180,16 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
+  content: "&#xe258;";
   border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -234,7 +233,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -257,35 +256,14 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Scott Nelson</h1>
-<h4 class="author">Assistant Professor - University of Illinois
-Urbana-Champaign</h4>
+<h4 class="author">Assistant Professor - University of Illinois Urbana-Champaign</h4>
 
 </div>
 
 
 <p><img src="pics/also-also-me.jpg" alt="abstract" style="float: left; margin: 4px 10px 0px 4px; border: 1px solid #000000; height:auto; width:18%"/></p>
-<p>I am an Assistant Professor in the <a
-href="https://linguistics.illinois.edu">Department of Linguistics</a> at
-the University of Illinois Urbana-Champaign. My broad research interests
-include the phonetics-phonology interface, phonological representations,
-and computational/model-theoretic phonology. I received my PhD in
-Linguistics from <a href="https://www.linguistics.stonybrook.edu">Stony
-Brook University</a> in 2024. While at Stony Brook I was also affiliated
-with the <a href="https://iacs.stonybrook.edu/index.php">Institute for
-Advanced Computational Science</a>. I was advised by <a
-href="http://jeffreyheinz.net">Jeffrey Heinz</a>. Before attending Stony
-Brook, I received my MA and BA in Linguistics from Michigan State
-University where I was advised by <a
-href="https://karthikdurvasula.gitlab.io">Karthik Durvasula</a>. You can
-find a current copy of my CV <a href="pics/cv.pdf">here</a>. If you
-would like to find out more information about me, please look around
-this website or <strong>send me an e-mail:</strong>
-sjnelson[at]illinois[dot]edu.</p>
-<p>When I’m not doing linguistics, I like to
-{write,record,perform,listen to} music. I spent a decade of my life
-traveling around in a van with my friends performing music for
-strangers. My love for all things sound is ultimately what drew me to
-phonetics and phonology.</p>
+<p>I am an Assistant Professor in the <a href="https://linguistics.illinois.edu">Department of Linguistics</a> at the University of Illinois Urbana-Champaign. My broad research interests include the phonetics-phonology interface, phonological representations, and computational/model-theoretic phonology. I received my PhD in Linguistics from <a href="https://www.linguistics.stonybrook.edu">Stony Brook University</a> in 2024. While at Stony Brook I was also affiliated with the <a href="https://iacs.stonybrook.edu/index.php">Institute for Advanced Computational Science</a>. I was advised by <a href="http://jeffreyheinz.net">Jeffrey Heinz</a>. Before attending Stony Brook, I received my MA and BA in Linguistics from Michigan State University where I was advised by <a href="https://karthikdurvasula.gitlab.io">Karthik Durvasula</a>. You can find a current copy of my CV <a href="pics/cv.pdf">here</a>. If you would like to find out more information about me, please look around this website or <strong>send me an e-mail:</strong> sjnelson[at]illinois[dot]edu.</p>
+<p>When I’m not doing linguistics, I like to {write,record,perform,listen to} music. I spent a decade of my life traveling around in a van with my friends performing music for strangers. My love for all things sound is ultimately what drew me to phonetics and phonology.</p>
 <hr />
 <div id="research" class="section level1">
 <h1><strong>Research</strong></h1>
@@ -293,266 +271,90 @@ phonetics and phonology.</p>
 <img src="pics/phonphoncomp.png" />
 </center>
 <blockquote>
-<p>“…the overt aspects of language – the articulatory actions and the
-acoustic signal they produce – cannot be properly understood without
-reference to the covert aspect of language.” - Morris Halle</p>
+<p>“…the overt aspects of language – the articulatory actions and the acoustic signal they produce – cannot be properly understood without reference to the covert aspect of language.” - Morris Halle</p>
 </blockquote>
 <div id="specific-interests" class="section level2">
 <h2>Specific Interests</h2>
-<p>Language production and perception involve many factors. My research
-seeks to explain how these different factors interact. Primarily, I am
-interested in the nature of phonological knowledge and how it interacts
-with the sensory-motor system. I take the perspective that this is best
-answered by looking into the computational and representational
-properties of the transformations between continuous speech data and
-discrete symbolic mental units. In general, there are three questions to
-be considered:</p>
+<p>Language production and perception involve many factors. My research seeks to explain how these different factors interact. Primarily, I am interested in the nature of phonological knowledge and how it interacts with the sensory-motor system. I take the perspective that this is best answered by looking into the computational and representational properties of the transformations between continuous speech data and discrete symbolic mental units. In general, there are three questions to be considered:</p>
 <ol style="list-style-type: decimal">
 <li>How do we best characterize the output function? (production)</li>
 <li>How do we best characterize the input function? (perception)</li>
-<li>How do we best characterize the mental representations that mediate
-between the two?</li>
+<li>How do we best characterize the mental representations that mediate between the two?</li>
 </ol>
-<p>In my dissertation, <em>The Computational Structure of Phonological
-and Phonetic Knowledge</em>, I primarily addressed questions 1 and 3. I
-introduced what I call <strong>The Blueprint Model of
-Production</strong> which is a computational characterization of the
-production side of the phonetics-phonology interface. It provides an
-explanation for phenomena like incomplete neutralization and variation
-in homophone duration without needing to abandon discrete phonological
-knowledge. I also show how articulatory-based representations can be
-easily generated directly from symbolic strings, which supports more
-abstract theories of representation. My current research plans involve
-using the BMP to analyze more empirical phenomena and expand the
-computational side to include a perception aspect.</p>
-<p>Because of the nature of the data, my research has involved both
-experimental and formal methods. I also work on model-theoretic
-phonology. In that domain I find myself consistently thinking about
-process interactions. Most of my abstracts contain some combination of
-the keywords: <code>phonetics-phonology interface</code>,
-<code>phonological representations</code>, <code>computation</code>, and
-<code>model-theoretic phonology</code>. Lately, I have also been
-interested in how optionality and variability play a roll in the larger
-framework I have been developing.</p>
+<p>In my dissertation, <em>The Computational Structure of Phonological and Phonetic Knowledge</em>, I primarily addressed questions 1 and 3. I introduced what I call <strong>The Blueprint Model of Production</strong> which is a computational characterization of the production side of the phonetics-phonology interface. It provides an explanation for phenomena like incomplete neutralization and variation in homophone duration without needing to abandon discrete phonological knowledge. I also show how articulatory-based representations can be easily generated directly from symbolic strings, which supports more abstract theories of representation. My current research plans involve using the BMP to analyze more empirical phenomena and expand the computational side to include a perception aspect.</p>
+<p>Because of the nature of the data, my research has involved both experimental and formal methods. I also work on model-theoretic phonology. In that domain I find myself consistently thinking about process interactions. Most of my abstracts contain some combination of the keywords: <code>phonetics-phonology interface</code>, <code>phonological representations</code>, <code>computation</code>, and <code>model-theoretic phonology</code>. Lately, I have also been interested in how optionality and variability play a roll in the larger framework I have been developing.</p>
 </div>
 <div id="publications" class="section level2">
 <h2>Publications</h2>
 <div id="journal-articles" class="section level3">
 <h3>Journal Articles</h3>
 <ul>
-<li><p><strong>Nelson, S.</strong> &amp; Heinz, J. 2025. “<a
-href="https://www.cambridge.org/core/journals/phonology/article/blueprint-model-of-production/8F5DCE3962C064DA547FD44B5BD21218">The
-Blueprint Model of Production</a>”. <em>Phonology</em></p></li>
-<li><p>Taherkhani, N. &amp; <strong>Nelson, S.</strong> 2024. “<a
-href="https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/abs/southern-tati-takestani-dialect/9C2D1269604E1F8AAC18EAE6C7E92A5C">Southern
-Tati: Takestani Dialect</a>”. <em>Journal of the International Phonetic
-Association</em>.</p></li>
-<li><p><strong>Nelson, S</strong> &amp; Durvasula, K. 2021. “<a
-href="https://www.sciencedirect.com/science/article/abs/pii/S0095447020301108">Lexically-Guided
-Perceptual Learning does Generalize to New Contexts</a>”. <em>Journal of
-Phonetics</em>.</p></li>
+<li><p><strong>Nelson, S.</strong> &amp; Heinz, J. 2025. “<a href="https://www.cambridge.org/core/journals/phonology/article/blueprint-model-of-production/8F5DCE3962C064DA547FD44B5BD21218">The Blueprint Model of Production</a>”. <em>Phonology</em></p></li>
+<li><p>Taherkhani, N. &amp; <strong>Nelson, S.</strong> 2024. “<a href="https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/abs/southern-tati-takestani-dialect/9C2D1269604E1F8AAC18EAE6C7E92A5C">Southern Tati: Takestani Dialect</a>”. <em>Journal of the International Phonetic Association</em>.</p></li>
+<li><p><strong>Nelson, S</strong> &amp; Durvasula, K. 2021. “<a href="https://www.sciencedirect.com/science/article/abs/pii/S0095447020301108">Lexically-Guided Perceptual Learning does Generalize to New Contexts</a>”. <em>Journal of Phonetics</em>.</p></li>
 </ul>
 </div>
 <div id="proceedings" class="section level3">
 <h3>Proceedings</h3>
 <ul>
-<li><p><strong>Nelson, S</strong>. 2024. “Optionality and the
-Phonetics-Phonology Interface”. <em>Proceedings of the 42nd West Coast
-Conference on Formal Linguistics</em>.</p></li>
-<li><p><strong>Nelson, S</strong> &amp; Baković, E. 2024. “<a
-href="https://openpublishing.library.umass.edu/scil/article/id/2227/">Underspecification
-without Underspecified Representations</a>”. <em>Proceedings of the
-Society for Computation in Linguistics</em>, 7(1), 352-356.</p></li>
-<li><p><strong>Nelson, S</strong>. 2022. “<a
-href="https://scholarworks.umass.edu/scil/vol5/iss1/2/">A Model
-Theoretic Perspective on Phonological Feature Systems</a>”.
-<em>Proceedings of the Society for Computation in Linguistics</em>,
-5(1), 1-10.</p></li>
-<li><p><strong>Nelson, S</strong> &amp; Heinz, J. 2022. “<a
-href="http://journals.linguisticsociety.org/proceedings/index.php/amphonology/article/view/5304">Incomplete
-Neutralization and the Blueprint Model of Production</a>”. In Peter
-Jurgec, Liisa Duncan, Emily Elfner, Yoonjung Kang, Alexei Kochetov,
-Brittney K. O’Neill, Avery Ozburn, Keren Rice, Nathan Sanders, Jessamyn
-Schertz, Nate Shaftoe, and Lisa Sullivan (eds.), <em>Proceedings of the
-2021 Annual Meeting on Phonology</em>. Washington, DC: Linguistic
-Society of America.</p></li>
-<li><p>Pue, A. Sean &amp; <strong>Nelson, S</strong>. 2018. “Marking
-Poetic Time: Building and Annotating a Hindi-Urdu Poetry Corpus for
-Computational Humanities Research.” <em>Proceedings of the Second
-Workshop on Corpus-based Research in the Humanities (CRH-2)</em>,
-171-180.</p></li>
-<li><p>Durvasula, K. &amp; <strong>Nelson, S</strong>. 2018. “<a
-href="http://journals.linguisticsociety.org/proceedings/index.php/amphonology/article/view/4237">Lexical
-Retuning Targets Features</a>”. In Gallagher, Gillian, Gouskova, Maria,
-and Sora Yin (eds.), <em>Proceedings of the 2017 Annual Meeting on
-Phonology</em>. Washington, DC: Linguistic Society of America.</p></li>
+<li><p><strong>Nelson, S</strong>. 2024. “Optionality and the Phonetics-Phonology Interface”. <em>Proceedings of the 42nd West Coast Conference on Formal Linguistics</em>.</p></li>
+<li><p><strong>Nelson, S</strong> &amp; Baković, E. 2024. “<a href="https://openpublishing.library.umass.edu/scil/article/id/2227/">Underspecification without Underspecified Representations</a>”. <em>Proceedings of the Society for Computation in Linguistics</em>, 7(1), 352-356.</p></li>
+<li><p><strong>Nelson, S</strong>. 2022. “<a href="https://scholarworks.umass.edu/scil/vol5/iss1/2/">A Model Theoretic Perspective on Phonological Feature Systems</a>”. <em>Proceedings of the Society for Computation in Linguistics</em>, 5(1), 1-10.</p></li>
+<li><p><strong>Nelson, S</strong> &amp; Heinz, J. 2022. “<a href="http://journals.linguisticsociety.org/proceedings/index.php/amphonology/article/view/5304">Incomplete Neutralization and the Blueprint Model of Production</a>”. In Peter Jurgec, Liisa Duncan, Emily Elfner, Yoonjung Kang, Alexei Kochetov, Brittney K. O’Neill, Avery Ozburn, Keren Rice, Nathan Sanders, Jessamyn Schertz, Nate Shaftoe, and Lisa Sullivan (eds.), <em>Proceedings of the 2021 Annual Meeting on Phonology</em>. Washington, DC: Linguistic Society of America.</p></li>
+<li><p>Pue, A. Sean &amp; <strong>Nelson, S</strong>. 2018. “Marking Poetic Time: Building and Annotating a Hindi-Urdu Poetry Corpus for Computational Humanities Research.” <em>Proceedings of the Second Workshop on Corpus-based Research in the Humanities (CRH-2)</em>, 171-180.</p></li>
+<li><p>Durvasula, K. &amp; <strong>Nelson, S</strong>. 2018. “<a href="http://journals.linguisticsociety.org/proceedings/index.php/amphonology/article/view/4237">Lexical Retuning Targets Features</a>”. In Gallagher, Gillian, Gouskova, Maria, and Sora Yin (eds.), <em>Proceedings of the 2017 Annual Meeting on Phonology</em>. Washington, DC: Linguistic Society of America.</p></li>
 </ul>
 </div>
 </div>
 <div id="manuscripts" class="section level2">
 <h2>Manuscripts</h2>
 <ul>
-<li><strong>Nelson, S</strong>. “The logic and typology of derived
-environment effects”.</li>
-<li>Taherkhani, N., <strong>Nelson, S.</strong> &amp; Heinz, J. “Vowel
-alternations as evidence for contrastive vowel features in Southern
-Tati: Takestani dialect”</li>
-<li><strong>Nelson, S</strong>. “On inferring linear order from
-non-linear gestural representations”.</li>
-<li>Heinz, J. &amp; <strong>Nelson, S.</strong> “The Past, Present, and
-Future of Model-Theoretic Phonology”.</li>
+<li><strong>Nelson, S</strong>. “The logic and typology of derived environment effects”.</li>
+<li>Taherkhani, N., <strong>Nelson, S.</strong> &amp; Heinz, J. “Vowel alternations as evidence for contrastive vowel features in Southern Tati: Takestani dialect”</li>
+<li><strong>Nelson, S</strong>. “On inferring linear order from non-linear gestural representations”.</li>
+<li>Heinz, J. &amp; <strong>Nelson, S.</strong> “The Past, Present, and Future of Model-Theoretic Phonology”.</li>
 </ul>
 </div>
 <div id="presentations-and-posters" class="section level2">
 <h2>Presentations and Posters</h2>
 <ul>
-<li><p><strong>Nelson, S.</strong> (2026). Phonological Knowledge,
-Weighted Logic, and the Competence/Performance Distinction. Old-World
-Conference in Phonology 23 (OCP2023). University of Cambridge.
-Cambridge, UK, England.</p></li>
-<li><p><strong>Nelson, S.</strong> &amp; Baković, E. (2026). Feature
-spreading and redundancy with BMRS. Old-World Conference in Phonology 23
-(OCP23). University of Cambridge. Cambridge, UK, England.</p></li>
-<li><p>Stephanov, A. &amp; <strong>Nelson, S.</strong> (2025).
-Formalizing the Venetian ‘Evanescent’ /l/: A Three-Perspective Analysis.
-Going Romance 2025. Ca’ Foscari University of Venice, Venice,
-Italy.</p></li>
-<li><p>Stephanov, A. &amp; <strong>Nelson, S.</strong> (2025).
-Formalizing the Venetian ‘Evanescent’ /l/: A Three-Perspective Analysis.
-Annual Meeting on Phonology 2025 (AMP). University of California
-Berkeley. Berkeley, CA, USA.</p></li>
-<li><p><strong>Nelson, S.</strong> (2025). <a
-href="Presentations/dymos2025-Nelson.pdf">Using Model Theory and
-Function Types to Formally Relate Symbolic and Dynamic Theories of
-Speech</a>. Dynamic Models of Speech (DYMOS). University of Oregon.
-Eugene, OR, USA.</p></li>
-<li><p><strong>Nelson, S.</strong> (2025). <a
-href="Presentations/naphc2025-Nelson.pdf">Phonological Knowledge,
-Weighted Logic, and the Competence/Performance Distinction</a>. North
-American Phonology Conference 13 (NAPHC). Concordia University,
-Montreal, Quebec, CA.</p></li>
-<li><p><strong>Nelson, S.</strong> &amp; Baković, E. (2024). <a
-href="Presentations/amp2024-NelsonBakovic.pdf">Computation Clarifies
-Mixed Specification Behavior of Coronals in English</a>. Annual Meeting
-on Phonology 2024 (AMP). Rutgers University, New Brunswick, NJ,
-USA.</p></li>
-<li><p><strong>Nelson, S.</strong> (2024). <a
-href="Presentations/midphon2024-Nelson.pdf">Coronal is Never
-Underspecified in English: a Computational View</a>. 29th Annual
-Mid-Continental Phonetics &amp; Phonology Conference (MidPhon).
-University of Illinois Urbana-Champaign, Urbana, IL, USA.</p></li>
-<li><p><strong>Nelson, S.</strong> (2024). <a
-href="Presentations/rspw2024-Nelson.pdf">BMRS and
-Underspecification</a>. Rutgers Subregular Phonology Workshop. Rutgers
-University. New Brunswick, NJ, USA.</p></li>
-<li><p><strong>Nelson, S.</strong> &amp; Baković, E. (2024). <a
-href="Presentations/scil2024-NelsonBakovic.pdf">Underspecification
-without Underspecified Representations</a>. Society for Computation in
-Linguistics 2024 (SCiL). University of California Irvine. Irvine, CA,
-USA.</p></li>
-<li><p><strong>Nelson, S.</strong> (2024). <a
-href="Presentations/wccfl2024-Nelson.pdf">Optionality and the
-Phonetics-Phonology Interface</a>. 42nd West Coast Conference on Formal
-Linguistics (WCCFL). University of California Berkeley. Berkeley, CA,
-USA.</p></li>
-<li><p>Chandlee, J., Jardine, A., &amp; <strong>Nelson, S.</strong>
-(2024). <a
-href="Presentations/lsa2024-ChandleeJardineNelson.pdf">Tutorial: Logic
-and Model Theory for Phonology</a>. Annual Meeting of the Linguistic
-Society of America (LSA). New York, New York, USA.</p></li>
-<li><p><strong>Nelson, S.</strong> (2023). <a
-href="Presentations/m1002023-Nelson.pdf">Unordered rules that only apply
-to the input are not more complex than ordered rules</a>. M100.
-Massachusetts Institute of Technology. Cambridge, MA, USA.</p></li>
-<li><p><strong>Nelson, S.</strong> (2023). <a
-href="Presentations/naphc2023-Nelson.pdf">Model Theoretic Phonology and
-Theory Comparison: Segments, Gestures, and Coupling Graphs</a>. North
-American Phonology Conference 12 (NAPhC). Concordia University,
-Montreal, Quebec, Canada.</p></li>
-<li><p>Taherkhani, N., <strong>Nelson, S.</strong>, &amp; Heinz, J.
-(2023). <a href="Presentations/nacil2023-TaherkhaniNelsonHeinz.pdf">A
-Contrastive Hierarchy for Vowels in Southern Tati: Takestani
-Dialect</a>. North American Conference in Iranian Linguistics 3 (NACIL).
-University of California Los Angeles, Los Angeles, CA, USA.</p></li>
-<li><p><strong>Nelson,S.</strong> (2022). <a
-href="Presentations/amp2022-Nelson.pdf">Are Representations in
-Articulatory and Generative Phonology so different?</a>. Annual Meeting
-on Phonology 2022 (AMP). University of California Los Angeles, Los
-Angeles, CA, USA.</p></li>
-<li><p><strong>Nelson, S.</strong> (2022). <a
-href="Presentations/wmtrp2022-Nelson.pdf">Gestures, Coupling Graphs, and
-Strings</a>. Workshop on Model Theoretic Representations in Phonology
-(WMTRP). Stony Brook University, Stony Brook, NY, USA.</p></li>
-<li><p>Heinz, J. &amp; <strong>Nelson, S.</strong> (2022). <a
-href="Presentations/wmtrp2022-HeinzNelson.pdf">The Past, Present, and
-Future of Model Theoretic Phonology</a>. Workshop on Model Theoretic
-Representations in Phonology (WMTRP). Stony Brook University, Stony
-Brook, NY, USA.</p></li>
-<li><p><strong>Nelson, S.</strong> (2022). <a
-href="Presentations/scil2021-Nelson.pdf">A Model Theoretic Perspective
-on Phonological Feature Systems</a>. Society for Computation in
-Linguistics 2022 (SCiL).</p></li>
-<li><p><strong>Nelson, S.</strong> &amp; Heinz, J. (2021). <a
-href="Presentations/amp2021-NelsonHeinz.pdf">Incomplete Neutralization
-and the Blueprint Model of Production</a>. Annual Meeting on Phonology
-2021 (AMP). University of Toronto, Toronto, Ontario, Canada.</p></li>
-<li><p><strong>Nelson, S.</strong> (2021). <a
-href="Presentations/phone2021-Nelson.pdf">What can logic and model
-theory tell us about phonological feature systems?</a> Phonology in the
-Northeast 2021 (PhoNE). New York University, New York, New York,
-USA.</p></li>
-<li><p><strong>Nelson, S.</strong> (2020). <a
-href="Presentations/necphon2020-Nelson.pdf">The logical language of
-phonological features</a>. Northeastern Computational Phonology Workshop
-2020 (NECPhon). Maryland University. College Park, Maryland,
-USA.</p></li>
-<li><p><strong>Nelson, S.</strong> &amp; Heinz, J. (2020). <a
-href="Presentations/wtph2020-NelsonHeinz.pdf">Incomplete Neutralization
-is no Problem for Formal Phonology</a>. Workshop on Theoretical
-Phonology 2020 (WTPh). Concordia University. Montreal, Quebec,
-Canada.</p></li>
-<li><p><strong>Nelson, S.</strong> (2019) <a
-href="Presentations/lsa2019-Nelson.pdf">Generalization in the absence of
-variation within lexical retuning</a>. Annual Meeting of the Linguistic
-Society of America (LSA). New York, New York, USA.</p></li>
-<li><p><strong>Nelson, S.</strong> (2018). <a
-href="Presentations/midphon2018-Nelson.pdf">Lexical retuning is not the
-same as audio-visual retuning: the former generalizes better</a>. 23rd
-Annual Mid-Continental Phonetics &amp; Phonology Conference (MidPhon).
-Northwestern University. Evanston, Illinois, USA.</p></li>
-<li><p>Durvasula, K. &amp; <strong>Nelson, S.</strong> (2018). <a
-href="Presentations/labphon2018-DurvasulaNelson.pdf">Retuning
-generalizes to new contexts</a>. 16th Conference on Laboratory Phonology
-(LabPhon). University of Lisboa. Lisboa, Portugal.</p></li>
-<li><p>Pue, A. Sean &amp; <strong>Nelson, S.</strong> (2018). Marking
-Poetic Time: Building and Annotating a Hindi-Urdu Poetry Corpus for
-Computational Humanities Research. Corpus-based Research in the
-Humanities 2, Austrian Academy of Science. Vienna, Austria.</p></li>
-<li><p>Durvasula, K. &amp; <strong>Nelson, S.</strong> (2017). <a
-href="Presentations/amp2017-DurvasulaNelson.pdf">Perceptual retuning
-targets features</a>. Annual Meeting on Phonology 2017 (AMP). New York
-University. New York, New York, USA.</p></li>
+<li><p><strong>Nelson, S.</strong> (2026). Phonological Knowledge, Weighted Logic, and the Competence/Performance Distinction. Old-World Conference in Phonology 23 (OCP2023). University of Cambridge. Cambridge, UK, England.</p></li>
+<li><p><strong>Nelson, S.</strong> &amp; Baković, E. (2026). Feature spreading and redundancy with BMRS. Old-World Conference in Phonology 23 (OCP23). University of Cambridge. Cambridge, UK, England.</p></li>
+<li><p>Stephanov, A. &amp; <strong>Nelson, S.</strong> (2025). Formalizing the Venetian ‘Evanescent’ /l/: A Three-Perspective Analysis. Going Romance 2025. Ca’ Foscari University of Venice, Venice, Italy.</p></li>
+<li><p>Stephanov, A. &amp; <strong>Nelson, S.</strong> (2025). Formalizing the Venetian ‘Evanescent’ /l/: A Three-Perspective Analysis. Annual Meeting on Phonology 2025 (AMP). University of California Berkeley. Berkeley, CA, USA.</p></li>
+<li><p><strong>Nelson, S.</strong> (2025). <a href="Presentations/dymos2025-Nelson.pdf">Using Model Theory and Function Types to Formally Relate Symbolic and Dynamic Theories of Speech</a>. Dynamic Models of Speech (DYMOS). University of Oregon. Eugene, OR, USA.</p></li>
+<li><p><strong>Nelson, S.</strong> (2025). <a href="Presentations/naphc2025-Nelson.pdf">Phonological Knowledge, Weighted Logic, and the Competence/Performance Distinction</a>. North American Phonology Conference 13 (NAPHC). Concordia University, Montreal, Quebec, CA.</p></li>
+<li><p><strong>Nelson, S.</strong> &amp; Baković, E. (2024). <a href="Presentations/amp2024-NelsonBakovic.pdf">Computation Clarifies Mixed Specification Behavior of Coronals in English</a>. Annual Meeting on Phonology 2024 (AMP). Rutgers University, New Brunswick, NJ, USA.</p></li>
+<li><p><strong>Nelson, S.</strong> (2024). <a href="Presentations/midphon2024-Nelson.pdf">Coronal is Never Underspecified in English: a Computational View</a>. 29th Annual Mid-Continental Phonetics &amp; Phonology Conference (MidPhon). University of Illinois Urbana-Champaign, Urbana, IL, USA.</p></li>
+<li><p><strong>Nelson, S.</strong> (2024). <a href="Presentations/rspw2024-Nelson.pdf">BMRS and Underspecification</a>. Rutgers Subregular Phonology Workshop. Rutgers University. New Brunswick, NJ, USA.</p></li>
+<li><p><strong>Nelson, S.</strong> &amp; Baković, E. (2024). <a href="Presentations/scil2024-NelsonBakovic.pdf">Underspecification without Underspecified Representations</a>. Society for Computation in Linguistics 2024 (SCiL). University of California Irvine. Irvine, CA, USA.</p></li>
+<li><p><strong>Nelson, S.</strong> (2024). <a href="Presentations/wccfl2024-Nelson.pdf">Optionality and the Phonetics-Phonology Interface</a>. 42nd West Coast Conference on Formal Linguistics (WCCFL). University of California Berkeley. Berkeley, CA, USA.</p></li>
+<li><p>Chandlee, J., Jardine, A., &amp; <strong>Nelson, S.</strong> (2024). <a href="Presentations/lsa2024-ChandleeJardineNelson.pdf">Tutorial: Logic and Model Theory for Phonology</a>. Annual Meeting of the Linguistic Society of America (LSA). New York, New York, USA.</p></li>
+<li><p><strong>Nelson, S.</strong> (2023). <a href="Presentations/m1002023-Nelson.pdf">Unordered rules that only apply to the input are not more complex than ordered rules</a>. M100. Massachusetts Institute of Technology. Cambridge, MA, USA.</p></li>
+<li><p><strong>Nelson, S.</strong> (2023). <a href="Presentations/naphc2023-Nelson.pdf">Model Theoretic Phonology and Theory Comparison: Segments, Gestures, and Coupling Graphs</a>. North American Phonology Conference 12 (NAPhC). Concordia University, Montreal, Quebec, Canada.</p></li>
+<li><p>Taherkhani, N., <strong>Nelson, S.</strong>, &amp; Heinz, J. (2023). <a href="Presentations/nacil2023-TaherkhaniNelsonHeinz.pdf">A Contrastive Hierarchy for Vowels in Southern Tati: Takestani Dialect</a>. North American Conference in Iranian Linguistics 3 (NACIL). University of California Los Angeles, Los Angeles, CA, USA.</p></li>
+<li><p><strong>Nelson,S.</strong> (2022). <a href="Presentations/amp2022-Nelson.pdf">Are Representations in Articulatory and Generative Phonology so different?</a>. Annual Meeting on Phonology 2022 (AMP). University of California Los Angeles, Los Angeles, CA, USA.</p></li>
+<li><p><strong>Nelson, S.</strong> (2022). <a href="Presentations/wmtrp2022-Nelson.pdf">Gestures, Coupling Graphs, and Strings</a>. Workshop on Model Theoretic Representations in Phonology (WMTRP). Stony Brook University, Stony Brook, NY, USA.</p></li>
+<li><p>Heinz, J. &amp; <strong>Nelson, S.</strong> (2022). <a href="Presentations/wmtrp2022-HeinzNelson.pdf">The Past, Present, and Future of Model Theoretic Phonology</a>. Workshop on Model Theoretic Representations in Phonology (WMTRP). Stony Brook University, Stony Brook, NY, USA.</p></li>
+<li><p><strong>Nelson, S.</strong> (2022). <a href="Presentations/scil2021-Nelson.pdf">A Model Theoretic Perspective on Phonological Feature Systems</a>. Society for Computation in Linguistics 2022 (SCiL).</p></li>
+<li><p><strong>Nelson, S.</strong> &amp; Heinz, J. (2021). <a href="Presentations/amp2021-NelsonHeinz.pdf">Incomplete Neutralization and the Blueprint Model of Production</a>. Annual Meeting on Phonology 2021 (AMP). University of Toronto, Toronto, Ontario, Canada.</p></li>
+<li><p><strong>Nelson, S.</strong> (2021). <a href="Presentations/phone2021-Nelson.pdf">What can logic and model theory tell us about phonological feature systems?</a> Phonology in the Northeast 2021 (PhoNE). New York University, New York, New York, USA.</p></li>
+<li><p><strong>Nelson, S.</strong> (2020). <a href="Presentations/necphon2020-Nelson.pdf">The logical language of phonological features</a>. Northeastern Computational Phonology Workshop 2020 (NECPhon). Maryland University. College Park, Maryland, USA.</p></li>
+<li><p><strong>Nelson, S.</strong> &amp; Heinz, J. (2020). <a href="Presentations/wtph2020-NelsonHeinz.pdf">Incomplete Neutralization is no Problem for Formal Phonology</a>. Workshop on Theoretical Phonology 2020 (WTPh). Concordia University. Montreal, Quebec, Canada.</p></li>
+<li><p><strong>Nelson, S.</strong> (2019) <a href="Presentations/lsa2019-Nelson.pdf">Generalization in the absence of variation within lexical retuning</a>. Annual Meeting of the Linguistic Society of America (LSA). New York, New York, USA.</p></li>
+<li><p><strong>Nelson, S.</strong> (2018). <a href="Presentations/midphon2018-Nelson.pdf">Lexical retuning is not the same as audio-visual retuning: the former generalizes better</a>. 23rd Annual Mid-Continental Phonetics &amp; Phonology Conference (MidPhon). Northwestern University. Evanston, Illinois, USA.</p></li>
+<li><p>Durvasula, K. &amp; <strong>Nelson, S.</strong> (2018). <a href="Presentations/labphon2018-DurvasulaNelson.pdf">Retuning generalizes to new contexts</a>. 16th Conference on Laboratory Phonology (LabPhon). University of Lisboa. Lisboa, Portugal.</p></li>
+<li><p>Pue, A. Sean &amp; <strong>Nelson, S.</strong> (2018). Marking Poetic Time: Building and Annotating a Hindi-Urdu Poetry Corpus for Computational Humanities Research. Corpus-based Research in the Humanities 2, Austrian Academy of Science. Vienna, Austria.</p></li>
+<li><p>Durvasula, K. &amp; <strong>Nelson, S.</strong> (2017). <a href="Presentations/amp2017-DurvasulaNelson.pdf">Perceptual retuning targets features</a>. Annual Meeting on Phonology 2017 (AMP). New York University. New York, New York, USA.</p></li>
 </ul>
 <hr />
 </div>
 </div>
 <div id="teaching" class="section level1">
 <h1><strong>Teaching</strong></h1>
-<p>I currently work as an Instructor in the Department of Linguistics at
-the University of Illinois Urbana-Champaign. My office is located in
-LCLB 4117. I have regularly scheduled office hours on Wednesdays and
-Fridays from 12:30-2:00pm. If you are a student in one of my classes,
-please got my <a href="https://snelson89.youcanbook.me">YouCanBookMe</a>
-page to schedule a time to meet. If you are not my student, or if those
-time/meeting lengths do not work for you, please send me an e-mail. We
-can find a time to meet either remotely or in person.Below is a list of
-classes I have served as either a teaching assistant or main instructor
-for.</p>
-<p>In 2023 I was a recipient of the Stony Brook <a
-href="https://grad.stonybrook.edu/awards/President_Teaching.php">President’s
-Award for Excellence in Teaching by a Graduate Student</a>.</p>
-<div id="university-of-illinois-urbana-champaign"
-class="section level2">
+<p>I currently work as an Instructor in the Department of Linguistics at the University of Illinois Urbana-Champaign. My office is located in LCLB 4117. I have regularly scheduled office hours on Wednesdays and Fridays from 12:30-2:00pm. If you are a student in one of my classes, please got my <a href="https://snelson89.youcanbook.me">YouCanBookMe</a> page to schedule a time to meet. If you are not my student, or if those time/meeting lengths do not work for you, please send me an e-mail. We can find a time to meet either remotely or in person.Below is a list of classes I have served as either a teaching assistant or main instructor for.</p>
+<p>In 2023 I was a recipient of the Stony Brook <a href="https://grad.stonybrook.edu/awards/President_Teaching.php">President’s Award for Excellence in Teaching by a Graduate Student</a>.</p>
+<div id="university-of-illinois-urbana-champaign" class="section level2">
 <h2>University of Illinois Urbana-Champaign</h2>
 <div id="main-instructor" class="section level3">
 <h3>Main Instructor</h3>
@@ -565,8 +367,7 @@ class="section level2">
 <ul>
 <li>Fall 2024</li>
 </ul></li>
-<li><strong>LING 490</strong>: <em>Computation and Phonological
-Theory</em>
+<li><strong>LING 490</strong>: <em>Computation and Phonological Theory</em>
 <ul>
 <li>Spring 2025</li>
 </ul></li>
@@ -598,8 +399,7 @@ Theory</em>
 <ul>
 <li>Fall 2019; Fall 2021; Spring 2022</li>
 </ul></li>
-<li><strong>LIN 235</strong>: <em>Signed Languages &amp; Deaf
-Communities</em>
+<li><strong>LIN 235</strong>: <em>Signed Languages &amp; Deaf Communities</em>
 <ul>
 <li>Spring 2024</li>
 </ul></li>
@@ -618,8 +418,7 @@ Communities</em>
 <ul>
 <li><strong>LIN 200</strong>: <em>Language in the United States</em>
 <ul>
-<li>Winter 2022 (Co-taught with <a
-href="https://andrija-petrovic.github.io">Andrija Petrovic</a>)</li>
+<li>Winter 2022 (Co-taught with <a href="https://andrija-petrovic.github.io">Andrija Petrovic</a>)</li>
 </ul></li>
 <li><strong>LIN 350</strong>: <em>Experimental Phonetics</em>
 <ul>
@@ -631,9 +430,7 @@ href="https://andrija-petrovic.github.io">Andrija Petrovic</a>)</li>
 </ul></li>
 <li><strong>LIN 522</strong>: <em>Phonetics</em>
 <ul>
-<li>Summer 2020; Summer 2022 (Co-taught with <a
-href="https://sites.google.com/view/felixfonsecaquesada/página-principal">Felix
-Fonseca Quesada</a>)</li>
+<li>Summer 2020; Summer 2022 (Co-taught with <a href="https://sites.google.com/view/felixfonsecaquesada/página-principal">Felix Fonseca Quesada</a>)</li>
 </ul></li>
 </ul>
 </div>
@@ -653,17 +450,14 @@ Fonseca Quesada</a>)</li>
 </ul></li>
 <li>New York Institute
 <ul>
-<li>Winter/<a href="files/mathling-summer2024.pdf">Summer 2024</a>
-(Introduction to Mathematical Linguistics co-taught with <a
-href="https://www.vinczarnecki.com">Vinny Czarnecki</a>)</li>
+<li>Winter/<a href="files/mathling-summer2024.pdf">Summer 2024</a> (Introduction to Mathematical Linguistics co-taught with <a href="https://www.vinczarnecki.com">Vinny Czarnecki</a>)</li>
 </ul></li>
 </ul>
 </div>
 <div id="volunteer" class="section level3">
 <h3>Volunteer</h3>
 <ul>
-<li>Institute for Advanced Computational Science Data + Computation =
-Discovery!
+<li>Institute for Advanced Computational Science Data + Computation = Discovery!
 <ul>
 <li>Summer 2024</li>
 </ul></li>
@@ -682,8 +476,7 @@ Discovery!
 </ul>
 </div>
 </div>
-<div id="workshop-materials-handouts-tutorials-etc"
-class="section level2">
+<div id="workshop-materials-handouts-tutorials-etc" class="section level2">
 <h2>Workshop Materials, Handouts, Tutorials, etc…</h2>
 <ul>
 <li><a href="Praat.html">Introduction to Praat</a></li>
