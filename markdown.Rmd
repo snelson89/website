@@ -1,0 +1,145 @@
+---
+title: "Markdown Tutorial"
+output: html_document
+---
+
+# Introduction
+Markdown is what is called a *lightweight* markup language.
+It is the lightweight part that makes it different from something like LaTeX.
+In my opinion it is best suited for making quick/small documents like handouts.
+One advantage it has over something like MS Word/Google Docs is that you can embed
+LaTex style math directly within it. 
+At the same time, you can use many html-style commands when necessary. 
+If you'd like to follow along/try things out you can use the browser-based markdown editor [StackEdit](https://stackedit.io).
+
+# Some basic commands
+
+## Headings
+
+I thought there were only three levels, but while preparing this tutorial I found
+out you can have up to six heading levels. Seems like overkill, but maybe you'll
+find a need for it. 
+
+|Command|Result|
+|:------|:----:|
+|```# ...``` | Heading 1 |
+|```## ...``` | Heading 2 |
+|```### ...```| Heading 3 |
+|```#### ...```| Heading 4 |
+|```##### ...```| Heading 5 |
+|```###### ...```| Heading 6 |
+
+# This is a top level heading (section)
+
+## This is a second layer heading (subsection)
+
+### This is a third level heading (subsubsection)
+
+#### This is a fourth level heading (subsubsubsection)
+
+##### This is a fifth level heading (subsubsubsubsection)
+
+###### This is a bottom level heading (subsubsubsubsubsection)
+
+## Text
+
+You might want to change how your text looks. Here are some ways in which you 
+can do so. 
+
+
+|Command|Result|
+|:------|:----:|
+|```**...**``` | **Bold** |
+|```*...*``` | *Italic* |
+|```***...***``` | ***Bold & Italic***|
+|``` `...` ``` | `Code Block` |
+
+
+> You can also make something a block quote by placing the ```>``` symbol at the 
+beginning of the line. If you want a multiline block quote with a line break just use ```>```
+with no text in between the two lines.
+
+> You can also have nested blockquotes
+>
+>> by including and empty line with `>` and then ```>>``` on the following line
+
+## Lists
+
+You can have both ordered and unordered lists. For ordered lists, any number 
+followed by a period willdo and Markdown will change to the correct ordering. 
+You can also embed up to three levels.
+
+1. Item 1
+3. Item 2
+    1. Item 2-1
+    2. Item 2-2
+        1. Item 2-2-1
+        3. Item 2-2-2
+        2. Item 2-2-3
+    2. Item 2-3
+2. Item 3
+
+Alternatively, you can use a/b or i/ii in the embedded levels.
+
+1. Item 1
+3. Item 2
+    a. Item 2-1
+    b. Item 2-2
+        i. Item 2-2-1
+        ii. Item 2-2-2
+        iii. Item 2-2-3
+    c. Item 2-3
+2. Item 3
+
+For undordered lists, just use ```-```.
+
+- Item 1
+- Item 2
+    - Item 2-1
+    - Item 2-2
+        - Item 2-2-1
+        - Item 2-2-2
+        - Item 2-2-3
+    - Item 2-3
+- Item 3
+
+You can also embedd unordered lists within ordered lists.
+
+1. Item 1
+3. Item 2
+    - Item 2-1
+    - Item 2-2
+        1. Item 2-2-1
+        3. Item 2-2-2
+        2. Item 2-2-3
+    - Item 2-3
+2. Item 3
+
+## Including Images
+
+This works easiest when the image is in the same folder as the markdown file. 
+The basic synatx is `![Image Description](File Name)`.
+You may also want to use HTML directly if you need to adjust the size: `<img src="http://....jpg" width="200" height="200" />`
+Here is a picture of me in Santa Cruz, CA. 
+
+<center><img src="pics/also-me.jpg" width="200"/></center>
+
+## Links
+
+Links work in a similar way to images: `[Description of link](Link)`.
+Here is a link to the [PPCC Page](https://www.scott-nelson.net/PPCC).
+
+## LaTeX Math
+
+If you wrap single `$` around the latex equation you can display math inline like this: $ab \sqsubseteq ab^{k-1}a$.
+If you wrap double `$$` around the latex equation you can display math centered like this: $$ab \sqsubseteq ab^{k-1}a$$.
+
+
+### Beyond
+
+There is slightly more you can do with Markdown, but these are the basics. There is no
+all-in-one Markdown program. Its like a programming language in which you can type
+up a Markdown document in any text-based program, but you need a separate compiler
+to get a pdf or html document. I've used Markdown in R, Google Colab, and Github, but also with 
+a program for Mac called MacDown which has realtime updating so you can see
+what the output looks like as you are creating your document. The choice is up to you...

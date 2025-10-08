@@ -11,12 +11,12 @@
 
 
 
-<title>PPCC Research Group</title>
+<title>Markdown Tutorial</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -255,107 +255,237 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">PPCC Research Group</h1>
+<h1 class="title toc-ignore">Markdown Tutorial</h1>
 
 </div>
 
 
-<p>The <strong>P</strong>(honology), <strong>P</strong>(honetics),
-<strong>C</strong>(omputation), and <strong>C</strong>(ognition)
-<strong>Research Group</strong> is led by Scott Nelson at the University
-of Illinois Urbana-Champaign. The research focus of this group is on the
-relationship between <em>phonological</em> and <em>phonetic
-knowledge</em>. We largely approach things <em>computationally</em> and
-are interested in the implications of what we find for general
-linguistic <em>cognition</em>.</p>
-<p>The group meets every other week for two hours. Meetings are broken
-down into three 40 minute chunks. One chunk is for a group member to
-share their ongoing work with the group. Another chunk is for a group
-member to lead a discussion on a recently published (or pre-print) paper
-relevant to the group’s interests. The final chunk is for a group member
-to teach a skill (programming language, software, mathematical approach,
-…).</p>
-<div id="fall-2025-meetings" class="section level2">
-<h2>Fall 2025 Meetings</h2>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Markdown is what is called a <em>lightweight</em> markup language. It
+is the lightweight part that makes it different from something like
+LaTeX. In my opinion it is best suited for making quick/small documents
+like handouts. One advantage it has over something like MS Word/Google
+Docs is that you can embed LaTex style math directly within it. At the
+same time, you can use many html-style commands when necessary. If you’d
+like to follow along/try things out you can use the browser-based
+markdown editor <a href="https://stackedit.io">StackEdit</a>.</p>
+</div>
+<div id="some-basic-commands" class="section level1">
+<h1>Some basic commands</h1>
+<div id="headings" class="section level2">
+<h2>Headings</h2>
+<p>I thought there were only three levels, but while preparing this
+tutorial I found out you can have up to six heading levels. Seems like
+overkill, but maybe you’ll find a need for it.</p>
 <table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
 <thead>
 <tr>
-<th align="center">Date</th>
-<th align="center">Research Presentation</th>
-<th align="center">Paper Presentation</th>
-<th align="center">Skill Presentation</th>
+<th align="left">Command</th>
+<th align="center">Result</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">8/27</td>
-<td align="center"><a href="PPCC/Intro-2025.pdf">Scott on PPCC</a></td>
-<td align="center">na.</td>
-<td align="center">na.</td>
+<td align="left"><code># ...</code></td>
+<td align="center">Heading 1</td>
 </tr>
 <tr>
-<td align="center">9/10</td>
-<td align="center">Anna AMP Practice Talk</td>
-<td align="center">Matthew on <a
-href="https://mol2025.molweb.xyz/docs/mol2025_yolyan.pdf">Yolyan
-(2025)</a></td>
-<td align="center">Yinglun on LaTeX</td>
+<td align="left"><code>## ...</code></td>
+<td align="center">Heading 2</td>
 </tr>
 <tr>
-<td align="center">9/24</td>
-<td align="center">Yinglun on Re-Analyzing the Expressivity of SK Korean
-Tone Plateuing</td>
-<td align="center">Angie on <a
-href="https://www.sciencedirect.com/science/article/pii/S0749596X25000427">Meyers
-et al. (2025)</a></td>
-<td align="center">Scott on Markdown</td>
+<td align="left"><code>### ...</code></td>
+<td align="center">Heading 3</td>
 </tr>
 <tr>
-<td align="center">10/8</td>
-<td align="center">Matthew on Tier-Based Functions with BMRS</td>
-<td align="center">Yinglun on <a
-href="https://openpublishing.library.umass.edu/scil/article/id/3124/">Joo
-&amp; Jardine (2025)</a></td>
-<td align="center">Scott on <a href="PPCC/GradientFLT.pdf">Weighted
-Logic (and more!)</a></td>
+<td align="left"><code>#### ...</code></td>
+<td align="center">Heading 4</td>
 </tr>
 <tr>
-<td align="center">10/22</td>
-<td align="center">Mikhael on Computing Rhyme</td>
-<td align="center">na.</td>
-<td align="center">na.</td>
+<td align="left"><code>##### ...</code></td>
+<td align="center">Heading 5</td>
 </tr>
 <tr>
-<td align="center">11/5</td>
-<td align="center">Ryan on Real-Time Automaton for Phonetic
-Categorization</td>
-<td align="center">Anna on tbd</td>
-<td align="center">Scott on Bayesian Statistics</td>
-</tr>
-<tr>
-<td align="center">11/19</td>
-<td align="center">Angie on Malay Morphophonology and BMRS</td>
-<td align="center">Ryan on <a
-href="https://www.sciencedirect.com/science/article/pii/S0010027725000873">Wetzel
-&amp; Kurz (2025)</a></td>
-<td align="center">Scott on Algorithmic Analysis</td>
-</tr>
-<tr>
-<td align="center">12/3</td>
-<td align="center">tbd</td>
-<td align="center">Mikhael on <a
-href="https://openpublishing.library.umass.edu/amphonology/article/id/3022/">Danis
-(2025)</a></td>
-<td align="center">Scott on Computational Learning Theory</td>
+<td align="left"><code>###### ...</code></td>
+<td align="center">Heading 6</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div id="this-is-a-top-level-heading-section" class="section level1">
+<h1>This is a top level heading (section)</h1>
+<div id="this-is-a-second-layer-heading-subsection"
+class="section level2">
+<h2>This is a second layer heading (subsection)</h2>
+<div id="this-is-a-third-level-heading-subsubsection"
+class="section level3">
+<h3>This is a third level heading (subsubsection)</h3>
+<div id="this-is-a-fourth-level-heading-subsubsubsection"
+class="section level4">
+<h4>This is a fourth level heading (subsubsubsection)</h4>
+<div id="this-is-a-fifth-level-heading-subsubsubsubsection"
+class="section level5">
+<h5>This is a fifth level heading (subsubsubsubsection)</h5>
+<div id="this-is-a-bottom-level-heading-subsubsubsubsubsection"
+class="section level6">
+<h6>This is a bottom level heading (subsubsubsubsubsection)</h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="text" class="section level2">
+<h2>Text</h2>
+<p>You might want to change how your text looks. Here are some ways in
+which you can do so.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Command</th>
+<th align="center">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>**...**</code></td>
+<td align="center"><strong>Bold</strong></td>
+</tr>
+<tr>
+<td align="left"><code>*...*</code></td>
+<td align="center"><em>Italic</em></td>
+</tr>
+<tr>
+<td align="left"><code>***...***</code></td>
+<td align="center"><strong><em>Bold &amp; Italic</em></strong></td>
+</tr>
+<tr>
+<td align="left"><code>`...`</code></td>
+<td align="center"><code>Code Block</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>You can also make something a block quote by placing the
+<code>&gt;</code> symbol at the beginning of the line. If you want a
+multiline block quote with a line break just use <code>&gt;</code> with
+no text in between the two lines.</p>
+</blockquote>
+<blockquote>
+<p>You can also have nested blockquotes</p>
+<blockquote>
+<p>by including and empty line with <code>&gt;</code> and then
+<code>&gt;&gt;</code> on the following line</p>
+</blockquote>
+</blockquote>
+</div>
+<div id="lists" class="section level2">
+<h2>Lists</h2>
+<p>You can have both ordered and unordered lists. For ordered lists, any
+number followed by a period willdo and Markdown will change to the
+correct ordering. You can also embed up to three levels.</p>
+<ol style="list-style-type: decimal">
+<li>Item 1</li>
+<li>Item 2
+<ol style="list-style-type: decimal">
+<li>Item 2-1</li>
+<li>Item 2-2
+<ol style="list-style-type: decimal">
+<li>Item 2-2-1</li>
+<li>Item 2-2-2</li>
+<li>Item 2-2-3</li>
+</ol></li>
+<li>Item 2-3</li>
+</ol></li>
+<li>Item 3</li>
+</ol>
+<p>Alternatively, you can use a/b or i/ii in the embedded levels.</p>
+<ol style="list-style-type: decimal">
+<li>Item 1</li>
+<li>Item 2
+<ol style="list-style-type: lower-alpha">
+<li>Item 2-1</li>
+<li>Item 2-2
+<ol style="list-style-type: lower-roman">
+<li>Item 2-2-1</li>
+<li>Item 2-2-2</li>
+<li>Item 2-2-3</li>
+</ol></li>
+<li>Item 2-3</li>
+</ol></li>
+<li>Item 3</li>
+</ol>
+<p>For undordered lists, just use <code>-</code>.</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2
+<ul>
+<li>Item 2-1</li>
+<li>Item 2-2
+<ul>
+<li>Item 2-2-1</li>
+<li>Item 2-2-2</li>
+<li>Item 2-2-3</li>
+</ul></li>
+<li>Item 2-3</li>
+</ul></li>
+<li>Item 3</li>
+</ul>
+<p>You can also embedd unordered lists within ordered lists.</p>
+<ol style="list-style-type: decimal">
+<li>Item 1</li>
+<li>Item 2
+<ul>
+<li>Item 2-1</li>
+<li>Item 2-2
+<ol style="list-style-type: decimal">
+<li>Item 2-2-1</li>
+<li>Item 2-2-2</li>
+<li>Item 2-2-3</li>
+</ol></li>
+<li>Item 2-3</li>
+</ul></li>
+<li>Item 3</li>
+</ol>
+</div>
+<div id="including-images" class="section level2">
+<h2>Including Images</h2>
+<p>This works easiest when the image is in the same folder as the
+markdown file. The basic synatx is
+<code>![Image Description](File Name)</code>. You may also want to use
+HTML directly if you need to adjust the size:
+<code>&lt;img src="http://....jpg" width="200" height="200" /&gt;</code>
+Here is a picture of me in Santa Cruz, CA.</p>
+<center>
+<img src="pics/also-me.jpg" width="200"/>
+</center>
+</div>
+<div id="links" class="section level2">
+<h2>Links</h2>
+<p>Links work in a similar way to images:
+<code>[Description of link](Link)</code>. Here is a link to the <a
+href="https://www.scott-nelson.net/PPCC">PPCC Page</a>.</p>
+</div>
+<div id="latex-math" class="section level2">
+<h2>LaTeX Math</h2>
+<p>If you wrap single <code>$</code> around the latex equation you can
+display math inline like this: <span class="math inline">\(ab
+\sqsubseteq ab^{k-1}a\)</span>. If you wrap double <code>$$</code>
+around the latex equation you can display math centered like this: <span
+class="math display">\[ab \sqsubseteq ab^{k-1}a\]</span>.</p>
+<div id="beyond" class="section level3">
+<h3>Beyond</h3>
+<p>There is slightly more you can do with Markdown, but these are the
+basics. There is no all-in-one Markdown program. Its like a programming
+language in which you can type up a Markdown document in any text-based
+program, but you need a separate compiler to get a pdf or html document.
+I’ve used Markdown in R, Google Colab, and Github, but also with a
+program for Mac called MacDown which has realtime updating so you can
+see what the output looks like as you are creating your document. The
+choice is up to you…</p>
+</div>
+</div>
 </div>
 
 
