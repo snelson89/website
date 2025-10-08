@@ -56,7 +56,7 @@ Lately, I have also been interested in how optionality and variability play a ro
 ### Proceedings
 -   **Nelson, S**. 2024. "Optionality and the Phonetics-Phonology Interface". *Proceedings of the 42nd West Coast Conference on Formal Linguistics*.
 
--   **Nelson, S** & Baković, E. 2024. "[Underspecification without Underspecified Representations](https://openpublishing.library.umass.edu/scil/article/id/2227/)". *Proceedings of the Society for Computation in Linguistics*, 7(1), 352-356.
+-   **Nelson, S**. & Baković, E. 2024. "[Underspecification without Underspecified Representations](https://openpublishing.library.umass.edu/scil/article/id/2227/)". *Proceedings of the Society for Computation in Linguistics*, 7(1), 352-356.
 
 -   **Nelson, S**. 2022. "[A Model Theoretic Perspective on Phonological Feature Systems](https://scholarworks.umass.edu/scil/vol5/iss1/2/)". *Proceedings of the Society for Computation in Linguistics*, 5(1), 1-10.
 
@@ -68,16 +68,23 @@ Lately, I have also been interested in how optionality and variability play a ro
 
 ## Manuscripts
 
+-   **Nelson, S**. "On the formal equivalence of phonological strings and gestural representations".
+-   **Nelson, S**. & Baković, E. "Feature spreading, redundancy, and blocking".
 -   **Nelson, S**. "The logic and typology of derived environment effects".
 -   Taherkhani, N., **Nelson, S.** & Heinz, J. "Vowel alternations as evidence for contrastive vowel features in Southern Tati: Takestani dialect"
--   **Nelson, S**. "On inferring linear order from non-linear gestural representations".
 -   Heinz, J. & **Nelson, S.** "The Past, Present, and Future of Model-Theoretic Phonology".
 
 ## Presentations and Posters
 
-- **Nelson, S.** (2026). Phonological Knowledge, Weighted Logic, and the Competence/Performance Distinction. Old-World Conference in Phonology 23 (OCP2023). University of Cambridge. Cambridge, UK, England.
+- **Nelson, S.** (2026). Formalizing phonological knowledge verses usage with weighted logic. Old-World Conference in Phonology 23 (OCP2023). University of Cambridge. Cambridge, UK, England.
 
 - **Nelson, S.** & Baković, E. (2026). Feature spreading and redundancy with BMRS. Old-World Conference in Phonology 23 (OCP23). University of Cambridge. Cambridge, UK, England. 
+
+- **Nelson, S.** (2026). Phonological Knowledge, Weighted Logic, and the Competence/Performance Distinction. Annual Meeting of the Linguistic Society of America (LSA). New Orleans, LA, USA.
+
+- **Nelson, S.** & Baković, E. (2026). A BMRS analysis of Trojan vowels in Hungarian vowel harmony. Annual Meeting of the Linguistic Society of America (LSA). New Orleans, LA, USA. 
+
+- Hayes, M.. & **Nelson, S.** (2026). Poetic Rhyme as a Tier-Based Strictly Local Constraint. Annual Meeting of the Linguistic Society of America (LSA). New Orleans, LA, USA.
 
 - Stephanov, A. & **Nelson, S.** (2025). Formalizing the Venetian ‘Evanescent’ /l/: A Three-Perspective Analysis. Going Romance 2025. Ca' Foscari University of Venice, Venice, Italy.
 
