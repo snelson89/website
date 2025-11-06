@@ -24,6 +24,6 @@ The final chunk is for a group member to teach a skill (programming language, so
 |9/24|Yinglun on Re-Analyzing the Expressivity of SK Korean Tone Plateuing|Angie on [Meyers et al. (2025)](https://www.sciencedirect.com/science/article/pii/S0749596X25000427)|Scott on Markdown|
 |10/8|Matthew on Tier-Based Functions with BMRS|Yinglun on [Joo & Jardine (2025)](https://openpublishing.library.umass.edu/scil/article/id/3124/)|Scott on [Weighted Logic (and more!)](PPCC/GradientFLT.pdf)|
 |10/22|Mikhael on Computing Rhyme|na.|na.|
-|11/5|Ryan on Real-Time Automaton for Phonetic Categorization|Anna on tbd|Scott on Bayesian Statistics|
-|11/19|Angie on Malay Morphophonology and BMRS|Ryan on [Wetzel & Kurz (2025)](https://www.sciencedirect.com/science/article/pii/S0010027725000873)|Scott on Algorithmic Analysis|
-|12/3|tbd|Mikhael on [Danis (2025)](https://openpublishing.library.umass.edu/amphonology/article/id/3022/)|Scott on Computational Learning Theory|
+|11/5|Scott on Vowel Harmony Typology w/ BMRS|Anna on [Levenstein et al. (2024)](https://link.springer.com/article/10.1007/s42113-024-00219-3) |Scott on [Bayesian Statistics](PPCC/BayesianStats.pdf)|
+|11/19|Angie on Malay Morphophonology and BMRS|(Ryan on [Wetzel & Kurz (2025)](https://www.sciencedirect.com/science/article/pii/S0010027725000873))|n.a|
+|12/3|Ryan on Real-Time Automaton for Phonetic Categorization|Mikhael on [Danis (2025)](https://openpublishing.library.umass.edu/amphonology/article/id/3022/)|Scott on Computational Learning Theory|

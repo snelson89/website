@@ -80,11 +80,13 @@ Lately, I have also been interested in how optionality and variability play a ro
 
 - **Nelson, S.** & Baković, E. (2026). Feature spreading and redundancy with BMRS. Old-World Conference in Phonology 23 (OCP23). University of Cambridge. Cambridge, UK, England. 
 
+- **Nelson, S.** (2026). Discrete Interpretations of Continuous Representations in Model-Theoretic Computational Phonology. Workshop on The Role of Representation in Computational Phonology. University of Cambridge. Cambridge, UK, England. 
+
 - **Nelson, S.** (2026). Phonological Knowledge, Weighted Logic, and the Competence/Performance Distinction. Annual Meeting of the Linguistic Society of America (LSA). New Orleans, LA, USA.
 
 - **Nelson, S.** & Baković, E. (2026). A BMRS analysis of Trojan vowels in Hungarian vowel harmony. Annual Meeting of the Linguistic Society of America (LSA). New Orleans, LA, USA. 
 
-- Hayes, M.. & **Nelson, S.** (2026). Poetic Rhyme as a Tier-Based Strictly Local Constraint. Annual Meeting of the Linguistic Society of America (LSA). New Orleans, LA, USA.
+- Hayes, M. & **Nelson, S.** (2026). Poetic Rhyme as a Tier-Based Strictly Local Constraint. Annual Meeting of the Linguistic Society of America (LSA). New Orleans, LA, USA.
 
 - Stephanov, A. & **Nelson, S.** (2025). Formalizing the Venetian ‘Evanescent’ /l/: A Three-Perspective Analysis. Going Romance 2025. Ca' Foscari University of Venice, Venice, Italy.
 
