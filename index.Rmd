@@ -54,7 +54,7 @@ Lately, I have also been interested in how optionality and variability play a ro
 -   **Nelson, S** & Durvasula, K. 2021. "[Lexically-Guided Perceptual Learning does Generalize to New Contexts](https://www.sciencedirect.com/science/article/abs/pii/S0095447020301108)". *Journal of Phonetics*.
 
 ### Proceedings
--   **Nelson, S**. 2024. "Optionality and the Phonetics-Phonology Interface". *Proceedings of the 42nd West Coast Conference on Formal Linguistics*.
+-   **Nelson, S**. 2025. "[Optionality and the Phonetics-Phonology Interface](https://www.lingref.com/cpp/wccfl/42/paper3831.pdf)". *Proceedings of the 42nd West Coast Conference on Formal Linguistics*.
 
 -   **Nelson, S**. & Baković, E. 2024. "[Underspecification without Underspecified Representations](https://openpublishing.library.umass.edu/scil/article/id/2227/)". *Proceedings of the Society for Computation in Linguistics*, 7(1), 352-356.
 
@@ -80,7 +80,7 @@ Lately, I have also been interested in how optionality and variability play a ro
 
 - **Nelson, S.** & Baković, E. (2026). Feature spreading and redundancy with BMRS. Old-World Conference in Phonology 23 (OCP23). University of Cambridge. Cambridge, UK, England. 
 
-- **Nelson, S.** (2026). Discrete Interpretations of Continuous Representations in Model-Theoretic Computational Phonology. Workshop on The Role of Representation in Computational Phonology. University of Cambridge. Cambridge, UK, England. 
+- **Nelson, S.** (2026). [Discrete Interpretations of Continuous Representations in Model-Theoretic Computational Phonology](Presentations/ocpworkshop2026-Nelson.pdf). Workshop on The Role of Representation in Computational Phonology. University of Cambridge. Cambridge, UK, England. 
 
 - **Nelson, S.** (2026). Phonological Knowledge, Weighted Logic, and the Competence/Performance Distinction. Annual Meeting of the Linguistic Society of America (LSA). New Orleans, LA, USA.
 
@@ -144,7 +144,7 @@ Lately, I have also been interested in how optionality and variability play a ro
 
 # **Teaching**
 
-I currently work as an Instructor in the Department of Linguistics at the University of Illinois Urbana-Champaign. My office is located in LCLB 4117. I have regularly scheduled office hours on Wednesdays and Fridays from 12:30-2:00pm.
+I currently work as an Instructor in the Department of Linguistics at the University of Illinois Urbana-Champaign. My office is located in LCLB 4117. I have regularly scheduled office hours on Wednesdays from 12:30-2:00pm and Fridays from 3:30-5:00pm.
 If you are a student in one of my classes, please got my [YouCanBookMe](https://snelson89.youcanbook.me) page to schedule a time to meet. If you are not my student, or if those time/meeting lengths do not work for you, please send me an e-mail. We can find a time to meet either remotely or in person.Below is a list of classes I have served as either a teaching assistant or main instructor for. 
 
 In 2023 I was a recipient of the Stony Brook [President's Award for Excellence in Teaching by a Graduate Student](https://grad.stonybrook.edu/awards/President_Teaching.php).
@@ -157,12 +157,13 @@ In 2023 I was a recipient of the Stony Brook [President's Award for Excellence i
     -   Spring 2025
 -   **LING 401**: *Intro to General Phonetics*
     -   Fall 2024
--   **LING 490**: *Computation and Phonological Theory*
-    -   Spring 2025
+-   **LING 490**: *Special Topics in Linguistics*
+    -   Spring 2025 (Computation and Phonological Theory)
+    -   Spring 2026 (Learnability and Lingusitic Theory)
 -   **LING 502**: *Phonology I*
     -   Spring 2025; Fall 2025
 -   **LING 542**: *Phonology II*
-    -   Fall 2024
+    -   Fall 2024; Spring 2026
 
 ## Stony Brook University
 
