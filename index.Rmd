@@ -76,7 +76,7 @@ Lately, I have also been interested in how optionality and variability play a ro
 
 ## Presentations and Posters
 
-- **Nelson, S.** (2026). Formalizing phonological knowledge verses usage with weighted logic. Old-World Conference in Phonology 23 (OCP2023). University of Cambridge. Cambridge, UK, England.
+- **Nelson, S.** (2026). [Formalizing phonological knowledge verses usage with weighted logic](Presentations/ocp2026-Nelson.pdf). Old-World Conference in Phonology 23 (OCP2023). University of Cambridge. Cambridge, UK, England.
 
 - **Nelson, S.** & Baković, E. (2026). Feature spreading and redundancy with BMRS. Old-World Conference in Phonology 23 (OCP23). University of Cambridge. Cambridge, UK, England. 
 
