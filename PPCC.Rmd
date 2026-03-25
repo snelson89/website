@@ -21,12 +21,12 @@ The final chunk is for a group member to teach a skill (programming language, so
 |:---:|:---:|:---:|:---:|
 |1/28|Scheduling Meeting |na.|na.|
 |2/11|Matthew and Scott on Tier-Based Functions w/ BMRS|Anna on [Cho (2025)](https://www.sciencedirect.com/science/article/abs/pii/S0095447025000373)|Scott on Information Theory \(G&K Ch. 1\)|
-2/25|Mikhael on TSL Poetry Experiments|Daniel on [Kawahara & Kumagai (2025)](https://www.journal-labphon.org/article/id/10808/)|Scott on Bayesian Updating \(G&K Ch. 2\)|
-|3/11|Angie on Malay Morphophonology|Ryan on [Richmond (2024)](https://onlinelibrary.wiley.com/doi/full/10.1111/mila.12521)|Scott on tbd|
-|3/25|Daniel on Rendaku + Lyman's Law with BMRS|Mikhael on [Swanson (2025)](https://mol2025.molweb.xyz/docs/mol2025_swanson.pdf)|Scott on tbd|
+2/25|Mikhael on TSL Poetry Experiments|Daniel on [Kawahara & Kumagai (2025)](https://www.journal-labphon.org/article/id/10808/)|--|
+|3/11|Angie on Malay Morphophonology|Ryan on [Richmond (2024)](https://onlinelibrary.wiley.com/doi/full/10.1111/mila.12521)|Scott on Bayesian Updating \(G&K Ch. 2\)|
+|3/25|Daniel on Rendaku + Lyman's Law with BMRS|Mikhael on [Swanson (2025)](https://mol2025.molweb.xyz/docs/mol2025_swanson.pdf)|Scott on Functions and Representations \(G&K Ch. 3+4\)|
 |4/8|CLS Week|CLS Week|CLS Week|
-|4/22|Ryan on Phonetic Category Learning|Angie on [Czarnecki (2025)](https://openpublishing.library.umass.edu/scil/article/id/3162/)|Scott on tbd|
-|5/6|Anna on tbd.|Matthew on [Hu (2025)](https://openpublishing.library.umass.edu/scil/article/id/3157/)|Scott on tbd|
+|4/22|Ryan on Phonetic Category Learning|Angie on [Czarnecki (2025)](https://openpublishing.library.umass.edu/scil/article/id/3162/)|Scott on Symbols and Procedures \(G&K Ch. 5+6\)|
+|5/6|Anna on tbd.|Matthew on [Hu (2025)](https://openpublishing.library.umass.edu/scil/article/id/3157/)|Scott on Architectures and Data Structures \(G&K Ch. 8+9\)|
 
 ## Fall 2025 Meetings
 
