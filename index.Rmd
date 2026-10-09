@@ -76,6 +76,8 @@ Lately, I have also been interested in how optionality and variability play a ro
 
 ## Presentations and Posters
 
+- **Nelson, S.** (2026). [Search and Copy/Change with Boolean Monadic Recursive Schemes](Presentations/amp2026-Nelson.pdf). Annual Meeting on Phonology 2026 (AMP). University of Maryland College Park. College Park, MD, USA.
+
 - **Nelson, S.** (2026). [Formalizing phonological knowledge verses usage with weighted logic](Presentations/ocp2026-Nelson.pdf). Old-World Conference in Phonology 23 (OCP2023). University of Cambridge. Cambridge, UK, England.
 
 - **Nelson, S.** & Baković, E. (2026). Feature spreading and redundancy with BMRS. Old-World Conference in Phonology 23 (OCP23). University of Cambridge. Cambridge, UK, England. 
@@ -156,10 +158,11 @@ In 2023 I was a recipient of the Stony Brook [President's Award for Excellence i
 -   **LING 304**: *Elements of Morphology* 
     -   Spring 2025
 -   **LING 401**: *Intro to General Phonetics*
-    -   Fall 2024
+    -   Fall 2024; Fall 2026
 -   **LING 490**: *Special Topics in Linguistics*
     -   Spring 2025 (Computation and Phonological Theory)
     -   Spring 2026 (Learnability and Lingusitic Theory)
+    -   Fall 2026 (Computational Phonology)
 -   **LING 502**: *Phonology I*
     -   Spring 2025; Fall 2025
 -   **LING 542**: *Phonology II*

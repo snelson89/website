@@ -1,0 +1,25 @@
+---
+title: "Computation(al) and Mathematical Phonology Internet Archive"
+output: 
+  html_document: 
+    theme: cosmo
+---
+
+<h2>2025</h2>
+- Czarnecki, V. (2025). The Logic of Linearization: Interpretations of Trees via Strings. _Society for Computation in Linguistics_, 8(1).
+- Dai, H. (2025). An exception-filtering approach to phonotactic learning. _Phonology_, 42, e5.
+- Danis, N. (2025). Logical transductions are not sufficient for notational equivalence. In _Proceedings of the Annual Meetings on Phonology (Vol. 1, No. 1)_. University of Massachusetts Amherst Libraries.
+- Graf, T., & Hanson, K. (2025). Automata for subregular syntax: Syntax with strings attached. _Society for Computation in Linguistics_, 8(1).
+- Hanson, K. (2025). Tier-based strict locality and the typology of agreement. _Journal of Language Modelling_, 13(1), 43-97.
+- Hanson, K. (2025). Adjunction in (T) SL Syntax. _Society for Computation in Linguistics_, 8(1).
+- Hanson, K. (2025). Upward agreement and syntactic counterfeeding in Lubukusu. _Proceedings of the Linguistic Society of America_, 10(1), 5960-5960.
+- Hayashi, K., & Kamigaito, H. (2025). From Formal Language Theory to Statistical Learning: Finite Observability of Subregular Languages. _arXiv preprint arXiv:2509.22598_.
+- Heinz, J. The Logical Structure of Phonological Generalizations. _Phonological Studies_, 28:69--80, 2025
+- Hu, Y. (2025). BMRS-Net: Learning BMRS Predicates as Decision Trees. _Society for Computation in Linguistics_, 8(1).
+- Jardine, A., & Oakden, C. (2025). Computing process-specific constraints. _Linguistic Inquiry_, 56(4), 807-816.
+- Joo, H., & Jardine, A. (2025). Intonation as a quantifier-free logical interpretation of metrical and prosodic structure. _Society for Computation in Linguistics_, 8(1).
+- Mayer, C. (2025). Reconciling categorical and gradient models of phonotactics. _Society for Computation in Linguistics_, 8(1).
+- Nelson, S., & Heinz, J. (2025). The blueprint model of production. _Phonology_, 42, e12.
+- Swanson, L., Hanson, K., & Graf, T. (2025). Are syntactic categories ISL-2 inferrable? A corpus study. _Society for Computation in Linguistics_, 8(1).
+- Yolyan, T. (2025). A Logical Characterization of Weak Determinism as Simultaneous Application. _Journal of Logic, Language and Information_, 34(1), 89-153.
+- Yolyan, T. A. (2025). _Phonological Expressivity and Learning via Boolean Monadic Recursive Schemes_ (Doctoral dissertation, Rutgers The State University of New Jersey, School of Graduate Studies).
