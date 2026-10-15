@@ -76,7 +76,11 @@ Lately, I have also been interested in how optionality and variability play a ro
 
 ## Presentations and Posters
 
+- **Nelson, S.**, Yeung, D., & King, M. (2026) [Computing Long Distance Phenomena with Boolean Monadic Recursive Schemes](Presentations/midphon2026-NelsonYeungKing.pdf). 31st Annual Mid-Continental Phonetics & Phonology Conference (MidPhon). St. Louis University. St. Louis, MO, USA.
+
 - **Nelson, S.** (2026). [Search and Copy/Change with Boolean Monadic Recursive Schemes](Presentations/amp2026-Nelson.pdf). Annual Meeting on Phonology 2026 (AMP). University of Maryland College Park. College Park, MD, USA.
+
+- **Nelson, S.** (2026). [Algorithms + Data Structures = Speech Production Programs](Presentations/mayfest2026-Nelson.pdf). Mayfest 2026. University of Maryland College Park. College Park, MD, USA.
 
 - **Nelson, S.** (2026). [Formalizing phonological knowledge verses usage with weighted logic](Presentations/ocp2026-Nelson.pdf). Old-World Conference in Phonology 23 (OCP2023). University of Cambridge. Cambridge, UK, England.
 
@@ -146,14 +150,12 @@ Lately, I have also been interested in how optionality and variability play a ro
 
 # **Teaching**
 
-I currently work as an Instructor in the Department of Linguistics at the University of Illinois Urbana-Champaign. My office is located in LCLB 4117. I have regularly scheduled office hours on Wednesdays from 12:30-2:00pm and Fridays from 3:30-5:00pm.
+I currently work as an Assistant Professor in the Department of Linguistics at the University of Illinois Urbana-Champaign. My office is located in LCLB 4117. I have regularly scheduled office hours on Mondays and Wednesdays from 1:00-2:00pm.
 If you are a student in one of my classes, please got my [YouCanBookMe](https://snelson89.youcanbook.me) page to schedule a time to meet. If you are not my student, or if those time/meeting lengths do not work for you, please send me an e-mail. We can find a time to meet either remotely or in person.Below is a list of classes I have served as either a teaching assistant or main instructor for. 
 
 In 2023 I was a recipient of the Stony Brook [President's Award for Excellence in Teaching by a Graduate Student](https://grad.stonybrook.edu/awards/President_Teaching.php).
 
-## University of Illinois Urbana-Champaign
-
-### Main Instructor
+## Courses Taught at the University of Illinois Urbana-Champaign
 
 -   **LING 304**: *Elements of Morphology* 
     -   Spring 2025
@@ -161,43 +163,19 @@ In 2023 I was a recipient of the Stony Brook [President's Award for Excellence i
     -   Fall 2024; Fall 2026
 -   **LING 490**: *Special Topics in Linguistics*
     -   Spring 2025 (Computation and Phonological Theory)
-    -   Spring 2026 (Learnability and Lingusitic Theory)
+    -   Spring 2026 (Learnability and Linguistic Theory)
     -   Fall 2026 (Computational Phonology)
 -   **LING 502**: *Phonology I*
-    -   Spring 2025; Fall 2025
+    -   Spring 2025; Fall 2025; Spring 2027
 -   **LING 542**: *Phonology II*
     -   Fall 2024; Spring 2026
 
-## Stony Brook University
-
-### Teaching Assistant
-
--   **LIN 101**: *Introduction to Linguistics*
-    -   Spring 2020
--   **LIN 120**: *Language and Technology*
-    -   Fall 2020
--   **LIN 201**: *Phonetics*
-    -   Fall 2019; Fall 2021; Spring 2022
--   **LIN 235**: *Signed Languages & Deaf Communities*
-    -   Spring 2024
--   **LIN 301**: *Phonology*
-    -   Spring 2021; Fall 2022; Fall 2023
--   **LIN 538**: *Statistics for Linguistics*
-    -   Spring 2023
-
-### Main Instructor
-
--   **LIN 200**: *Language in the United States*
-    -   Winter 2022 (Co-taught with [Andrija Petrovic](https://andrija-petrovic.github.io))
--   **LIN 350**: *Experimental Phonetics*
-    -   Summer [2023](350SU23.html)
--   **LIN 405**: *Writing in Linguistics*
-    -   Summer [2021](405SU21.html)
--   **LIN 522**: *Phonetics*
-    -   Summer 2020; Summer 2022 (Co-taught with [Felix Fonseca Quesada](https://sites.google.com/view/felixfonsecaquesada/página-principal))
-
 
 ## Additional Instruction
+
+Before arriving at Illinois, I was a teaching assistant for Introduction to Linguistics, Language and Technology, Phonetics, Signed Language & Deaf Communities, Phonology, and Statistics for Linguistics. I also was main instructor for Language in the United States, Experimental Phonetics, Writing in Linguistics, and Phonetics (graduate level). 
+
+I have additional volunteer teaching experience listed below.
 
 ### Head Instructor
 
